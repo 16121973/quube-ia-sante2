@@ -1171,10 +1171,234 @@ app.get('/cas-usage', (c) => {
 // Route: Qui sommes-nous
 app.get('/a-propos', (c) => {
   return c.render(
-    <div>
-      <h1>Qui sommes-nous - En construction</h1>
-      <p>Cette page sera créée avec le PROMPT 4</p>
-    </div>,
+    <>
+      {/* Hero */}
+      <section class="hero" style="min-height: 40vh;">
+        <div class="hero-content">
+          <h1>Qui sommes-nous</h1>
+        </div>
+      </section>
+
+      {/* Section 1 - Le Fondateur */}
+      <section class="section section-dark">
+        <div class="container">
+          <div class="quote-section animate-on-scroll">
+            <div style="text-align: center;">
+              <img 
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop" 
+                alt="Samuel Bottaro" 
+                class="quote-image"
+                style="width: 350px; height: 350px; object-fit: cover;"
+              />
+            </div>
+            <div class="quote-content">
+              <h2 style="color: white; margin-bottom: var(--spacing-md);">Samuel Bottaro</h2>
+              <p style="font-size: 1.125rem; color: var(--color-accent); font-weight: 600; margin-bottom: var(--spacing-md);">
+                Fondateur de QUUBE IA Santé
+              </p>
+              
+              <div style="color: var(--color-text-secondary); font-size: 1.05rem; line-height: 1.9;">
+                <p style="margin-bottom: var(--spacing-md);">
+                  Pendant <strong style="color: white;">25 ans</strong>, j'ai accompagné des organisations de santé et médico-sociales dans leurs transformations les plus complexes : 
+                  restructurations, projets d'établissement, stratégies de développement, conduite du changement.
+                </p>
+                
+                <p style="margin-bottom: var(--spacing-md);">
+                  Quand l'IA générative a émergé, j'ai vu immédiatement son potentiel pour le secteur — et ses risques si elle est mal comprise ou mal déployée. 
+                  J'ai créé <strong style="color: white;">QUUBE IA Santé</strong> pour être ce pont entre deux mondes : celui de la santé, que je connais profondément, 
+                  et celui de l'IA, que je pratique au quotidien.
+                </p>
+                
+                <p style="margin-bottom: 0;">
+                  Ma conviction : <strong style="color: var(--color-accent);">l'IA est un accélérateur extraordinaire</strong>, à condition de l'aborder avec méthode, éthique et pragmatisme. 
+                  Mon rôle n'est pas de vous vendre de la technologie, mais de vous aider à en tirer le meilleur, en toute confiance.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 2 - Notre Vision */}
+      <section class="section section-light">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">Notre vision de l'IA en santé</h2>
+          
+          <div class="cards-grid animate-on-scroll">
+            <div class="card">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🤝</div>
+              <h3>L'IA augmente, elle ne remplace pas</h3>
+              <p>
+                Les professionnels de santé ont des compétences irremplaçables : l'empathie, le jugement clinique, la relation humaine. 
+                L'IA doit libérer leur temps pour ce qui compte vraiment : l'humain, la relation, la décision.
+              </p>
+            </div>
+
+            <div class="card">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">⚙️</div>
+              <h3>La technologie sans méthode est inutile</h3>
+              <p>
+                90% des échecs IA sont organisationnels, pas techniques. Notre approche place l'humain et le changement au centre, pas l'outil. 
+                Nous accompagnons la transformation, pas seulement le déploiement.
+              </p>
+            </div>
+
+            <div class="card">
+              <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🎯</div>
+              <h3>L'indépendance garantit l'objectivité</h3>
+              <p>
+                Nous ne vendons aucun logiciel, ne représentons aucun éditeur. Notre seul intérêt : que vous fassiez le bon choix pour votre organisation. 
+                Cette neutralité est notre garantie de conseil objectif.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 3 - Notre Méthodologie */}
+      <section class="section section-light" style="background: white;">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">Un parcours en 5 phases</h2>
+          <p class="section-subtitle animate-on-scroll">
+            Chaque organisation a son rythme. Nous vous accompagnons là où vous en êtes.
+          </p>
+
+          <div style="max-width: 900px; margin: var(--spacing-xl) auto;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-lg); flex-wrap: wrap; gap: var(--spacing-sm);">
+              <div style="text-align: center; flex: 1; min-width: 150px;">
+                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">①</div>
+                <h4 style="color: var(--color-navy); font-size: 1rem;">Sensibiliser</h4>
+              </div>
+              <div style="color: var(--color-accent); font-size: 2rem; font-weight: 700;">→</div>
+              <div style="text-align: center; flex: 1; min-width: 150px;">
+                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">②</div>
+                <h4 style="color: var(--color-navy); font-size: 1rem;">Monter en compétences</h4>
+              </div>
+              <div style="color: var(--color-accent); font-size: 2rem; font-weight: 700;">→</div>
+              <div style="text-align: center; flex: 1; min-width: 150px;">
+                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">③</div>
+                <h4 style="color: var(--color-navy); font-size: 1rem;">Structurer</h4>
+              </div>
+              <div style="color: var(--color-accent); font-size: 2rem; font-weight: 700;">→</div>
+              <div style="text-align: center; flex: 1; min-width: 150px;">
+                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">④</div>
+                <h4 style="color: var(--color-navy); font-size: 1rem;">Déployer</h4>
+              </div>
+              <div style="color: var(--color-accent); font-size: 2rem; font-weight: 700;">→</div>
+              <div style="text-align: center; flex: 1; min-width: 150px;">
+                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">⑤</div>
+                <h4 style="color: var(--color-navy); font-size: 1rem;">Pérenniser</h4>
+              </div>
+            </div>
+
+            <div style="background: var(--color-light-bg); padding: var(--spacing-lg); border-radius: 12px; text-align: center; margin-top: var(--spacing-xl);">
+              <p style="font-size: 1.05rem; color: var(--color-text-muted); margin: 0;">
+                <strong style="color: var(--color-navy);">Ce parcours n'est pas linéaire.</strong> Certains commencent par une formation, d'autres par un diagnostic. 
+                L'important est de démarrer au bon endroit pour votre organisation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 4 - Nos Références */}
+      <section class="section section-light">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">Ils nous font confiance</h2>
+          
+          <div class="cards-grid animate-on-scroll" style="margin-bottom: var(--spacing-xl);">
+            <div class="card">
+              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">Secteur sanitaire</h4>
+              <ul style="list-style: none; padding: 0; color: var(--color-text-muted);">
+                <li style="margin-bottom: var(--spacing-xs);">• Centres hospitaliers publics et privés</li>
+                <li style="margin-bottom: var(--spacing-xs);">• Cliniques et établissements SSR</li>
+                <li style="margin-bottom: var(--spacing-xs);">• Groupements hospitaliers de territoire</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">Secteur médico-social</h4>
+              <ul style="list-style: none; padding: 0; color: var(--color-text-muted);">
+                <li style="margin-bottom: var(--spacing-xs);">• Fondations et associations gestionnaires</li>
+                <li style="margin-bottom: var(--spacing-xs);">• EHPAD et résidences autonomie</li>
+                <li style="margin-bottom: var(--spacing-xs);">• Établissements handicap et protection enfance</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">Organisations sectorielles</h4>
+              <ul style="list-style: none; padding: 0; color: var(--color-text-muted);">
+                <li style="margin-bottom: var(--spacing-xs);">• Fédérations nationales du médico-social</li>
+                <li style="margin-bottom: var(--spacing-xs);">• Groupements et réseaux d'établissements</li>
+                <li style="margin-bottom: var(--spacing-xs);">• Organismes de formation sectoriels</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Cas pratiques */}
+          <h3 style="text-align: center; color: var(--color-navy); margin: var(--spacing-xl) 0 var(--spacing-lg);">
+            Cas pratiques récents
+          </h3>
+          
+          <div class="service-cards" style="max-width: 900px; margin: 0 auto;">
+            <div class="service-card animate-on-scroll">
+              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">
+                📚 Formation IA et feuille de route pour une fondation de santé
+              </h4>
+              <p style="color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">
+                Accompagnement complet : sensibilisation du CODIR, formation de 40 cadres sur 3 niveaux, 
+                diagnostic de maturité et construction d'une feuille de route IA à 3 ans.
+              </p>
+              <p style="color: var(--color-accent); font-weight: 600; margin: 0;">
+                Résultat : 85% des cadres formés autonomes sur l'IA en 3 mois
+              </p>
+            </div>
+
+            <div class="service-card animate-on-scroll">
+              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">
+                🚀 Accélération IA d'un projet stratégique sectoriel
+              </h4>
+              <p style="color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">
+                Production d'une étude de diversification complète pour une fédération : 
+                analyse de marché, benchmark de 20 établissements, 3 scénarios de développement, business plans détaillés.
+              </p>
+              <p style="color: var(--color-accent); font-weight: 600; margin: 0;">
+                Résultat : 6 semaines au lieu de 3 mois, transfert méthodologique complet
+              </p>
+            </div>
+          </div>
+
+          <p style="text-align: center; margin-top: var(--spacing-lg); color: var(--color-text-muted); font-style: italic;">
+            Références détaillées disponibles sur demande
+          </p>
+        </div>
+      </section>
+
+      {/* Section 5 - Notre Écosystème */}
+      <section class="section section-dark">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll" style="color: white;">Un réseau d'experts complémentaires</h2>
+          
+          <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.125rem; color: var(--color-text-secondary); line-height: 1.8; margin-bottom: var(--spacing-xl);">
+              Pour répondre à vos besoins spécifiques, nous mobilisons selon les projets des experts complémentaires : 
+              <strong style="color: white;">data scientists</strong>, <strong style="color: white;">spécialistes RGPD et cybersécurité</strong>, 
+              <strong style="color: white;">consultants en organisation</strong>, <strong style="color: white;">formateurs sectoriels</strong>.
+            </p>
+            
+            <p style="font-size: 1.125rem; color: var(--color-text-secondary); line-height: 1.8;">
+              Vous bénéficiez d'une <strong style="color: var(--color-accent);">équipe sur-mesure</strong> sans le coût d'un grand cabinet.
+            </p>
+          </div>
+
+          <div style="text-align: center; margin-top: var(--spacing-xl);">
+            <a href="/contact" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
+              Envie d'en savoir plus ? Échangeons
+            </a>
+          </div>
+        </div>
+      </section>
+    </>,
     { title: 'Qui sommes-nous' }
   )
 })
