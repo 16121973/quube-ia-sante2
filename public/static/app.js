@@ -54,29 +54,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Tab navigation (for cas-usage page)
 function initTabs() {
-  const tabs = document.querySelectorAll('[data-tab]');
-  const contents = document.querySelectorAll('[data-tab-content]');
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
   
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const target = tab.dataset.tab;
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const targetTab = button.dataset.tab;
       
-      // Remove active class from all tabs and contents
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
+      // Remove active class from all buttons and contents
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
       
-      // Add active class to clicked tab and corresponding content
-      tab.classList.add('active');
-      const targetContent = document.querySelector(`[data-tab-content="${target}"]`);
+      // Add active class to clicked button and corresponding content
+      button.classList.add('active');
+      const targetContent = document.querySelector(`[data-tab-content="${targetTab}"]`);
       if (targetContent) {
         targetContent.classList.add('active');
       }
     });
   });
+  
+  // Activate first tab by default
+  if (tabButtons.length > 0 && tabContents.length > 0) {
+    tabButtons[0].classList.add('active');
+    tabContents[0].classList.add('active');
+  }
 }
 
 // Initialize tabs if present
-if (document.querySelector('[data-tab]')) {
+if (document.querySelector('.tab-button')) {
   initTabs();
 }
 

@@ -641,10 +641,529 @@ app.get('/offres', (c) => {
 // Route: Cas d'usage
 app.get('/cas-usage', (c) => {
   return c.render(
-    <div>
-      <h1>Cas d'usage IA par métier - En construction</h1>
-      <p>Cette page sera créée avec le PROMPT 3</p>
-    </div>,
+    <>
+      {/* Hero */}
+      <section class="hero" style="min-height: 60vh;">
+        <div class="hero-content">
+          <h1>L'IA au service de chaque métier</h1>
+          <p style="max-width: 800px; margin: 0 auto;">
+            Découvrez les applications concrètes de l'intelligence artificielle dans votre domaine. 
+            Des cas d'usage testés dans le secteur santé et médico-social.
+          </p>
+        </div>
+      </section>
+
+      {/* Filtres transversaux */}
+      <section class="section section-light" style="padding-top: var(--spacing-md);">
+        <div class="container">
+          <div class="filter-badges">
+            <div class="filter-badge conformite">🏛️ Conformité — RGPD, AI Act, HDS, HAS, ESSMS</div>
+            <div class="filter-badge data">📊 Data & Analytics — BI, tableaux de bord, prédictif</div>
+            <div class="filter-badge automatisation">⚡ Automatisation — Gains de temps, workflows, documents</div>
+          </div>
+        </div>
+      </section>
+
+      {/* Onglets métiers */}
+      <section class="section section-light" style="padding-top: 0;">
+        <div class="container">
+          <div class="tabs-container">
+            {/* Navigation onglets */}
+            <div class="tabs-nav">
+              <button class="tab-button" data-tab="dg">📊 Direction Générale</button>
+              <button class="tab-button" data-tab="finance">💰 Finance & Gestion</button>
+              <button class="tab-button" data-tab="rh">👥 Ressources Humaines</button>
+              <button class="tab-button" data-tab="qualite">✅ Qualité & Conformité</button>
+              <button class="tab-button" data-tab="soins">🩺 Soins & Médical</button>
+              <button class="tab-button" data-tab="educatif">🎓 Éducatif & Médico-social</button>
+              <button class="tab-button" data-tab="transverse">🔄 Fonctions Transverses</button>
+            </div>
+
+            {/* Contenu onglet DG */}
+            <div class="tab-content" data-tab-content="dg">
+              <div class="use-case-example">
+                <h3>💡 Exemple concret</h3>
+                <p>Un DG d'une fondation médico-sociale a produit un projet stratégique complet en 8 semaines au lieu de 4 mois, avec analyse comparative de 15 établissements.</p>
+              </div>
+              <div class="use-cases-grid">
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Projets d'établissement et de service</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Rédaction collaborative, alignement stratégique, analyse comparative, production de livrables structurés en quelques semaines.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>CPOM et contrats pluriannuels</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-conformite">Conformité</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Construction des objectifs, indicateurs, plans d'actions, mise en cohérence avec les exigences réglementaires.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Notes stratégiques et synthèses décisionnelles</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Préparation CA, COMEX, CME avec synthèses percutantes et structurées.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Veille concurrentielle et positionnement</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Analyse du marché, benchmarks inter-établissements, identification opportunités de développement.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Business plans et nouveaux modèles économiques</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Projections financières, scénarios, études de faisabilité, dossiers de financement.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Dossiers appels à projets (AAP/AAC)</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Rédaction accélérée, cohérence des réponses, maximisation des chances de succès.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contenu onglet Finance */}
+            <div class="tab-content" data-tab-content="finance">
+              <div class="use-case-example">
+                <h3>💡 Exemple concret</h3>
+                <p>Une DAF d'un CH de 800 lits a réduit la préparation des rapports DGOS/ARS de 3 semaines à 5 jours.</p>
+              </div>
+              <div class="use-cases-grid">
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Business plans et projections financières</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Modélisation financière, scénarios multiples, analyses de sensibilité automatisées.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Simulations tarifaires (T2A, dotation)</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Optimisation tarifaire, impact de changements d'activité, aide à la décision budgétaire.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Rapports financiers DGOS/ARS</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-conformite">Conformité</span>
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Production accélérée des rapports réglementaires avec conformité garantie.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Réponses MIGAC/FIR</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-conformite">Conformité</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Dossiers de financement structurés, argumentaires solides, maximisation des dotations.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Tableaux de bord de gestion</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Construction de KPI, analyses d'écarts, reporting automatisé pour le pilotage.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Analyse des écarts budget/réel</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Identification des dérives, analyses de causes, recommandations d'ajustement.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contenu onglet RH */}
+            <div class="tab-content" data-tab-content="rh">
+              <div class="use-case-example">
+                <h3>💡 Exemple concret</h3>
+                <p>Une DRH a harmonisé 120 fiches de poste en 1 semaine au lieu de 2 mois.</p>
+              </div>
+              <div class="use-cases-grid">
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Rédaction de fiches de poste</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Génération cohérente, adaptation aux spécificités métier, harmonisation de la nomenclature.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Tri et analyse de CV</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Pré-sélection intelligente, matching compétences/poste, gain de temps massif.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Entretiens annuels et professionnels</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Synthèses structurées, identification besoins de formation, plans de développement.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Plans de formation individuels</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Parcours personnalisés, alignement avec GPEC, optimisation des budgets formation.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Plannings prévisionnels</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Optimisation effectifs, gestion congés/remplacements, respect des contraintes réglementaires.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Plans QVT et prévention RPS</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                      <span class="badge badge-conformite">Conformité</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Diagnostics, plans d'actions structurés, préparation CSE/CSSCT.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contenu onglet Qualité */}
+            <div class="tab-content" data-tab-content="qualite">
+              <div class="use-case-example">
+                <h3>💡 Exemple concret</h3>
+                <p>Un responsable qualité a préparé l'auto-évaluation ESSMS de 3 établissements en parallèle.</p>
+              </div>
+              <div class="use-cases-grid">
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Préparation certification HAS</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-conformite">Conformité</span>
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Dossiers de preuves structurés, traçabilité complète, gains de temps considérables.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Auto-évaluation ESSMS</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-conformite">Conformité</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Référentiel ESSMS complet, plans d'amélioration, synthèses par domaine.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Rédaction de procédures qualité</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Harmonisation documentaire, mise à jour facilitée, cohérence organisationnelle.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Signalement événements indésirables (EI)</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-conformite">Conformité</span>
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Analyses de causes, plans d'actions correctives, suivi des indicateurs.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Conformité RGPD et protection données</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-conformite">Conformité</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Registres de traitement, analyses d'impact, documentation complète pour audits.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>AI Act et éthique IA</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-conformite">Conformité</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Charte d'usage IA, gouvernance, conformité réglementaire européenne.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contenu onglet Soins */}
+            <div class="tab-content" data-tab-content="soins">
+              <div class="use-case-example">
+                <h3>💡 Exemple concret</h3>
+                <p>Une équipe médicale a réduit de 40% le temps de rédaction des comptes rendus de RCP.</p>
+              </div>
+              <div class="use-cases-grid">
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Comptes rendus médicaux</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Comptes rendus opératoires, consultations, structuration automatique, gain de temps massif.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Synthèses RCP (Réunion Concertation Pluridisciplinaire)</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Décisions structurées, traçabilité des discussions, partage inter-équipes facilité.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Protocoles de soins</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                      <span class="badge badge-conformite">Conformité</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Adaptation recommandations HAS, personnalisation par service, mise à jour facilitée.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Recherche bibliographique médicale</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Veille scientifique ciblée, synthèses de littérature, état de l'art actualisé.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Analyse interactions médicamenteuses</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Aide à la décision, alertes cliniques, sécurisation de la prescription.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Formation continue soignants</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Supports pédagogiques, simulation cas cliniques, évaluation des pratiques.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contenu onglet Éducatif */}
+            <div class="tab-content" data-tab-content="educatif">
+              <div class="use-case-example">
+                <h3>💡 Exemple concret</h3>
+                <p>Des éducateurs ont créé des supports FALC en quelques minutes au lieu de plusieurs heures.</p>
+              </div>
+              <div class="use-cases-grid">
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Projets Personnalisés d'Accompagnement (PPA/PIA)</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Rédaction structurée, cohérence des objectifs, suivi de l'évolution des usagers.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Bilans éducatifs et rééducatifs</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Synthèses structurées, évaluation des progrès, partage inter-professionnels.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Supports FALC (Facile à Lire et à Comprendre)</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Création rapide de documents accessibles, adaptation de contenus complexes.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Activités éducatives adaptées</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Fiches d'activités personnalisées, progression pédagogique, évaluation des acquis.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Communication avec familles</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Comptes rendus de réunions, livrets d'accueil, communication régulière facilitée.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Coordination partenaires (MDPH, écoles)</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Dossiers de demande, synthèses de parcours, coordination inter-institutionnelle.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Contenu onglet Transverse */}
+            <div class="tab-content" data-tab-content="transverse">
+              <div class="use-case-example">
+                <h3>💡 Exemple concret</h3>
+                <p>Un secrétariat a automatisé les comptes rendus de 50+ réunions annuelles, libérant 3 jours par mois.</p>
+              </div>
+              <div class="use-cases-grid">
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Comptes rendus de réunions</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-roi">ROI++</span>
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Structuration automatique, actions identifiées, diffusion rapide, gain de temps massif.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Communication interne</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Newsletters, notes de service, communication de crise structurée.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Communication externe</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Réseaux sociaux, site web, relations presse, campagnes de sensibilisation.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Gestion réclamations usagers</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Réponses structurées, analyse des tendances, amélioration continue.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Guides d'accueil multilingues</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">FAQ, chatbots d'information, supports dans plusieurs langues.</p>
+                </div>
+                <div class="use-case-card">
+                  <div class="use-case-header">
+                    <h4>Gestion stocks et commandes</h4>
+                    <div class="use-case-badges">
+                      <span class="badge badge-auto">Automatisation</span>
+                      <span class="badge badge-data">Data</span>
+                    </div>
+                  </div>
+                  <p class="use-case-description">Suivi logistique, optimisation des achats, inventaires automatisés.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section class="section section-dark">
+        <div class="container">
+          <div class="cta-section">
+            <h2>Ces cas d'usage vous parlent ?</h2>
+            <p>Échangeons sur votre contexte et identifions les applications prioritaires pour votre organisation.</p>
+            <a href="/contact" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
+              Prendre rendez-vous
+            </a>
+          </div>
+        </div>
+      </section>
+    </>,
     { title: 'Cas d\'usage' }
   )
 })
