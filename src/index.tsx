@@ -1406,10 +1406,177 @@ app.get('/a-propos', (c) => {
 // Route: Contact
 app.get('/contact', (c) => {
   return c.render(
-    <div>
-      <h1>Contact - En construction</h1>
-      <p>Cette page sera créée avec le PROMPT 5</p>
-    </div>,
+    <>
+      {/* Hero */}
+      <section class="hero" style="min-height: 50vh;">
+        <div class="hero-content">
+          <h1>Parlons de votre projet</h1>
+          <p style="max-width: 700px; margin: 0 auto;">
+            Un premier échange de 30 minutes, sans engagement, pour explorer le potentiel de l'IA dans votre organisation.
+          </p>
+        </div>
+      </section>
+
+      {/* Contact Layout */}
+      <section class="section section-light">
+        <div class="container">
+          <div class="contact-layout">
+            {/* Colonne gauche - Calendly */}
+            <div class="contact-column">
+              <h3 style="color: var(--color-navy); margin-bottom: var(--spacing-md);">
+                📅 Réserver un créneau
+              </h3>
+              <div class="calendly-embed">
+                <iframe
+                  src="https://calendly.com/quube"
+                  width="100%"
+                  height="630"
+                  frameborder="0"
+                  style="border: none; border-radius: 12px;"
+                ></iframe>
+              </div>
+            </div>
+
+            {/* Colonne droite - Formulaire */}
+            <div class="contact-column">
+              <h3 style="color: var(--color-navy); margin-bottom: var(--spacing-md);">
+                ✉️ Nous écrire
+              </h3>
+              
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="name">Nom et prénom *</label>
+                  <input type="text" id="name" name="name" required placeholder="Jean Dupont" />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email professionnel *</label>
+                  <input type="email" id="email" name="email" required placeholder="jean.dupont@etablissement.fr" />
+                </div>
+
+                <div class="form-group">
+                  <label for="organization">Organisation</label>
+                  <input type="text" id="organization" name="organization" placeholder="Nom de votre établissement" />
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    required 
+                    placeholder="Décrivez brièvement votre besoin..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                  Envoyer le message
+                </button>
+              </form>
+
+              {/* Coordonnées */}
+              <div class="contact-info">
+                <div class="contact-info-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  <a href="mailto:contact@quube.fr" style="color: var(--color-navy); font-weight: 600;">
+                    contact@quube.fr
+                  </a>
+                </div>
+
+                <div class="contact-info-item">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                  </svg>
+                  <a href="https://calendly.com/quube" target="_blank" style="color: var(--color-navy); font-weight: 600;">
+                    Calendly
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section class="section section-light" style="background: white;">
+        <div class="container">
+          <h2 class="section-title animate-on-scroll">Questions fréquentes</h2>
+          
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Combien coûte un accompagnement ?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Chaque mission est sur-mesure et dépend de vos besoins spécifiques. Un premier échange nous permet d'évaluer précisément votre contexte 
+                  et de vous proposer une offre adaptée. Nos tarifs sont compétitifs grâce à l'efficacité de l'IA dans nos processus de production.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Intervenez-vous partout en France ?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Oui, nous intervenons sur l'ensemble du territoire français, en présentiel et/ou en distanciel selon vos préférences. 
+                  La plupart de nos formations et accompagnements peuvent être réalisés efficacement en visioconférence, 
+                  ce qui permet une plus grande flexibilité et réduit les coûts de déplacement.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Faut-il déjà utiliser l'IA pour faire appel à vous ?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Pas du tout ! La majorité de nos clients démarrent de zéro avec l'IA. Notre parcours d'accompagnement est justement conçu pour s'adapter 
+                  à votre niveau de maturité actuel. Que vous soyez au stade de la découverte ou que vous ayez déjà quelques expérimentations en cours, 
+                  nous adaptons notre approche à votre situation.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                <span>Travaillez-vous avec un outil IA en particulier ?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Non, nous sommes totalement indépendants et agnostiques sur les outils. Nous travaillons avec les meilleurs outils du marché 
+                  (Claude, ChatGPT, Copilot, Gemini, Mistral...) et recommandons ceux qui correspondent le mieux à vos contraintes : 
+                  conformité RGPD, hébergement des données de santé (HDS), budget, facilité d'usage. Notre objectif est de vous aider à faire le bon choix, 
+                  pas de promouvoir une solution en particulier.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section class="section section-dark">
+        <div class="container">
+          <div class="cta-section animate-on-scroll">
+            <h2>Prêt à transformer votre organisation avec l'IA ?</h2>
+            <p>Commençons par un simple échange de 30 minutes pour comprendre vos besoins.</p>
+            <a href="https://calendly.com/quube" target="_blank" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
+              Réserver un créneau →
+            </a>
+          </div>
+        </div>
+      </section>
+    </>,
     { title: 'Contact' }
   )
 })

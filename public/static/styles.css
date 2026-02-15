@@ -1136,6 +1136,148 @@ a {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* === FAQ ACCORDION === */
+.faq-container {
+  max-width: 800px;
+  margin: var(--spacing-xl) auto;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.faq-question {
+  width: 100%;
+  padding: var(--spacing-lg);
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: var(--transition-smooth);
+}
+
+.faq-question:hover {
+  color: var(--color-accent);
+}
+
+.faq-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 var(--spacing-lg);
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 0 var(--spacing-lg) var(--spacing-lg);
+}
+
+.faq-answer p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+/* === CONTACT FORM === */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+.contact-column {
+  background: white;
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: var(--spacing-xs);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  font-family: var(--font-primary);
+  font-size: 1rem;
+  transition: var(--transition-smooth);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-info {
+  margin-top: var(--spacing-lg);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-muted);
+}
+
+.contact-info-item svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-accent);
+}
+
+/* === CALENDLY EMBED === */
+.calendly-embed {
+  min-height: 630px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* === RESPONSIVE CONTACT === */
+@media (max-width: 968px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* === RESPONSIVE TABS === */
 @media (max-width: 768px) {
   .tabs-nav {

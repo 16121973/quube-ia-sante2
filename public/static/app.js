@@ -117,7 +117,33 @@ function initContactForm() {
   });
 }
 
+// FAQ Accordion
+function initFAQ() {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      
+      // Close all items
+      faqItems.forEach(i => i.classList.remove('active'));
+      
+      // Toggle current item
+      if (!isActive) {
+        item.classList.add('active');
+      }
+    });
+  });
+}
+
 // Initialize contact form if present
 if (document.getElementById('contact-form')) {
   initContactForm();
+}
+
+// Initialize FAQ if present
+if (document.querySelector('.faq-item')) {
+  initFAQ();
 }
