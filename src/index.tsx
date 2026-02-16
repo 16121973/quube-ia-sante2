@@ -111,22 +111,6 @@ app.get('/', (c) => {
               <p class="value-description">L'IA augmente, elle ne remplace pas vos équipes</p>
             </div>
           </div>
-
-          {/* CHIFFRES CLÉS (sans pourcentages/timelines fictifs) */}
-          <div class="stats-grid fade-in">
-            <div class="stat-item">
-              <div class="stat-number" data-count="25">25</div>
-              <div class="stat-label">ans d'expertise santé<br />et médico-social</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-count="10">10</div>
-              <div class="stat-label">secteurs du système<br />de santé français</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number" data-count="7">7</div>
-              <div class="stat-label">métiers-types accompagnés<br />en formation IA</div>
-            </div>
-          </div>
         </div>
       </section>
 
