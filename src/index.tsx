@@ -29,7 +29,7 @@ app.get('/', (c) => {
             De la stratégie aux usages concrets, nous vous guidons sans jargon, au service des soignants et des patients.
           </p>
           <div class="hero-cta fade-in">
-            <a href="/offres" class="btn btn-primary btn-large">Découvrir nos offres</a>
+            <a href="/services" class="btn btn-primary btn-large">Découvrir nos services</a>
             <a href="/contact" class="btn btn-secondary btn-large">Prendre rendez-vous</a>
           </div>
           {/* SUPPRIMÉ: ligne "Claude • ChatGPT • Gemini..." du hero (à déplacer vers pages intérieures uniquement) */}
@@ -51,7 +51,7 @@ app.get('/', (c) => {
               </svg>
               <h3 class="card-title">Formation & Montée en compétences</h3>
               <p class="card-description">Vos équipes deviennent autonomes sur l'IA. Du dirigeant au professionnel de terrain, des programmes progressifs 100% santé.</p>
-              <a href="/offres#formation" class="card-link">Découvrir →</a>
+              <a href="/services#formation" class="card-link">Découvrir →</a>
             </div>
 
             {/* Offre 2 - Conseil */}
@@ -61,7 +61,7 @@ app.get('/', (c) => {
               </svg>
               <h3 class="card-title">Conseil & Stratégie IA</h3>
               <p class="card-description">Construisons ensemble votre feuille de route IA : diagnostic de maturité, choix de solutions, pilotage de projet, conduite du changement.</p>
-              <a href="/offres#conseil" class="card-link">Découvrir →</a>
+              <a href="/services#conseil" class="card-link">Découvrir →</a>
             </div>
 
             {/* Offre 3 - Accélération (SIGNATURE) */}
@@ -72,7 +72,7 @@ app.get('/', (c) => {
               </svg>
               <h3 class="card-title">Accélération de Projet</h3>
               <p class="card-description">L'IA comme outil de production. Nous co-créons avec vous et livrons vos livrables plus rapidement avec un transfert de compétences intégré.</p>
-              <a href="/offres#acceleration" class="card-link">Découvrir l'offre →</a>
+              <a href="/services#acceleration" class="card-link">Découvrir l'offre →</a>
             </div>
           </div>
         </div>
@@ -114,26 +114,7 @@ app.get('/', (c) => {
         </div>
       </section>
 
-      {/* Section 4 - CITATION FONDATEUR (fond sombre) */}
-      <section class="section-founder">
-        <div class="container">
-          <div class="founder-content fade-in">
-            <div class="founder-image">
-              {/* Photo réelle du fondateur (à remplacer par l'URL correcte) */}
-              <img src="https://cdn.prod.website-files.com/6693d568b935c546e51f1b34/66acd25a39ef72c39238a511_samuel_bottaro.webp" alt="Samuel Bottaro, Fondateur" />
-            </div>
-            <div class="founder-quote">
-              <blockquote>
-                « J'ai créé QUUBE IA Santé avec une conviction : l'intelligence artificielle est un levier majeur pour transformer le secteur de la santé. Accompagner les dirigeants et les équipes dans la maîtrise de l'IA, c'est leur donner les moyens de répondre aux défis de demain — efficience des organisations, qualité de l'accompagnement, et épanouissement des professionnels. »
-              </blockquote>
-              <div class="founder-name">Samuel Bottaro</div>
-              <div class="founder-title">Fondateur QUUBE IA Santé</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 5 - 10 MÉTIERS CARDS (fond clair) */}
+      {/* Section 4 - 10 MÉTIERS CARDS (fond clair) */}
       <section class="section-light">
         <div class="container">
           <div class="section-header fade-in">
@@ -521,15 +502,15 @@ app.get('/cas-usage', (c) => {
   )
 })
 
-// PAGE NOS OFFRES - 3 SECTIONS DÉTAILLÉES
+// PAGE NOS SERVICES - 3 SECTIONS DÉTAILLÉES
 // ============================================================================
-app.get('/offres', (c) => {
+app.get('/services', (c) => {
   return c.render(
     <>
       {/* Hero */}
       <section class="hero-interior">
         <div class="container">
-          <h1 class="fade-in">Nos offres</h1>
+          <h1 class="fade-in">Nos services</h1>
           <p class="hero-subtitle fade-in">Trois approches complémentaires pour réussir votre transformation IA</p>
         </div>
       </section>
@@ -767,7 +748,7 @@ app.get('/offres', (c) => {
         </div>
       </section>
     </>,
-    { title: 'Nos offres' }
+    { title: 'Nos services' }
   )
 })
 

@@ -19,7 +19,7 @@ export const renderer = jsxRenderer(({ children, title }) => {
             <a href="/" class="site-logo">QUUBE×IA Santé</a>
             <nav class="site-nav">
               <ul>
-                <li><a href="/offres">Nos offres</a></li>
+                <li><a href="/services">Nos services</a></li>
                 <li><a href="/cas-usage">Cas d'usage</a></li>
                 <li><a href="/a-propos">Qui sommes-nous</a></li>
                 <li><a href="/contact" class="nav-cta">Contact</a></li>
@@ -58,7 +58,7 @@ export const renderer = jsxRenderer(({ children, title }) => {
                 <h4>Navigation</h4>
                 <ul class="footer-nav">
                   <li><a href="/">Accueil</a></li>
-                  <li><a href="/offres">Nos offres</a></li>
+                  <li><a href="/services">Nos services</a></li>
                   <li><a href="/cas-usage">Cas d'usage</a></li>
                   <li><a href="/a-propos">Qui sommes-nous</a></li>
                   <li><a href="/contact">Contact</a></li>
