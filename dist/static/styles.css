@@ -787,6 +787,7 @@ section {
 .tab-button.active {
   color: var(--color-accent);
   border-bottom-color: var(--color-accent);
+  font-weight: 600;
 }
 
 .tab-panel {
@@ -807,6 +808,52 @@ section {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Badges ROI */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.badge-roi {
+  background: #10B981;
+  color: white;
+}
+
+.badge-auto {
+  background: #3B82F6;
+  color: white;
+}
+
+.badge-conformite {
+  background: #8B5CF6;
+  color: white;
+}
+
+.badge-data {
+  background: #F59E0B;
+  color: white;
+}
+
+/* Case example highlight */
+.case-example {
+  background: var(--color-light-alt);
+  padding: 24px;
+  border-radius: 12px;
+  border-left: 4px solid var(--color-accent);
+  margin-bottom: 32px;
+}
+
+.case-example strong {
+  color: var(--color-accent);
 }
 
 /* === FORMULAIRE CONTACT === */
