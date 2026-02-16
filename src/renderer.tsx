@@ -13,17 +13,18 @@ export const renderer = jsxRenderer(({ children, title }) => {
         <link href="/static/styles.css" rel="stylesheet" />
       </head>
       <body class="site-container">
-        {/* Header fixe transparent → blur au scroll */}
-        <header class="site-header">
-          <div class="header-content">
-            <a href="/" class="site-logo">QUUBE×IA Santé</a>
-            <nav class="site-nav">
-              <ul>
-                <li><a href="/services">Nos services</a></li>
-                <li><a href="/cas-usage">Cas d'usage</a></li>
-                <li><a href="/a-propos">Qui sommes-nous</a></li>
-                <li><a href="/contact" class="nav-cta">Contact</a></li>
-              </ul>
+        {/* Header - Charte QUUBE officielle */}
+        <header>
+          <div class="container">
+            <a href="/" class="logo">
+              <img src="https://www.genspark.ai/api/files/s/1Md7TeiG" alt="QUUBE" />
+            </a>
+            <nav>
+              <a href="/">Accueil</a>
+              <a href="/services">Nos services</a>
+              <a href="/cas-usage">Cas d'usage</a>
+              <a href="/a-propos">Qui sommes-nous</a>
+              <a href="/contact" class="btn-contact">Contact</a>
             </nav>
             <button class="mobile-menu-toggle" aria-label="Menu">☰</button>
           </div>
@@ -34,12 +35,12 @@ export const renderer = jsxRenderer(({ children, title }) => {
           {children}
         </main>
 
-        {/* Footer premium 3 colonnes */}
-        <footer class="site-footer">
+        {/* Footer - Charte QUUBE officielle */}
+        <footer>
           <div class="container">
-            <div class="footer-grid">
+            <div class="footer-content">
               {/* Colonne 1 - Identité */}
-              <div class="footer-column">
+              <div class="footer-section">
                 <h4>QUUBE×IA Santé</h4>
                 <p>
                   Cabinet indépendant de conseil et formation en IA pour les organisations de santé et médico-sociales.
@@ -49,35 +50,32 @@ export const renderer = jsxRenderer(({ children, title }) => {
                   75008 Paris
                 </p>
                 <p>
-                  <a href="mailto:contact@quube.fr" style="color: var(--color-text-white-70);">contact@quube.fr</a>
+                  <a href="mailto:contact@quube.fr">contact@quube.fr</a>
                 </p>
               </div>
 
               {/* Colonne 2 - Navigation */}
-              <div class="footer-column">
+              <div class="footer-section">
                 <h4>Navigation</h4>
-                <ul class="footer-nav">
-                  <li><a href="/">Accueil</a></li>
-                  <li><a href="/services">Nos services</a></li>
-                  <li><a href="/cas-usage">Cas d'usage</a></li>
-                  <li><a href="/a-propos">Qui sommes-nous</a></li>
-                  <li><a href="/contact">Contact</a></li>
-                </ul>
+                <a href="/">Accueil</a>
+                <a href="/services">Nos services</a>
+                <a href="/cas-usage">Cas d'usage</a>
+                <a href="/a-propos">Qui sommes-nous</a>
+                <a href="/contact">Contact</a>
               </div>
 
               {/* Colonne 3 - Contact & Social */}
-              <div class="footer-column">
+              <div class="footer-section">
                 <h4>Contactez-nous</h4>
                 <p>
                   Échangeons sur vos projets IA en santé.
                 </p>
-                <a href="/contact" class="btn btn-primary" style="margin-top: 16px; display: inline-block;">Prendre rendez-vous</a>
-                <div style="margin-top: 24px;">
-                  <a href="https://www.linkedin.com/company/quube-ia-sante" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; color: var(--color-text-white-70); text-decoration: none; transition: color 0.3s;">
-                    <svg style="width: 24px; height: 24px; margin-right: 8px;" fill="currentColor" viewBox="0 0 24 24">
+                <a href="/contact" class="btn-primary" style="margin-top: 16px; display: inline-block;">Prendre rendez-vous</a>
+                <div class="footer-social">
+                  <a href="https://www.linkedin.com/company/quube-ia-sante" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <svg fill="currentColor" viewBox="0 0 24 24" width="20" height="20">
                       <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
                     </svg>
-                    Suivez-nous sur LinkedIn
                   </a>
                 </div>
               </div>
