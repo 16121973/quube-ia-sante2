@@ -537,6 +537,7 @@ app.get('/cas-usage', (c) => {
   )
 })
 
+export default app
 // PAGE NOS OFFRES - 3 SECTIONS DÉTAILLÉES
 // ============================================================================
 app.get('/offres', (c) => {
