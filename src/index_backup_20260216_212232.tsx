@@ -160,8 +160,7 @@ app.get('/', (c) => {
 })
 
 // ============================================================================
-// ============================================================================
-// PAGE CAS D'USAGE - 3 CATÉGORIES ACCORDÉON
+// PAGE CAS D'USAGE - 10 ONGLETS ACCORDÉON
 // ============================================================================
 app.get('/cas-usage', (c) => {
   return c.render(
@@ -174,14 +173,16 @@ app.get('/cas-usage', (c) => {
         </div>
       </section>
 
-      {/* Accordéons par catégorie métier */}
+      {/* Accordéon 10 métiers */}
       <section class="section-light">
         <div class="container">
           <div class="accordion-wrapper">
-            {/* Catégorie 1 - Direction Générale */}
-            <details class="accordion-item accordion-category fade-in" open>
-              <summary class="accordion-header accordion-category-header">
-                <span class="accordion-category-title">Direction Générale</span>
+            
+            {/* Métier 1 - Direction Générale */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Direction générale</span>
+                <span class="accordion-title">Stratégie, pilotage et transformation organisationnelle</span>
                 <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -189,27 +190,27 @@ app.get('/cas-usage', (c) => {
               <div class="accordion-content">
                 <div class="use-case-detail">
                   <h4>Challenge</h4>
-                  <p>Piloter la stratégie globale de l'établissement, préparer les instances de gouvernance (Conseil d'Administration, CVS), rédiger des rapports d'activité conformes aux exigences réglementaires (ARS, Département), et conduire la transformation digitale dans un contexte de ressources contraintes.</p>
+                  <p>Piloter une organisation complexe, anticiper les réformes réglementaires, optimiser l'allocation des ressources, et accompagner les équipes dans le changement.</p>
                   
                   <h4>Bénéfice IA</h4>
-                  <p>L'IA synthétise les données de multiples services pour préparer des rapports d'activité structurés et conformes, génère des présentations stratégiques pour les instances de gouvernance, aide à la rédaction de notes de cadrage pour les projets d'établissement, et facilite l'analyse de données pour le pilotage de la performance.</p>
+                  <p>L'IA vous aide à synthétiser les rapports d'activité, à simuler des scénarios budgétaires (CPOM, EPRD), à préparer les conseils d'administration et à rédiger les communications stratégiques.</p>
                   
                   <h4>Notre approche</h4>
                   <ul>
-                    <li>Diagnostic des besoins stratégiques et analyse des processus de pilotage actuels</li>
-                    <li>Formation personnalisée aux outils IA de synthèse, structuration et pilotage</li>
-                    <li>Co-création de templates IA pour rapports, présentations et notes stratégiques</li>
-                    <li>Accompagnement sur un cycle de gouvernance complet (préparation CA, CVS, rapport d'activité)</li>
+                    <li>Diagnostic de maturité IA de la direction</li>
+                    <li>Identification des cas d'usage prioritaires</li>
+                    <li>Formation des cadres dirigeants à l'utilisation d'outils IA (ChatGPT, Claude, etc.)</li>
+                    <li>Accompagnement sur projet pilote (ex: préparation CPOM assistée par IA)</li>
                   </ul>
                 </div>
               </div>
             </details>
 
-            {/* Catégorie 2 - Services Administratifs & Support */}
-            <details class="accordion-item accordion-category fade-in" open>
-              <summary class="accordion-header accordion-category-header">
-                <span class="accordion-category-title">Services Administratifs & Support</span>
-                <p class="accordion-category-subtitle">Finances, RH, Qualité, Achats, SI, Communication</p>
+            {/* Métier 2 - Finances & contrôle de gestion */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Finances & contrôle</span>
+                <span class="accordion-title">CPOM, EPRD, tableaux de bord et analyse financière</span>
                 <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -217,43 +218,27 @@ app.get('/cas-usage', (c) => {
               <div class="accordion-content">
                 <div class="use-case-detail">
                   <h4>Challenge</h4>
-                  <p>Les services supports doivent :</p>
-                  <ul>
-                    <li><strong>Finances :</strong> Rédiger CPOM et EPRD conformes, préparer les dialogues de gestion avec les autorités</li>
-                    <li><strong>RH :</strong> Attirer et retenir des talents dans un secteur en tension, gérer GPEC et formations</li>
-                    <li><strong>Qualité :</strong> Préparer les évaluations HAS, rédiger procédures et rapports d'audit</li>
-                    <li><strong>Achats :</strong> Rédiger cahiers des charges, analyser les offres, gérer marchés publics</li>
-                    <li><strong>SI :</strong> Assurer sécurité HDS, conformité RGPD, habilitations et formations utilisateurs</li>
-                    <li><strong>Communication :</strong> Produire contenus réseaux sociaux, communiqués de presse, newsletters internes</li>
-                  </ul>
+                  <p>Construire des documents financiers complexes (CPOM, EPRD), analyser les écarts budgétaires, répondre aux demandes de financeurs, et produire des rapports d'activité détaillés.</p>
                   
                   <h4>Bénéfice IA</h4>
-                  <p>L'IA apporte une aide concrète sur chaque fonction :</p>
-                  <ul>
-                    <li><strong>Finances :</strong> Structuration CPOM/EPRD, analyse commentée des écarts budgétaires, argumentaires financiers</li>
-                    <li><strong>RH :</strong> Rédaction offres d'emploi attractives, grilles d'entretien, supports de formation GPEC</li>
-                    <li><strong>Qualité :</strong> Auto-évaluations HAS structurées, procédures conformes, plans d'action qualité</li>
-                    <li><strong>Achats :</strong> Rédaction cahiers des charges, analyse comparative offres, rapports de coûts</li>
-                    <li><strong>SI :</strong> Procédures de sécurité, supports formation cybersécurité, documentation RGPD/HDS</li>
-                    <li><strong>Communication :</strong> Génération de contenus multicanaux, posts engageants, communiqués et supports visuels</li>
-                  </ul>
+                  <p>L'IA automatise la création de narratifs financiers, génère des tableaux de bord dynamiques, détecte des anomalies dans les données budgétaires et accélère la rédaction de réponses aux tutelles.</p>
                   
                   <h4>Notre approche</h4>
                   <ul>
-                    <li>Diagnostic des processus métiers spécifiques à chaque service support</li>
-                    <li>Formations ciblées par fonction (finances, RH, qualité, achats, SI, communication)</li>
-                    <li>Co-création de templates IA adaptés aux documents métiers (CPOM, fiches de poste, procédures, cahiers des charges, etc.)</li>
-                    <li>Accompagnement sur cycle complet (budget, recrutement, certification, appel d'offres, etc.)</li>
+                    <li>Analyse des besoins spécifiques du service financier</li>
+                    <li>Formation à l'utilisation d'IA pour la rédaction financière</li>
+                    <li>Co-création de templates IA pour CPOM/EPRD</li>
+                    <li>Accompagnement sur un cycle budgétaire complet</li>
                   </ul>
                 </div>
               </div>
             </details>
 
-            {/* Catégorie 3 - Cœur de Métier Santé */}
-            <details class="accordion-item accordion-category fade-in" open>
-              <summary class="accordion-header accordion-category-header">
-                <span class="accordion-category-title">Cœur de Métier Santé</span>
-                <p class="accordion-category-subtitle">Soins, Accompagnement Éducatif, Direction des Soins</p>
+            {/* Métier 3 - Ressources Humaines */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Ressources humaines</span>
+                <span class="accordion-title">Recrutement, formation et fidélisation des talents</span>
                 <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
@@ -261,41 +246,228 @@ app.get('/cas-usage', (c) => {
               <div class="accordion-content">
                 <div class="use-case-detail">
                   <h4>Challenge</h4>
-                  <p>Les professionnels du soin et de l'accompagnement font face à :</p>
-                  <ul>
-                    <li><strong>Soins & Accompagnement :</strong> Rédiger des projets personnalisés de qualité, assurer transmissions efficaces, coordonner prises en charge pluridisciplinaires</li>
-                    <li><strong>Accompagnement Éducatif :</strong> Créer supports pédagogiques adaptés (FALC, pictogrammes), concevoir activités éducatives personnalisées, documenter projets individuels</li>
-                    <li><strong>Direction des Soins :</strong> Élaborer protocoles conformes aux bonnes pratiques HAS, piloter projets de soins, former équipes, réaliser audits de pratiques</li>
-                  </ul>
+                  <p>Attirer et retenir des talents dans un secteur en tension, gérer les processus RH (fiches de poste, entretiens, formations), et piloter la GPEC.</p>
                   
                   <h4>Bénéfice IA</h4>
-                  <p>L'IA soutient le cœur de métier sans jamais remplacer l'expertise professionnelle :</p>
-                  <ul>
-                    <li><strong>Soins & Accompagnement :</strong> Structuration projets personnalisés, synthèse transmissions, comptes rendus coordination, supports d'information familles</li>
-                    <li><strong>Accompagnement Éducatif :</strong> Génération supports FALC, propositions activités adaptées aux profils, aide rédaction projets éducatifs</li>
-                    <li><strong>Direction des Soins :</strong> Rédaction protocoles basés sur recommandations HAS, synthèse retours audits, supports formation, suivi pratiques</li>
-                  </ul>
+                  <p>L'IA rédige des offres d'emploi attractives, prépare des grilles d'entretien, génère des supports de formation personnalisés et aide à l'analyse des besoins en compétences.</p>
                   
                   <h4>Notre approche</h4>
                   <ul>
-                    <li>Analyse des besoins spécifiques des équipes de terrain (soins, éducatif, direction)</li>
-                    <li>Formations adaptées aux professionnels de terrain (langage métier, respect des pratiques)</li>
-                    <li>Co-création de templates IA pour projets personnalisés, supports FALC, protocoles de soins</li>
-                    <li>Accompagnement respectueux des référentiels métier et des pratiques professionnelles</li>
+                    <li>Audit des processus RH actuels</li>
+                    <li>Formation des équipes RH aux outils IA (génération de contenu, analyse de CVs)</li>
+                    <li>Co-création de templates IA pour fiches de poste et communications RH</li>
+                    <li>Accompagnement sur un cycle de recrutement complet</li>
                   </ul>
                 </div>
               </div>
             </details>
+
+            {/* Métier 4 - Qualité & certification */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Qualité & certification</span>
+                <span class="accordion-title">HAS, évaluation interne, procédures et audits</span>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Préparer les évaluations HAS, rédiger des procédures qualité conformes, analyser les non-conformités et produire des rapports d'audit détaillés.</p>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA aide à structurer les auto-évaluations HAS, à rédiger des procédures conformes aux référentiels, à analyser les écarts de pratiques et à générer des plans d'action.</p>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Analyse du référentiel HAS applicable à votre structure</li>
+                    <li>Formation à l'utilisation d'IA pour la rédaction de procédures</li>
+                    <li>Co-création de templates IA pour auto-évaluations et procédures</li>
+                    <li>Accompagnement sur un cycle de certification complet</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+
+            {/* Métier 5 - Soins & accompagnement */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Soins & accompagnement</span>
+                <span class="accordion-title">Projets personnalisés, transmissions et coordination</span>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Rédiger des projets personnalisés de qualité, assurer des transmissions efficaces, coordonner les prises en charge pluridisciplinaires, tout en respectant la charge de travail des équipes.</p>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA structure les projets personnalisés, synthétise les transmissions, aide à la rédaction de comptes rendus de réunions de coordination et génère des supports d'information pour les familles.</p>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Analyse des besoins spécifiques des équipes de soins</li>
+                    <li>Formation adaptée aux professionnels de terrain</li>
+                    <li>Co-création de templates IA pour projets personnalisés</li>
+                    <li>Accompagnement respectueux des pratiques professionnelles</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+
+            {/* Métier 6 - Éducatif & pédagogie */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Éducatif & pédagogie</span>
+                <span class="accordion-title">Supports FALC, activités adaptées et projets éducatifs</span>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Créer des supports pédagogiques adaptés (FALC, pictogrammes), concevoir des activités éducatives personnalisées et documenter les projets individuels.</p>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA génère des supports en Facile à Lire et à Comprendre (FALC), propose des idées d'activités adaptées aux profils des usagers et aide à la rédaction de projets éducatifs.</p>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Formation spécifique aux professionnels de l'éducatif</li>
+                    <li>Co-création de prompts IA pour génération de supports FALC</li>
+                    <li>Accompagnement sur la création d'activités adaptées</li>
+                    <li>Respect des principes d'accessibilité et d'inclusion</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+
+            {/* Métier 7 - Direction des soins */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Direction des soins</span>
+                <span class="accordion-title">Protocoles, référentiels et audits de pratiques</span>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Élaborer des protocoles de soins conformes aux bonnes pratiques, piloter les projets de soins, former les équipes et réaliser des audits de pratiques professionnelles.</p>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA aide à la rédaction de protocoles basés sur les recommandations HAS, synthétise les retours d'audits, génère des supports de formation et facilite le suivi des pratiques.</p>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Analyse des besoins de la direction des soins</li>
+                    <li>Formation à l'utilisation d'IA pour la documentation clinique</li>
+                    <li>Co-création de templates IA pour protocoles et procédures</li>
+                    <li>Accompagnement respectueux des référentiels métier</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+
+            {/* Métier 8 - Systèmes d'information */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Systèmes d'information</span>
+                <span class="accordion-title">RGPD, HDS, interopérabilité et sécurité</span>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Assurer la conformité RGPD et HDS, gérer l'interopérabilité des systèmes, documenter les architectures techniques et piloter les projets de transformation numérique.</p>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA aide à la rédaction de documentation technique, à l'analyse de conformité RGPD, à la génération de registres de traitement et à la préparation de cahiers des charges.</p>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Audit de maturité IA du service informatique</li>
+                    <li>Formation aux enjeux éthiques et réglementaires de l'IA en santé</li>
+                    <li>Accompagnement sur la sélection de solutions IA conformes</li>
+                    <li>Support sur l'intégration d'IA dans les SI existants</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+
+            {/* Métier 9 - Communication */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Communication</span>
+                <span class="accordion-title">Valorisation de projets, communication interne et externe</span>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Valoriser les actions de l'établissement, produire des newsletters, gérer les réseaux sociaux, créer des supports de communication attractifs, tout en respectant l'identité de l'organisation.</p>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA génère des contenus adaptés aux différents canaux (newsletters, posts LinkedIn, communiqués), crée des visuels, rédige des articles de valorisation et optimise les messages.</p>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Analyse de la stratégie de communication actuelle</li>
+                    <li>Formation aux outils IA de création de contenu</li>
+                    <li>Co-création d'une charte éditoriale IA</li>
+                    <li>Accompagnement sur un cycle de communication complet</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+
+            {/* Métier 10 - Achats & logistique */}
+            <details class="accordion-item fade-in">
+              <summary class="accordion-header">
+                <span class="accordion-tag">Achats & logistique</span>
+                <span class="accordion-title">Appels d'offres, gestion des contrats et optimisation</span>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Rédiger des cahiers des charges complexes, analyser des offres fournisseurs, gérer les contrats et optimiser les coûts d'achat dans un contexte budgétaire contraint.</p>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA accélère la rédaction de cahiers des charges, synthétise les offres fournisseurs pour faciliter la comparaison, génère des tableaux d'analyse et aide à la négociation.</p>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Analyse des processus achats actuels</li>
+                    <li>Formation à l'utilisation d'IA pour la rédaction d'appels d'offres</li>
+                    <li>Co-création de templates IA pour cahiers des charges</li>
+                    <li>Accompagnement sur un cycle d'achat complet</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
+
           </div>
         </div>
       </section>
 
-      {/* CTA final */}
-      <section class="cta-section">
+      {/* CTA Final */}
+      <section class="section-cta-final">
         <div class="container">
           <div class="cta-content fade-in">
-            <h2 class="cta-title">Prêt à transformer votre métier avec l'IA ?</h2>
-            <p class="cta-subtitle">Échangeons sur vos cas d'usage spécifiques et vos défis quotidiens</p>
+            <h2 class="cta-title">Un cas d'usage vous parle ?</h2>
+            <p class="cta-subtitle">Échangeons sur vos besoins spécifiques</p>
             <a href="/contact" class="btn btn-primary btn-large">Prendre rendez-vous</a>
           </div>
         </div>

@@ -1952,3 +1952,237 @@ section {
     padding: 24px 20px;
   }
 }
+
+/* === USE CASE CARDS GROUPED (3 catégories) === */
+.use-cases-grouped {
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+.use-case-card-large {
+  min-height: 200px;
+  padding: 40px 32px;
+}
+
+.use-case-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-gray);
+  margin-top: 12px;
+}
+
+/* =============================================
+   STYLES ACCORDÉONS CATÉGORIES (3 groupes)
+   ============================================= */
+
+.accordion-category-header {
+  background: linear-gradient(135deg, var(--color-dark-bg) 0%, var(--color-dark-secondary) 100%);
+  padding: 24px 32px !important;
+  border-radius: 12px !important;
+  border-left: 4px solid var(--color-accent) !important;
+}
+
+.accordion-category-title {
+  font-size: 1.35rem !important;
+  font-weight: 700 !important;
+  color: var(--color-white) !important;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.accordion-category-subtitle {
+  font-size: 0.9rem !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  margin: 8px 0 0 0 !important;
+  font-weight: 400 !important;
+  display: block;
+}
+
+.accordion-category .accordion-content {
+  padding: 32px !important;
+  background: var(--color-white);
+}
+
+.accordion-category .use-case-detail ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.accordion-category .use-case-detail ul li {
+  padding: 8px 0 8px 28px;
+  position: relative;
+  line-height: 1.7;
+}
+
+.accordion-category .use-case-detail ul li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.accordion-category .use-case-detail ul li strong {
+  color: var(--color-dark-bg);
+  font-weight: 600;
+}
+
+/* =============================================
+   RESTAURATION COULEURS QUUBE.FR (FORMES GÉOMÉTRIQUES)
+   ============================================= */
+
+:root {
+  /* Couleurs géométriques Quube.fr */
+  --color-geometric-purple: #8B7FCE;
+  --color-geometric-turquoise: #6DD3CE;
+  --color-geometric-green: #5FD5A8;
+  --color-geometric-yellow: #F9E45C;
+}
+
+/* Accents de couleur sur les cards services (page Services) */
+.offer-card:nth-child(3n+1) {
+  border-left-color: var(--color-geometric-purple) !important;
+}
+
+.offer-card:nth-child(3n+1):hover {
+  border-left-color: var(--color-geometric-purple) !important;
+  box-shadow: 0 8px 24px rgba(139, 127, 206, 0.15) !important;
+}
+
+.offer-card:nth-child(3n+2) {
+  border-left-color: var(--color-geometric-turquoise) !important;
+}
+
+.offer-card:nth-child(3n+2):hover {
+  border-left-color: var(--color-geometric-turquoise) !important;
+  box-shadow: 0 8px 24px rgba(109, 211, 206, 0.15) !important;
+}
+
+.offer-card:nth-child(3n+3) {
+  border-left-color: var(--color-geometric-green) !important;
+}
+
+.offer-card:nth-child(3n+3):hover {
+  border-left-color: var(--color-geometric-green) !important;
+  box-shadow: 0 8px 24px rgba(95, 213, 168, 0.15) !important;
+}
+
+/* Accents catégories accordéons (page Cas d'usage) */
+.accordion-category:nth-child(1) .accordion-category-header {
+  border-left-color: var(--color-geometric-purple) !important;
+}
+
+.accordion-category:nth-child(2) .accordion-category-header {
+  border-left-color: var(--color-geometric-turquoise) !important;
+}
+
+.accordion-category:nth-child(3) .accordion-category-header {
+  border-left-color: var(--color-geometric-green) !important;
+}
+
+/* Badges avec couleurs alternées */
+.use-case-tag:nth-child(3n+1) {
+  background: rgba(139, 127, 206, 0.1);
+  color: var(--color-geometric-purple);
+}
+
+.use-case-tag:nth-child(3n+2) {
+  background: rgba(109, 211, 206, 0.1);
+  color: var(--color-geometric-turquoise);
+}
+
+.use-case-tag:nth-child(3n+3) {
+  background: rgba(95, 213, 168, 0.1);
+  color: var(--color-geometric-green);
+}
+
+/* Cards cas d'usage homepage avec accents couleur */
+.use-case-card-large:nth-child(1) {
+  border-left-color: var(--color-geometric-purple) !important;
+}
+
+.use-case-card-large:nth-child(1):hover {
+  border-left-color: var(--color-geometric-purple) !important;
+  box-shadow: 0 12px 32px rgba(139, 127, 206, 0.12) !important;
+}
+
+.use-case-card-large:nth-child(2) {
+  border-left-color: var(--color-geometric-turquoise) !important;
+}
+
+.use-case-card-large:nth-child(2):hover {
+  border-left-color: var(--color-geometric-turquoise) !important;
+  box-shadow: 0 12px 32px rgba(109, 211, 206, 0.12) !important;
+}
+
+.use-case-card-large:nth-child(3) {
+  border-left-color: var(--color-geometric-green) !important;
+}
+
+.use-case-card-large:nth-child(3):hover {
+  border-left-color: var(--color-geometric-green) !important;
+  box-shadow: 0 12px 32px rgba(95, 213, 168, 0.12) !important;
+}
+
+/* Piliers (homepage) avec couleurs géométriques */
+.vision-card:nth-child(4n+1) {
+  border-left-color: var(--color-geometric-purple);
+}
+
+.vision-card:nth-child(4n+2) {
+  border-left-color: var(--color-geometric-turquoise);
+}
+
+.vision-card:nth-child(4n+3) {
+  border-left-color: var(--color-geometric-green);
+}
+
+.vision-card:nth-child(4n+4) {
+  border-left-color: var(--color-geometric-yellow);
+}
+
+/* Timeline méthodologie (page Qui sommes-nous) */
+.timeline-item:nth-child(5n+1) .timeline-number {
+  background: var(--color-geometric-purple);
+}
+
+.timeline-item:nth-child(5n+2) .timeline-number {
+  background: var(--color-geometric-turquoise);
+}
+
+.timeline-item:nth-child(5n+3) .timeline-number {
+  background: var(--color-geometric-green);
+}
+
+.timeline-item:nth-child(5n+4) .timeline-number {
+  background: var(--color-geometric-yellow);
+  color: var(--color-dark-bg);
+}
+
+.timeline-item:nth-child(5n+5) .timeline-number {
+  background: var(--color-accent);
+}
+
+/* =============================================
+   RESPONSIVE ACCORDÉONS CATÉGORIES
+   ============================================= */
+
+@media (max-width: 768px) {
+  .accordion-category-header {
+    padding: 20px !important;
+  }
+
+  .accordion-category-title {
+    font-size: 1.15rem !important;
+  }
+
+  .accordion-category-subtitle {
+    font-size: 0.85rem !important;
+  }
+
+  .accordion-category .accordion-content {
+    padding: 24px !important;
+  }
+}
+
