@@ -11,46 +11,58 @@
 }
 
 :root {
-  /* Couleurs principales - tons sombres élégants */
-  --color-dark-bg: #0a0e1a;
-  --color-dark-card: #141824;
-  --color-navy: #1a1f35;
-  --color-navy-light: #252b42;
+  /* Couleurs principales - tons sombres élégants premium */
+  --color-dark-bg: #0B1120;
+  --color-dark-card: #151B2E;
+  --color-navy: #1E293B;
+  --color-navy-light: #2D3A52;
   
   /* Couleurs de texte */
   --color-text-primary: #ffffff;
-  --color-text-secondary: #b4b9c8;
-  --color-text-muted: #6b7280;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #94A3B8;
   
-  /* Accent */
-  --color-accent: #E67E22;
-  --color-accent-hover: #d35400;
+  /* Accent émeraude premium */
+  --color-accent: #10B981;
+  --color-accent-hover: #059669;
+  --color-accent-light: #D1FAE5;
+  
+  /* Accent secondaire (pour offre signature) */
+  --color-signature: #3B82F6;
+  --color-signature-hover: #2563EB;
+  --color-signature-light: #DBEAFE;
   
   /* Neutral light */
-  --color-light-bg: #f8f9fa;
+  --color-light-bg: #F8FAFC;
   --color-light-card: #ffffff;
   
   /* Typographie */
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   
-  /* Espacements généreux */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 2rem;
-  --spacing-lg: 4rem;
-  --spacing-xl: 6rem;
-  --spacing-xxl: 8rem;
+  /* Espacements TRÈS généreux (B2B premium) */
+  --spacing-xs: 0.75rem;
+  --spacing-sm: 1.5rem;
+  --spacing-md: 3rem;
+  --spacing-lg: 5rem;
+  --spacing-xl: 8rem;
+  --spacing-xxl: 12rem;
   
   /* Transitions */
   --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Shadows premium */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
 }
 
 /* === TYPOGRAPHIE === */
 body {
   font-family: var(--font-primary);
-  font-size: 16px;
-  line-height: 1.6;
-  color: var(--color-text-primary);
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--color-navy);
   background-color: var(--color-light-bg);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -58,32 +70,44 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
   margin-bottom: var(--spacing-md);
+  color: var(--color-navy);
 }
 
 h1 {
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 800;
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
   font-weight: 700;
 }
 
 h3 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+  font-weight: 700;
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 p {
   margin-bottom: var(--spacing-sm);
   line-height: 1.8;
+  font-size: 1.0625rem;
+}
+
+.lead {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  font-weight: 400;
 }
 
 a {
@@ -159,36 +183,50 @@ a {
 /* === BUTTONS === */
 .btn {
   display: inline-block;
-  padding: 0.875rem 2rem;
+  padding: 1.125rem 2.5rem;
   font-weight: 600;
-  font-size: 0.95rem;
-  border-radius: 8px;
+  font-size: 1.0625rem;
+  border-radius: 12px;
   cursor: pointer;
   transition: var(--transition-smooth);
   border: none;
   text-align: center;
+  letter-spacing: -0.01em;
 }
 
 .btn-primary {
   background-color: var(--color-accent);
   color: white;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
 }
 
 .btn-primary:hover {
   background-color: var(--color-accent-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(230, 126, 34, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.4);
+}
+
+.btn-signature {
+  background-color: var(--color-signature);
+  color: white;
+  box-shadow: 0 4px 14px rgba(59, 130, 246, 0.3);
+}
+
+.btn-signature:hover {
+  background-color: var(--color-signature-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.4);
 }
 
 .btn-secondary {
   background-color: transparent;
-  color: var(--color-text-primary);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: var(--color-navy);
+  border: 2px solid var(--color-navy);
 }
 
 .btn-secondary:hover {
-  border-color: var(--color-text-primary);
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: var(--color-navy);
+  color: white;
 }
 
 .btn-link {
@@ -197,6 +235,7 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+  padding: 0;
 }
 
 .btn-link:hover {
@@ -206,11 +245,11 @@ a {
 
 /* === SECTIONS === */
 .section {
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xxl) 0;
 }
 
 .section-dark {
-  background-color: var(--color-dark-bg);
+  background: linear-gradient(135deg, var(--color-dark-bg) 0%, var(--color-navy) 100%);
   color: var(--color-text-primary);
 }
 
@@ -222,6 +261,30 @@ a {
 .section-light {
   background-color: var(--color-light-bg);
   color: var(--color-navy);
+}
+
+.section-white {
+  background-color: white;
+  color: var(--color-navy);
+}
+
+/* Section signature - Mise en avant spéciale */
+.section-signature {
+  background: linear-gradient(135deg, var(--color-signature) 0%, #1E40AF 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-signature::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 /* === HERO === */
@@ -272,55 +335,101 @@ a {
 /* === CARDS === */
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
 }
 
 .card {
   background-color: var(--color-light-card);
-  border-radius: 12px;
+  border-radius: 20px;
   padding: var(--spacing-lg);
   transition: var(--transition-smooth);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-sm);
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-12px);
+  box-shadow: var(--shadow-xl);
+  border-color: rgba(16, 185, 129, 0.2);
 }
 
 .card-dark {
-  background-color: var(--color-dark-card);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .card-dark:hover {
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 .card-featured {
-  border: 2px solid var(--color-accent);
+  border: 3px solid var(--color-accent);
   position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.card-featured::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.card-signature {
+  background: linear-gradient(135deg, var(--color-signature) 0%, #2563EB 100%);
+  color: white;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-signature::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 80%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.card-signature h3,
+.card-signature h4,
+.card-signature p {
+  color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .card-badge {
   position: absolute;
-  top: -12px;
-  right: 20px;
-  background-color: var(--color-accent);
+  top: -16px;
+  right: 24px;
+  background: linear-gradient(135deg, var(--color-signature), #2563EB);
   color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.75rem;
+  padding: 0.625rem 1.25rem;
+  border-radius: 24px;
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
 
 .card-icon {
-  width: 48px;
-  height: 48px;
+  width: 56px;
+  height: 56px;
   margin-bottom: var(--spacing-sm);
   color: var(--color-accent);
 }
@@ -328,19 +437,25 @@ a {
 .card h3 {
   margin-bottom: var(--spacing-sm);
   color: var(--color-navy);
+  font-size: 1.5rem;
 }
 
-.card-dark h3 {
-  color: var(--color-text-primary);
+.card-dark h3, .card-signature h3 {
+  color: white;
 }
 
 .card p {
   color: var(--color-text-muted);
   margin-bottom: var(--spacing-md);
+  line-height: 1.7;
 }
 
 .card-dark p {
   color: var(--color-text-secondary);
+}
+
+.card-signature p {
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /* === VALUES GRID === */
