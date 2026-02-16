@@ -18,175 +18,192 @@ app.use(renderer)
 app.get('/', (c) => {
   return c.render(
     <>
-      {/* Section 1 - HERO */}
+      {/* Section 1 - HERO (fond sombre gradient, 100vh) */}
       <section class="hero">
-        <div class="hero-content animate-on-scroll">
-          <h1 class="fade-in">L'IA en Santé, En Toute Confiance</h1>
-          <p class="fade-in fade-in-delay-1">
-            Cabinet indépendant de conseil et formation en intelligence artificielle pour les organisations de santé et médico-sociales. 
+        <div class="hero-content">
+          <h1 class="fade-in">L'IA en Santé,<br />En Toute Confiance</h1>
+          <p class="hero-subtitle fade-in">
+            Cabinet indépendant de conseil et formation en IA pour les organisations de santé et médico-sociales. 
             De la stratégie aux usages concrets, nous vous guidons sans jargon, au service des soignants et des patients.
           </p>
-          <div class="hero-cta fade-in fade-in-delay-2">
-            <a href="/offres" class="btn btn-primary">Découvrir nos offres</a>
-            <a href="/contact" class="btn btn-secondary">Prendre rendez-vous</a>
+          <div class="hero-cta fade-in">
+            <a href="/offres" class="btn btn-primary btn-large">Découvrir nos offres</a>
+            <a href="/contact" class="btn btn-secondary btn-large">Prendre rendez-vous</a>
           </div>
-          <div class="hero-brands fade-in fade-in-delay-3">
-            Claude | ChatGPT | Gemini | Mistral | Copilot
+          <div class="hero-tools fade-in">
+            Claude • ChatGPT • Gemini • Mistral • Copilot
           </div>
         </div>
       </section>
 
-      {/* Section 2 - 3 OFFRES */}
-      <section class="section section-light">
+      {/* Section 2 - 3 OFFRES (fond clair) */}
+      <section class="section-light">
         <div class="container">
-          <h2 class="section-title animate-on-scroll">Comment pouvons-nous vous aider ?</h2>
-          <div class="cards-grid animate-on-scroll">
+          <div class="section-header fade-in">
+            <h2 class="section-title">Comment pouvons-nous vous aider ?</h2>
+            <p class="section-subtitle">Trois approches complémentaires pour réussir votre transformation IA</p>
+          </div>
+          <div class="cards-grid">
             {/* Offre 1 - Formation */}
-            <div class="card">
+            <div class="card fade-in">
               <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
-              <h3>Formation & Montée en compétences</h3>
-              <p>Vos équipes deviennent autonomes sur l'IA. Du dirigeant au professionnel de terrain, des programmes progressifs 100% santé.</p>
-              <a href="/offres#formation" class="btn-link">Découvrir →</a>
+              <h3 class="card-title">Formation & Montée en compétences</h3>
+              <p class="card-description">Vos équipes deviennent autonomes sur l'IA. Du dirigeant au professionnel de terrain, des programmes progressifs 100% santé.</p>
+              <a href="/offres#formation" class="card-link">Découvrir →</a>
             </div>
 
             {/* Offre 2 - Conseil */}
-            <div class="card">
+            <div class="card fade-in">
               <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
               </svg>
-              <h3>Conseil & Stratégie IA</h3>
-              <p>Diagnostic de maturité, feuille de route, aide au choix des solutions, pilotage de projet, conduite du changement.</p>
-              <a href="/offres#conseil" class="btn-link">Découvrir →</a>
+              <h3 class="card-title">Conseil & Stratégie IA</h3>
+              <p class="card-description">Construisons ensemble votre feuille de route IA : diagnostic, sélection de solutions neutres, pilotage, conduite du changement et mesure du ROI.</p>
+              <a href="/offres#conseil" class="card-link">Découvrir →</a>
             </div>
 
-            {/* Offre 3 - Accélération (Featured) */}
-            <div class="card card-featured">
+            {/* Offre 3 - Accélération (SIGNATURE) */}
+            <div class="card card-signature fade-in">
               <div class="card-badge">Offre signature</div>
               <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              <h3>Accélération de Projet</h3>
-              <p>L'IA comme outil de production pour vos projets stratégiques. Livrables 2 à 3 fois plus rapides, transfert de compétences inclus.</p>
-              <a href="/offres#acceleration" class="btn-link">Découvrir →</a>
+              <h3 class="card-title">Accélération de Projet</h3>
+              <p class="card-description">Produisez en 2 à 3 fois moins de temps avec l'IA. Nous travaillons en binôme avec vous, de la stratégie au financement : le conseil augmenté par l'IA.</p>
+              <a href="/offres#acceleration" class="card-link">Découvrir l'offre →</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 3 - VALEURS + CHIFFRES */}
-      <section class="section section-light" style="padding-top: 0;">
+      {/* Section 3 - VALEURS & CHIFFRES (fond légèrement teinté) */}
+      <section class="section-alt">
         <div class="container">
           {/* Valeurs */}
-          <div class="values-grid animate-on-scroll">
+          <div class="values-grid fade-in">
             <div class="value-item">
-              <h4>🏥 100% Santé × IA</h4>
-              <p>Expertise terrain sanitaire + intelligence artificielle</p>
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+              </svg>
+              <h4 class="value-title">100% Santé × IA</h4>
+              <p class="value-description">Expertise terrain sanitaire + intelligence artificielle</p>
             </div>
             <div class="value-item">
-              <h4>🤝 Neutres & Indépendants</h4>
-              <p>Aucun partenariat éditeur, conseil objectif</p>
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <h4 class="value-title">Neutres & Indépendants</h4>
+              <p class="value-description">Aucun partenariat éditeur, conseil objectif</p>
             </div>
             <div class="value-item">
-              <h4>🛠️ Concrets & Humains</h4>
-              <p>Co-construction pragmatique avec vos équipes</p>
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h4 class="value-title">Concrets & Humains</h4>
+              <p class="value-description">Co-construction pragmatique avec vos équipes</p>
             </div>
             <div class="value-item">
-              <h4>✋ Gardez la Main</h4>
-              <p>L'IA augmente vos équipes, ne les remplace pas</p>
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11" />
+              </svg>
+              <h4 class="value-title">Gardez la Main</h4>
+              <p class="value-description">L'IA augmente vos équipes, ne les remplace pas</p>
             </div>
           </div>
 
-          {/* Chiffres */}
-          <div class="stats-grid animate-on-scroll">
-            <div class="stat-item">
-              <div class="stat-number">25 ans</div>
-              <div class="stat-label">d'expertise dans le secteur santé et médico-social</div>
+          {/* Chiffres clés */}
+          <div class="numbers-grid fade-in" style="margin-top: 80px;">
+            <div class="number-item">
+              <span class="number-value">25 ans</span>
+              <div class="number-label">D'expertise santé</div>
             </div>
-            <div class="stat-item">
-              <div class="stat-number">÷ 2-3</div>
-              <div class="stat-label">les délais de vos projets stratégiques</div>
+            <div class="number-item">
+              <span class="number-value">÷2‑3</span>
+              <div class="number-label">Délais divisés</div>
             </div>
-            <div class="stat-item">
-              <div class="stat-number">50-70%</div>
-              <div class="stat-label">de gain de temps mesuré</div>
+            <div class="number-item">
+              <span class="number-value">50‑70 %</span>
+              <div class="number-label">Gain de temps</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 4 - LE FONDATEUR */}
-      <section class="section section-dark">
+      {/* Section 4 - FONDATEUR (fond sombre) */}
+      <section class="founder-section">
         <div class="container">
-          <div class="quote-section animate-on-scroll">
-            <div style="text-align: center;">
-              <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" 
-                alt="Samuel Bottaro" 
-                class="quote-image"
-                style="width: 300px; height: 300px; object-fit: cover;"
-              />
-            </div>
-            <div class="quote-content">
-              <div class="quote-text">
+          <div class="founder-content fade-in">
+            {/* Avatar monogram SB */}
+            <div class="founder-avatar">SB</div>
+            
+            <div class="founder-quote-block">
+              <p class="founder-quote">
                 « J'ai créé QUUBE IA Santé avec une conviction : l'intelligence artificielle est un levier majeur pour transformer le secteur de la santé. 
                 Accompagner les dirigeants et les équipes dans la maîtrise de l'IA, c'est leur donner les moyens de répondre aux défis de demain — 
                 efficience des organisations, qualité de l'accompagnement, et épanouissement des professionnels. »
-              </div>
-              <div class="quote-author">
-                Samuel Bottaro
-                <span>Fondateur de QUUBE IA Santé</span>
-              </div>
-              <div style="margin-top: var(--spacing-md);">
-                <a href="/a-propos" class="btn-link">En savoir plus →</a>
+              </p>
+              <div>
+                <div class="founder-name">Samuel Bottaro</div>
+                <div class="founder-title">Fondateur & Consultant IA Santé</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Section 5 - APERÇU CAS D'USAGE */}
-      <section class="section section-light">
+      {/* Section 5 - APERÇU CAS D'USAGE (fond clair) */}
+      <section class="section-light">
         <div class="container">
-          <h2 class="section-title animate-on-scroll">L'IA au service de chaque métier</h2>
-          <p class="section-subtitle animate-on-scroll">
-            Direction générale, finance, RH, qualité, soins, éducatif... Découvrez les applications concrètes pour votre fonction.
+          <div class="section-header fade-in">
+            <h2 class="section-title">Cas d'usage par métier</h2>
+            <p class="section-subtitle">Des gains concrets, mesurés sur le terrain</p>
+          </div>
+          <div class="cards-grid">
+            <div class="card fade-in">
+              <h4 class="card-title">Direction Générale</h4>
+              <p class="card-description">Projet stratégique livré en <strong>8 semaines</strong> au lieu de 4 mois.</p>
+              <p class="card-description" style="font-size: 0.95rem; color: var(--color-text-gray);">
+                Plan stratégique • Projet établissement • Projet associatif
+              </p>
+            </div>
+            <div class="card fade-in">
+              <h4 class="card-title">Finance & Gestion</h4>
+              <p class="card-description">Rapports DGOS/ARS en <strong>5 jours</strong> au lieu de 3 semaines.</p>
+              <p class="card-description" style="font-size: 0.95rem; color: var(--color-text-gray);">
+                Rapports réglementaires • Budgets • Analyses financières
+              </p>
+            </div>
+            <div class="card fade-in">
+              <h4 class="card-title">Ressources Humaines</h4>
+              <p class="card-description"><strong>120 fiches de poste</strong> créées en 1 semaine vs 2 mois.</p>
+              <p class="card-description" style="font-size: 0.95rem; color: var(--color-text-gray);">
+                Recrutement • Formation • Gestion des talents
+              </p>
+            </div>
+            <div class="card fade-in">
+              <h4 class="card-title">Qualité & Conformité</h4>
+              <p class="card-description"><strong>3 auto-évaluations ESSMS</strong> simultanées en mode projet.</p>
+              <p class="card-description" style="font-size: 0.95rem; color: var(--color-text-gray);">
+                HAS • Certifications • Plans d'action
+              </p>
+            </div>
+          </div>
+          <div class="text-center" style="margin-top: 48px;">
+            <a href="/cas-usage" class="btn btn-primary">Voir tous les cas d'usage</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6 - CTA FINAL (fond sombre) */}
+      <section class="cta-final">
+        <div class="cta-final-content fade-in">
+          <h2>Parlons de votre projet</h2>
+          <p class="cta-final-subtitle">
+            Un échange de 30 minutes pour comprendre vos enjeux et définir comment l'IA peut accélérer vos projets.
           </p>
-          <div class="mini-cards animate-on-scroll">
-            <div class="mini-card">
-              <h4>📊 Direction Générale</h4>
-              <p>Projet d'établissement produit en 8 semaines au lieu de 4 mois</p>
-            </div>
-            <div class="mini-card">
-              <h4>💰 Finance</h4>
-              <p>Rapports DGOS/ARS préparés en 5 jours au lieu de 3 semaines</p>
-            </div>
-            <div class="mini-card">
-              <h4>👥 Ressources Humaines</h4>
-              <p>120 fiches de poste rédigées en 1 semaine au lieu de 2 mois</p>
-            </div>
-            <div class="mini-card">
-              <h4>✅ Qualité</h4>
-              <p>Auto-évaluation ESSMS de 3 établissements en parallèle</p>
-            </div>
-          </div>
-          <div style="text-align: center; margin-top: var(--spacing-lg);" class="animate-on-scroll">
-            <a href="/cas-usage" class="btn btn-primary">Voir tous les cas d'usage →</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 6 - CTA FINAL */}
-      <section class="section section-dark">
-        <div class="container">
-          <div class="cta-section animate-on-scroll">
-            <h2>Parlons de votre projet</h2>
-            <p>Un premier échange de 30 minutes, sans engagement, pour explorer le potentiel de l'IA dans votre organisation.</p>
-            <a href="/contact" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
-              Prendre rendez-vous
-            </a>
-          </div>
+          <a href="/contact" class="btn btn-primary btn-large">Prendre rendez-vous</a>
         </div>
       </section>
     </>,
@@ -198,438 +215,18 @@ app.get('/', (c) => {
 app.get('/offres', (c) => {
   return c.render(
     <>
-      {/* Hero Section */}
-      <section class="hero" style="min-height: 60vh;">
-        <div class="hero-content">
+      <div class="page-hero">
+        <div class="container">
           <h1>Nos offres</h1>
-          <p style="max-width: 800px; margin: 0 auto;">
-            De la première sensibilisation au déploiement opérationnel, nous vous accompagnons à chaque étape de votre transformation IA. 
-            Trois offres complémentaires, une seule exigence : des résultats concrets.
-          </p>
+          <p>Trois approches complémentaires pour réussir votre transformation IA</p>
         </div>
-      </section>
-
-      {/* OFFRE 1 - FORMATION */}
-      <section id="formation" class="section section-light offer-section">
+      </div>
+      
+      <section class="section-light">
         <div class="container">
-          <div class="offer-header animate-on-scroll">
-            <h2>Formation & Montée en compétences</h2>
-            <p>Vos équipes deviennent autonomes sur l'IA. Du dirigeant au professionnel de terrain, des programmes progressifs 100% santé.</p>
-          </div>
-
-          <div class="service-cards">
-            {/* Conférences */}
-            <div class="service-card animate-on-scroll">
-              <h3>🎤 Conférences IA Inspirantes</h3>
-              <div class="service-meta">
-                <span><strong>Public :</strong> COMEX, CODIR, CSE, CME</span>
-                <span><strong>Durée :</strong> 2h</span>
-                <span><strong>Format :</strong> 50-200 personnes</span>
-              </div>
-              <div class="service-content">
-                <p><strong>Contenu :</strong></p>
-                <ul>
-                  <li>Démystification de l'IA et de ses applications en santé</li>
-                  <li>Exemples concrets et retours d'expérience sectoriels</li>
-                  <li>Démonstrations live d'outils IA</li>
-                  <li>État de l'art et perspectives d'évolution</li>
-                </ul>
-              </div>
-              <div class="service-deliverables">
-                <strong>📦 Livrables :</strong> Support de présentation + Démonstration en live
-              </div>
-            </div>
-
-            {/* Coaching */}
-            <div class="service-card animate-on-scroll">
-              <h3>👔 Coaching IA pour Dirigeants</h3>
-              <div class="service-meta">
-                <span><strong>Public :</strong> DG, Directeurs</span>
-                <span><strong>Format :</strong> 3-6 séances (1h30)</span>
-                <span><strong>Mode :</strong> Confidentiel</span>
-              </div>
-              <div class="service-content">
-                <p><strong>Contenu :</strong></p>
-                <ul>
-                  <li>Appropriation personnalisée des outils IA</li>
-                  <li>Construction d'une vision stratégique IA</li>
-                  <li>Anticipation des impacts managériaux</li>
-                  <li>Cas d'usage adaptés à votre contexte</li>
-                </ul>
-              </div>
-              <div class="service-deliverables">
-                <strong>📦 Livrables :</strong> Plan d'action personnel + Hotline 3 mois
-              </div>
-            </div>
-          </div>
-
-          {/* Formations collectives - 3 niveaux */}
-          <h3 style="margin-top: var(--spacing-xl); text-align: center; color: var(--color-navy);">
-            Formations collectives — 3 niveaux progressifs
-          </h3>
-          
-          <div class="formation-levels">
-            {/* Niveau Découverte */}
-            <div class="level-card level-debutant animate-on-scroll">
-              <span class="level-badge">🌱 DÉCOUVERTE</span>
-              <h3>Niveau Débutant</h3>
-              <div class="level-meta">
-                <strong>Durée :</strong> 0,5 jour (3h30)<br/>
-                <strong>Cible :</strong> Nouveaux utilisateurs
-              </div>
-              <ul>
-                <li>Qu'est-ce que l'IA générative ?</li>
-                <li>Premiers pas avec ChatGPT/Claude</li>
-                <li>5 cas d'usage simples pour démarrer</li>
-                <li>Bonnes pratiques RGPD et sécurité</li>
-              </ul>
-              <div class="level-deliverable">
-                ✓ Guide de démarrage + 10 prompts métier
-              </div>
-            </div>
-
-            {/* Niveau Productivité */}
-            <div class="level-card level-intermediaire animate-on-scroll">
-              <span class="level-badge">📈 PRODUCTIVITÉ</span>
-              <h3>Niveau Intermédiaire</h3>
-              <div class="level-meta">
-                <strong>Durée :</strong> 1 jour<br/>
-                <strong>Cible :</strong> Utilisateurs réguliers
-              </div>
-              <ul>
-                <li>Techniques de prompting avancé</li>
-                <li>Chaînage de prompts pour tâches complexes</li>
-                <li>Intégration avec Office 365</li>
-                <li>Cas d'usage métier approfondis</li>
-              </ul>
-              <div class="level-deliverable">
-                ✓ Bibliothèque de prompts + Charte d'usage
-              </div>
-            </div>
-
-            {/* Niveau Maîtrise */}
-            <div class="level-card level-expert animate-on-scroll">
-              <span class="level-badge">🎓 MAÎTRISE</span>
-              <h3>Niveau Expert</h3>
-              <div class="level-meta">
-                <strong>Durée :</strong> 2 jours<br/>
-                <strong>Cible :</strong> Référents IA, chefs de projet
-              </div>
-              <ul>
-                <li>Automatisation de workflows IA</li>
-                <li>APIs et intégrations techniques</li>
-                <li>Benchmark et choix de solutions</li>
-                <li>Formation de formateurs internes</li>
-              </ul>
-              <div class="level-deliverable">
-                ✓ Attestation de formation QUUBE + Kit de déploiement
-              </div>
-            </div>
-          </div>
-
-          {/* Sur-mesure */}
-          <div class="service-card animate-on-scroll" style="margin-top: var(--spacing-lg); background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-            <h3>🎯 Formations Sur-mesure</h3>
-            <p>Approfondissements outils spécifiques (Claude, Copilot, etc.), analyse de données avec IA, automatisations simples, optimisation de workflows — nous consulter pour un programme adapté à vos besoins.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* OFFRE 2 - CONSEIL */}
-      <section id="conseil" class="section section-light offer-section">
-        <div class="container">
-          <div class="offer-header animate-on-scroll">
-            <h2>Conseil & Stratégie IA</h2>
-            <p>Structurez et déployez votre transformation IA. Du diagnostic initial au pilotage opérationnel, un accompagnement sur-mesure.</p>
-          </div>
-
-          <div class="service-cards">
-            {/* Diagnostic */}
-            <div class="service-card animate-on-scroll">
-              <h3>🔍 Diagnostic Flash & Feuille de Route</h3>
-              <div class="service-meta">
-                <span><strong>Public :</strong> DG, DSI</span>
-                <span><strong>Durée :</strong> 2-5 jours selon taille</span>
-              </div>
-              <div class="service-content">
-                <p><strong>Contenu :</strong></p>
-                <ul>
-                  <li>Audit de maturité IA (processus, données, culture)</li>
-                  <li>Cartographie des cas d'usage prioritaires</li>
-                  <li>Analyse des quick wins et opportunités</li>
-                  <li>Priorisation par ROI et faisabilité</li>
-                </ul>
-              </div>
-              <div class="service-deliverables">
-                <strong>📦 Livrables :</strong>
-                <ul style="margin-top: 0.5rem;">
-                  <li>Rapport diagnostic + scoring maturité</li>
-                  <li>Feuille de route IA à 3 ans</li>
-                  <li>Matrice priorisation cas d'usage</li>
-                  <li>Recommandations gouvernance</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Aide au choix */}
-            <div class="service-card animate-on-scroll">
-              <h3>🎯 Aide au Choix des Solutions IA</h3>
-              <div class="service-meta">
-                <span><strong>Public :</strong> DSI, Directions métiers, Achats</span>
-                <span><strong>Durée :</strong> 3-10 jours</span>
-              </div>
-              <div class="service-content">
-                <p><strong>Contenu :</strong></p>
-                <ul>
-                  <li>Analyse besoins métiers et techniques</li>
-                  <li>Benchmark neutre du marché des solutions</li>
-                  <li>Grille d'évaluation multicritères</li>
-                  <li>Organisation POC/démos avec éditeurs</li>
-                  <li>Accompagnement négociation</li>
-                </ul>
-              </div>
-              <div class="service-deliverables">
-                <strong>📦 Livrables :</strong>
-                <ul style="margin-top: 0.5rem;">
-                  <li>Cahier des charges fonctionnel</li>
-                  <li>Benchmark comparatif (5-10 solutions)</li>
-                  <li>Recommandation argumentée</li>
-                  <li>Support présentation COMEX</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Pilotage */}
-            <div class="service-card animate-on-scroll">
-              <h3>⚙️ Pilotage de Projet IA</h3>
-              <div class="service-meta">
-                <span><strong>Public :</strong> DSI, Directions métiers, Chefs de projet</span>
-              </div>
-              <div class="service-content">
-                <ul>
-                  <li>Pilotage MOA/MOE</li>
-                  <li>Méthodologie agile adaptée santé</li>
-                  <li>Coordination éditeurs/SI</li>
-                  <li>Tests et recette</li>
-                  <li>Déploiement progressif</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Conduite changement */}
-            <div class="service-card animate-on-scroll">
-              <h3>🚀 Conduite du Changement</h3>
-              <div class="service-meta">
-                <span><strong>Public :</strong> DRH, Communication, Managers</span>
-              </div>
-              <div class="service-content">
-                <ul>
-                  <li>Plan de communication interne</li>
-                  <li>Identification ambassadeurs IA</li>
-                  <li>Formation utilisateurs finaux</li>
-                  <li>Accompagnement des résistances</li>
-                  <li>Support post-déploiement</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Mesure ROI */}
-            <div class="service-card animate-on-scroll">
-              <h3>📊 Mesure de ROI & Amélioration Continue</h3>
-              <div class="service-meta">
-                <span><strong>Public :</strong> DG, Contrôle de gestion, DSI</span>
-              </div>
-              <div class="service-deliverables">
-                <strong>📦 Livrables :</strong>
-                <ul style="margin-top: 0.5rem;">
-                  <li>Tableau de bord ROI</li>
-                  <li>Rapport d'impact mesurable</li>
-                  <li>Benchmark interne</li>
-                  <li>Recommandations d'optimisation</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* OFFRE 3 - ACCÉLÉRATION (Featured) */}
-      <section id="acceleration" class="section section-dark offer-section">
-        <div class="container">
-          <div class="offer-header animate-on-scroll">
-            <div style="display: inline-block; background: var(--color-accent); color: white; padding: 0.5rem 1.5rem; border-radius: 20px; font-size: 0.875rem; font-weight: 700; margin-bottom: 1rem;">
-              ★ OFFRE SIGNATURE
-            </div>
-            <h2 style="color: white;">L'IA accélère vos projets stratégiques</h2>
-            <p style="color: var(--color-text-secondary);">
-              L'IA comme outil de production du conseil. Délais ÷2-3, coûts réduits, transfert de compétences inclus.
-            </p>
-          </div>
-
-          {/* 3 Avantages */}
-          <div class="advantages-grid animate-on-scroll">
-            <div class="advantage-item">
-              <div class="advantage-icon">⏱️</div>
-              <h4 style="color: white;">Délais ÷ 2 à 3</h4>
-              <p style="color: var(--color-text-secondary);">Accélération massive de la production des livrables grâce à l'IA en co-pilote</p>
-            </div>
-            <div class="advantage-item">
-              <div class="advantage-icon">💰</div>
-              <h4 style="color: white;">Coûts Réduits</h4>
-              <p style="color: var(--color-text-secondary);">Tarif compétitif vs. cabinets classiques grâce à l'efficacité de l'IA</p>
-            </div>
-            <div class="advantage-item">
-              <div class="advantage-icon">🎓</div>
-              <h4 style="color: white;">Transfert Inclus</h4>
-              <p style="color: var(--color-text-secondary);">Vos équipes montent en compétence IA en situation réelle de travail</p>
-            </div>
-          </div>
-
-          {/* Projets éligibles */}
-          <h3 style="margin-top: var(--spacing-xl); text-align: center; color: white;">
-            Projets Éligibles
-          </h3>
-          
-          <div class="project-categories animate-on-scroll">
-            <div class="project-category">
-              <h4>📋 Stratégie & Gouvernance</h4>
-              <ul>
-                <li>Projet d'établissement</li>
-                <li>Projet de service</li>
-                <li>CPOM (Contrat Pluriannuel)</li>
-                <li>Schéma directeur SI</li>
-              </ul>
-            </div>
-
-            <div class="project-category">
-              <h4>💼 Développement & Financement</h4>
-              <ul>
-                <li>Réponse AAP / AMI</li>
-                <li>Business plan / Étude faisabilité</li>
-                <li>Dossier de financement</li>
-                <li>Nouveau modèle économique</li>
-              </ul>
-            </div>
-
-            <div class="project-category">
-              <h4>🔄 Transformation</h4>
-              <ul>
-                <li>Transformation offre services</li>
-                <li>Diversification (habitat, SSIAD...)</li>
-                <li>Réorganisation services</li>
-                <li>Optimisation performance</li>
-              </ul>
-            </div>
-
-            <div class="project-category">
-              <h4>📊 Analyse & Benchmark</h4>
-              <ul>
-                <li>Étude de marché / Positionnement</li>
-                <li>Benchmark concurrentiel</li>
-                <li>Analyse réglementaire</li>
-                <li>Revue littérature / État art</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Tableau des gains */}
-          <h3 style="margin-top: var(--spacing-xl); text-align: center; color: white;">
-            Gains de Temps Mesurés
-          </h3>
-          
-          <div class="gains-table-wrapper animate-on-scroll">
-            <table class="gains-table">
-              <thead>
-                <tr>
-                  <th>Type de Projet</th>
-                  <th>Délai Classique</th>
-                  <th>Délai Augmenté</th>
-                  <th>Gain</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Réponse AAP</strong></td>
-                  <td>3-4 semaines</td>
-                  <td>1-2 semaines</td>
-                  <td class="gain-highlight">50-60%</td>
-                </tr>
-                <tr>
-                  <td><strong>Business Plan</strong></td>
-                  <td>2-3 semaines</td>
-                  <td>5-7 jours</td>
-                  <td class="gain-highlight">60-70%</td>
-                </tr>
-                <tr>
-                  <td><strong>Projet d'Établissement</strong></td>
-                  <td>3-4 mois</td>
-                  <td>6-8 semaines</td>
-                  <td class="gain-highlight">50%</td>
-                </tr>
-                <tr>
-                  <td><strong>Étude de Diversification</strong></td>
-                  <td>6-8 semaines</td>
-                  <td>2-3 semaines</td>
-                  <td class="gain-highlight">60-65%</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          {/* Méthode binôme */}
-          <h3 style="margin-top: var(--spacing-xl); text-align: center; color: white;">
-            Méthode : Travail en Binôme
-          </h3>
-          
-          <div class="method-steps animate-on-scroll">
-            <div class="method-step">
-              <div class="step-number">1</div>
-              <h4>Cadrage</h4>
-              <p>
-                Consultant QUUBE structure le projet et définit les workflows IA. 
-                Référent client apporte la connaissance terrain.
-              </p>
-            </div>
-
-            <div class="method-step">
-              <div class="step-number">2</div>
-              <h4>Production</h4>
-              <p>
-                Consultant pilote l'IA et affine les outputs. 
-                Référent co-produit en temps réel et apprend les techniques.
-              </p>
-            </div>
-
-            <div class="method-step">
-              <div class="step-number">3</div>
-              <h4>Livraison</h4>
-              <p>
-                Livrables projet finalisés + Kit de transfert IA 
-                (prompts, templates, méthodologie reproductible).
-              </p>
-            </div>
-          </div>
-
-          <div style="text-align: center; margin-top: var(--spacing-xl);" class="animate-on-scroll">
-            <a href="/contact" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
-              Accélérez votre prochain projet →
-            </a>
-            <p style="margin-top: var(--spacing-md); color: var(--color-text-secondary);">
-              Échangeons sur votre projet stratégique et son potentiel d'accélération
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section class="section section-light">
-        <div class="container">
-          <div class="cta-section animate-on-scroll">
-            <h2>Prêt à démarrer ?</h2>
-            <p>Un premier échange de 30 minutes pour identifier l'offre qui correspond à vos besoins.</p>
-            <a href="/contact" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
-              Prendre rendez-vous
-            </a>
+          <p style="text-align: center; font-size: 1.125rem;">Contenu détaillé des offres à venir...</p>
+          <div class="text-center" style="margin-top: 32px;">
+            <a href="/contact" class="btn btn-primary">Nous contacter</a>
           </div>
         </div>
       </section>
@@ -642,525 +239,16 @@ app.get('/offres', (c) => {
 app.get('/cas-usage', (c) => {
   return c.render(
     <>
-      {/* Hero */}
-      <section class="hero" style="min-height: 60vh;">
-        <div class="hero-content">
-          <h1>L'IA au service de chaque métier</h1>
-          <p style="max-width: 800px; margin: 0 auto;">
-            Découvrez les applications concrètes de l'intelligence artificielle dans votre domaine. 
-            Des cas d'usage testés dans le secteur santé et médico-social.
-          </p>
-        </div>
-      </section>
-
-      {/* Filtres transversaux */}
-      <section class="section section-light" style="padding-top: var(--spacing-md);">
+      <div class="page-hero">
         <div class="container">
-          <div class="filter-badges">
-            <div class="filter-badge conformite">🏛️ Conformité — RGPD, AI Act, HDS, HAS, ESSMS</div>
-            <div class="filter-badge data">📊 Data & Analytics — BI, tableaux de bord, prédictif</div>
-            <div class="filter-badge automatisation">⚡ Automatisation — Gains de temps, workflows, documents</div>
-          </div>
+          <h1>Cas d'usage IA par métier</h1>
+          <p>Des exemples concrets, des gains mesurés</p>
         </div>
-      </section>
-
-      {/* Onglets métiers */}
-      <section class="section section-light" style="padding-top: 0;">
+      </div>
+      
+      <section class="section-light">
         <div class="container">
-          <div class="tabs-container">
-            {/* Navigation onglets */}
-            <div class="tabs-nav">
-              <button class="tab-button" data-tab="dg">📊 Direction Générale</button>
-              <button class="tab-button" data-tab="finance">💰 Finance & Gestion</button>
-              <button class="tab-button" data-tab="rh">👥 Ressources Humaines</button>
-              <button class="tab-button" data-tab="qualite">✅ Qualité & Conformité</button>
-              <button class="tab-button" data-tab="soins">🩺 Soins & Médical</button>
-              <button class="tab-button" data-tab="educatif">🎓 Éducatif & Médico-social</button>
-              <button class="tab-button" data-tab="transverse">🔄 Fonctions Transverses</button>
-            </div>
-
-            {/* Contenu onglet DG */}
-            <div class="tab-content" data-tab-content="dg">
-              <div class="use-case-example">
-                <h3>💡 Exemple concret</h3>
-                <p>Un DG d'une fondation médico-sociale a produit un projet stratégique complet en 8 semaines au lieu de 4 mois, avec analyse comparative de 15 établissements.</p>
-              </div>
-              <div class="use-cases-grid">
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Projets d'établissement et de service</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Rédaction collaborative, alignement stratégique, analyse comparative, production de livrables structurés en quelques semaines.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>CPOM et contrats pluriannuels</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-conformite">Conformité</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Construction des objectifs, indicateurs, plans d'actions, mise en cohérence avec les exigences réglementaires.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Notes stratégiques et synthèses décisionnelles</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Préparation CA, COMEX, CME avec synthèses percutantes et structurées.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Veille concurrentielle et positionnement</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Analyse du marché, benchmarks inter-établissements, identification opportunités de développement.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Business plans et nouveaux modèles économiques</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Projections financières, scénarios, études de faisabilité, dossiers de financement.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Dossiers appels à projets (AAP/AAC)</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Rédaction accélérée, cohérence des réponses, maximisation des chances de succès.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Contenu onglet Finance */}
-            <div class="tab-content" data-tab-content="finance">
-              <div class="use-case-example">
-                <h3>💡 Exemple concret</h3>
-                <p>Une DAF d'un CH de 800 lits a réduit la préparation des rapports DGOS/ARS de 3 semaines à 5 jours.</p>
-              </div>
-              <div class="use-cases-grid">
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Business plans et projections financières</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Modélisation financière, scénarios multiples, analyses de sensibilité automatisées.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Simulations tarifaires (T2A, dotation)</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Optimisation tarifaire, impact de changements d'activité, aide à la décision budgétaire.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Rapports financiers DGOS/ARS</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-conformite">Conformité</span>
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Production accélérée des rapports réglementaires avec conformité garantie.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Réponses MIGAC/FIR</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-conformite">Conformité</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Dossiers de financement structurés, argumentaires solides, maximisation des dotations.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Tableaux de bord de gestion</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Construction de KPI, analyses d'écarts, reporting automatisé pour le pilotage.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Analyse des écarts budget/réel</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Identification des dérives, analyses de causes, recommandations d'ajustement.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Contenu onglet RH */}
-            <div class="tab-content" data-tab-content="rh">
-              <div class="use-case-example">
-                <h3>💡 Exemple concret</h3>
-                <p>Une DRH a harmonisé 120 fiches de poste en 1 semaine au lieu de 2 mois.</p>
-              </div>
-              <div class="use-cases-grid">
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Rédaction de fiches de poste</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Génération cohérente, adaptation aux spécificités métier, harmonisation de la nomenclature.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Tri et analyse de CV</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Pré-sélection intelligente, matching compétences/poste, gain de temps massif.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Entretiens annuels et professionnels</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Synthèses structurées, identification besoins de formation, plans de développement.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Plans de formation individuels</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Parcours personnalisés, alignement avec GPEC, optimisation des budgets formation.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Plannings prévisionnels</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Optimisation effectifs, gestion congés/remplacements, respect des contraintes réglementaires.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Plans QVT et prévention RPS</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                      <span class="badge badge-conformite">Conformité</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Diagnostics, plans d'actions structurés, préparation CSE/CSSCT.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Contenu onglet Qualité */}
-            <div class="tab-content" data-tab-content="qualite">
-              <div class="use-case-example">
-                <h3>💡 Exemple concret</h3>
-                <p>Un responsable qualité a préparé l'auto-évaluation ESSMS de 3 établissements en parallèle.</p>
-              </div>
-              <div class="use-cases-grid">
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Préparation certification HAS</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-conformite">Conformité</span>
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Dossiers de preuves structurés, traçabilité complète, gains de temps considérables.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Auto-évaluation ESSMS</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-conformite">Conformité</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Référentiel ESSMS complet, plans d'amélioration, synthèses par domaine.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Rédaction de procédures qualité</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Harmonisation documentaire, mise à jour facilitée, cohérence organisationnelle.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Signalement événements indésirables (EI)</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-conformite">Conformité</span>
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Analyses de causes, plans d'actions correctives, suivi des indicateurs.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Conformité RGPD et protection données</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-conformite">Conformité</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Registres de traitement, analyses d'impact, documentation complète pour audits.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>AI Act et éthique IA</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-conformite">Conformité</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Charte d'usage IA, gouvernance, conformité réglementaire européenne.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Contenu onglet Soins */}
-            <div class="tab-content" data-tab-content="soins">
-              <div class="use-case-example">
-                <h3>💡 Exemple concret</h3>
-                <p>Une équipe médicale a réduit de 40% le temps de rédaction des comptes rendus de RCP.</p>
-              </div>
-              <div class="use-cases-grid">
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Comptes rendus médicaux</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Comptes rendus opératoires, consultations, structuration automatique, gain de temps massif.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Synthèses RCP (Réunion Concertation Pluridisciplinaire)</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Décisions structurées, traçabilité des discussions, partage inter-équipes facilité.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Protocoles de soins</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                      <span class="badge badge-conformite">Conformité</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Adaptation recommandations HAS, personnalisation par service, mise à jour facilitée.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Recherche bibliographique médicale</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Veille scientifique ciblée, synthèses de littérature, état de l'art actualisé.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Analyse interactions médicamenteuses</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Aide à la décision, alertes cliniques, sécurisation de la prescription.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Formation continue soignants</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Supports pédagogiques, simulation cas cliniques, évaluation des pratiques.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Contenu onglet Éducatif */}
-            <div class="tab-content" data-tab-content="educatif">
-              <div class="use-case-example">
-                <h3>💡 Exemple concret</h3>
-                <p>Des éducateurs ont créé des supports FALC en quelques minutes au lieu de plusieurs heures.</p>
-              </div>
-              <div class="use-cases-grid">
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Projets Personnalisés d'Accompagnement (PPA/PIA)</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Rédaction structurée, cohérence des objectifs, suivi de l'évolution des usagers.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Bilans éducatifs et rééducatifs</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Synthèses structurées, évaluation des progrès, partage inter-professionnels.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Supports FALC (Facile à Lire et à Comprendre)</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Création rapide de documents accessibles, adaptation de contenus complexes.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Activités éducatives adaptées</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Fiches d'activités personnalisées, progression pédagogique, évaluation des acquis.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Communication avec familles</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Comptes rendus de réunions, livrets d'accueil, communication régulière facilitée.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Coordination partenaires (MDPH, écoles)</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Dossiers de demande, synthèses de parcours, coordination inter-institutionnelle.</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Contenu onglet Transverse */}
-            <div class="tab-content" data-tab-content="transverse">
-              <div class="use-case-example">
-                <h3>💡 Exemple concret</h3>
-                <p>Un secrétariat a automatisé les comptes rendus de 50+ réunions annuelles, libérant 3 jours par mois.</p>
-              </div>
-              <div class="use-cases-grid">
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Comptes rendus de réunions</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-roi">ROI++</span>
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Structuration automatique, actions identifiées, diffusion rapide, gain de temps massif.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Communication interne</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Newsletters, notes de service, communication de crise structurée.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Communication externe</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Réseaux sociaux, site web, relations presse, campagnes de sensibilisation.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Gestion réclamations usagers</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Réponses structurées, analyse des tendances, amélioration continue.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Guides d'accueil multilingues</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">FAQ, chatbots d'information, supports dans plusieurs langues.</p>
-                </div>
-                <div class="use-case-card">
-                  <div class="use-case-header">
-                    <h4>Gestion stocks et commandes</h4>
-                    <div class="use-case-badges">
-                      <span class="badge badge-auto">Automatisation</span>
-                      <span class="badge badge-data">Data</span>
-                    </div>
-                  </div>
-                  <p class="use-case-description">Suivi logistique, optimisation des achats, inventaires automatisés.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section class="section section-dark">
-        <div class="container">
-          <div class="cta-section">
-            <h2>Ces cas d'usage vous parlent ?</h2>
-            <p>Échangeons sur votre contexte et identifions les applications prioritaires pour votre organisation.</p>
-            <a href="/contact" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
-              Prendre rendez-vous
-            </a>
-          </div>
+          <p style="text-align: center; font-size: 1.125rem;">Onglets et cas d'usage détaillés à venir...</p>
         </div>
       </section>
     </>,
@@ -1172,230 +260,16 @@ app.get('/cas-usage', (c) => {
 app.get('/a-propos', (c) => {
   return c.render(
     <>
-      {/* Hero */}
-      <section class="hero" style="min-height: 40vh;">
-        <div class="hero-content">
+      <div class="page-hero">
+        <div class="container">
           <h1>Qui sommes-nous</h1>
+          <p>Expertise santé et intelligence artificielle au service de votre transformation</p>
         </div>
-      </section>
-
-      {/* Section 1 - Le Fondateur */}
-      <section class="section section-dark">
+      </div>
+      
+      <section class="section-light">
         <div class="container">
-          <div class="quote-section animate-on-scroll">
-            <div style="text-align: center;">
-              <img 
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop" 
-                alt="Samuel Bottaro" 
-                class="quote-image"
-                style="width: 350px; height: 350px; object-fit: cover;"
-              />
-            </div>
-            <div class="quote-content">
-              <h2 style="color: white; margin-bottom: var(--spacing-md);">Samuel Bottaro</h2>
-              <p style="font-size: 1.125rem; color: var(--color-accent); font-weight: 600; margin-bottom: var(--spacing-md);">
-                Fondateur de QUUBE IA Santé
-              </p>
-              
-              <div style="color: var(--color-text-secondary); font-size: 1.05rem; line-height: 1.9;">
-                <p style="margin-bottom: var(--spacing-md);">
-                  Pendant <strong style="color: white;">25 ans</strong>, j'ai accompagné des organisations de santé et médico-sociales dans leurs transformations les plus complexes : 
-                  restructurations, projets d'établissement, stratégies de développement, conduite du changement.
-                </p>
-                
-                <p style="margin-bottom: var(--spacing-md);">
-                  Quand l'IA générative a émergé, j'ai vu immédiatement son potentiel pour le secteur — et ses risques si elle est mal comprise ou mal déployée. 
-                  J'ai créé <strong style="color: white;">QUUBE IA Santé</strong> pour être ce pont entre deux mondes : celui de la santé, que je connais profondément, 
-                  et celui de l'IA, que je pratique au quotidien.
-                </p>
-                
-                <p style="margin-bottom: 0;">
-                  Ma conviction : <strong style="color: var(--color-accent);">l'IA est un accélérateur extraordinaire</strong>, à condition de l'aborder avec méthode, éthique et pragmatisme. 
-                  Mon rôle n'est pas de vous vendre de la technologie, mais de vous aider à en tirer le meilleur, en toute confiance.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 2 - Notre Vision */}
-      <section class="section section-light">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll">Notre vision de l'IA en santé</h2>
-          
-          <div class="cards-grid animate-on-scroll">
-            <div class="card">
-              <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🤝</div>
-              <h3>L'IA augmente, elle ne remplace pas</h3>
-              <p>
-                Les professionnels de santé ont des compétences irremplaçables : l'empathie, le jugement clinique, la relation humaine. 
-                L'IA doit libérer leur temps pour ce qui compte vraiment : l'humain, la relation, la décision.
-              </p>
-            </div>
-
-            <div class="card">
-              <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">⚙️</div>
-              <h3>La technologie sans méthode est inutile</h3>
-              <p>
-                90% des échecs IA sont organisationnels, pas techniques. Notre approche place l'humain et le changement au centre, pas l'outil. 
-                Nous accompagnons la transformation, pas seulement le déploiement.
-              </p>
-            </div>
-
-            <div class="card">
-              <div style="font-size: 3rem; margin-bottom: var(--spacing-md);">🎯</div>
-              <h3>L'indépendance garantit l'objectivité</h3>
-              <p>
-                Nous ne vendons aucun logiciel, ne représentons aucun éditeur. Notre seul intérêt : que vous fassiez le bon choix pour votre organisation. 
-                Cette neutralité est notre garantie de conseil objectif.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 3 - Notre Méthodologie */}
-      <section class="section section-light" style="background: white;">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll">Un parcours en 5 phases</h2>
-          <p class="section-subtitle animate-on-scroll">
-            Chaque organisation a son rythme. Nous vous accompagnons là où vous en êtes.
-          </p>
-
-          <div style="max-width: 900px; margin: var(--spacing-xl) auto;">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: var(--spacing-lg); flex-wrap: wrap; gap: var(--spacing-sm);">
-              <div style="text-align: center; flex: 1; min-width: 150px;">
-                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">①</div>
-                <h4 style="color: var(--color-navy); font-size: 1rem;">Sensibiliser</h4>
-              </div>
-              <div style="color: var(--color-accent); font-size: 2rem; font-weight: 700;">→</div>
-              <div style="text-align: center; flex: 1; min-width: 150px;">
-                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">②</div>
-                <h4 style="color: var(--color-navy); font-size: 1rem;">Monter en compétences</h4>
-              </div>
-              <div style="color: var(--color-accent); font-size: 2rem; font-weight: 700;">→</div>
-              <div style="text-align: center; flex: 1; min-width: 150px;">
-                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">③</div>
-                <h4 style="color: var(--color-navy); font-size: 1rem;">Structurer</h4>
-              </div>
-              <div style="color: var(--color-accent); font-size: 2rem; font-weight: 700;">→</div>
-              <div style="text-align: center; flex: 1; min-width: 150px;">
-                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">④</div>
-                <h4 style="color: var(--color-navy); font-size: 1rem;">Déployer</h4>
-              </div>
-              <div style="color: var(--color-accent); font-size: 2rem; font-weight: 700;">→</div>
-              <div style="text-align: center; flex: 1; min-width: 150px;">
-                <div style="width: 60px; height: 60px; background: var(--color-accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; margin: 0 auto var(--spacing-sm);">⑤</div>
-                <h4 style="color: var(--color-navy); font-size: 1rem;">Pérenniser</h4>
-              </div>
-            </div>
-
-            <div style="background: var(--color-light-bg); padding: var(--spacing-lg); border-radius: 12px; text-align: center; margin-top: var(--spacing-xl);">
-              <p style="font-size: 1.05rem; color: var(--color-text-muted); margin: 0;">
-                <strong style="color: var(--color-navy);">Ce parcours n'est pas linéaire.</strong> Certains commencent par une formation, d'autres par un diagnostic. 
-                L'important est de démarrer au bon endroit pour votre organisation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 4 - Nos Références */}
-      <section class="section section-light">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll">Ils nous font confiance</h2>
-          
-          <div class="cards-grid animate-on-scroll" style="margin-bottom: var(--spacing-xl);">
-            <div class="card">
-              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">Secteur sanitaire</h4>
-              <ul style="list-style: none; padding: 0; color: var(--color-text-muted);">
-                <li style="margin-bottom: var(--spacing-xs);">• Centres hospitaliers publics et privés</li>
-                <li style="margin-bottom: var(--spacing-xs);">• Cliniques et établissements SSR</li>
-                <li style="margin-bottom: var(--spacing-xs);">• Groupements hospitaliers de territoire</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">Secteur médico-social</h4>
-              <ul style="list-style: none; padding: 0; color: var(--color-text-muted);">
-                <li style="margin-bottom: var(--spacing-xs);">• Fondations et associations gestionnaires</li>
-                <li style="margin-bottom: var(--spacing-xs);">• EHPAD et résidences autonomie</li>
-                <li style="margin-bottom: var(--spacing-xs);">• Établissements handicap et protection enfance</li>
-              </ul>
-            </div>
-
-            <div class="card">
-              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">Organisations sectorielles</h4>
-              <ul style="list-style: none; padding: 0; color: var(--color-text-muted);">
-                <li style="margin-bottom: var(--spacing-xs);">• Fédérations nationales du médico-social</li>
-                <li style="margin-bottom: var(--spacing-xs);">• Groupements et réseaux d'établissements</li>
-                <li style="margin-bottom: var(--spacing-xs);">• Organismes de formation sectoriels</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* Cas pratiques */}
-          <h3 style="text-align: center; color: var(--color-navy); margin: var(--spacing-xl) 0 var(--spacing-lg);">
-            Cas pratiques récents
-          </h3>
-          
-          <div class="service-cards" style="max-width: 900px; margin: 0 auto;">
-            <div class="service-card animate-on-scroll">
-              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">
-                📚 Formation IA et feuille de route pour une fondation de santé
-              </h4>
-              <p style="color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">
-                Accompagnement complet : sensibilisation du CODIR, formation de 40 cadres sur 3 niveaux, 
-                diagnostic de maturité et construction d'une feuille de route IA à 3 ans.
-              </p>
-              <p style="color: var(--color-accent); font-weight: 600; margin: 0;">
-                Résultat : 85% des cadres formés autonomes sur l'IA en 3 mois
-              </p>
-            </div>
-
-            <div class="service-card animate-on-scroll">
-              <h4 style="color: var(--color-navy); margin-bottom: var(--spacing-sm);">
-                🚀 Accélération IA d'un projet stratégique sectoriel
-              </h4>
-              <p style="color: var(--color-text-muted); margin-bottom: var(--spacing-sm);">
-                Production d'une étude de diversification complète pour une fédération : 
-                analyse de marché, benchmark de 20 établissements, 3 scénarios de développement, business plans détaillés.
-              </p>
-              <p style="color: var(--color-accent); font-weight: 600; margin: 0;">
-                Résultat : 6 semaines au lieu de 3 mois, transfert méthodologique complet
-              </p>
-            </div>
-          </div>
-
-          <p style="text-align: center; margin-top: var(--spacing-lg); color: var(--color-text-muted); font-style: italic;">
-            Références détaillées disponibles sur demande
-          </p>
-        </div>
-      </section>
-
-      {/* Section 5 - Notre Écosystème */}
-      <section class="section section-dark">
-        <div class="container">
-          <h2 class="section-title animate-on-scroll" style="color: white;">Un réseau d'experts complémentaires</h2>
-          
-          <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-            <p style="font-size: 1.125rem; color: var(--color-text-secondary); line-height: 1.8; margin-bottom: var(--spacing-xl);">
-              Pour répondre à vos besoins spécifiques, nous mobilisons selon les projets des experts complémentaires : 
-              <strong style="color: white;">data scientists</strong>, <strong style="color: white;">spécialistes RGPD et cybersécurité</strong>, 
-              <strong style="color: white;">consultants en organisation</strong>, <strong style="color: white;">formateurs sectoriels</strong>.
-            </p>
-            
-            <p style="font-size: 1.125rem; color: var(--color-text-secondary); line-height: 1.8;">
-              Vous bénéficiez d'une <strong style="color: var(--color-accent);">équipe sur-mesure</strong> sans le coût d'un grand cabinet.
-            </p>
-          </div>
-
-          <div style="text-align: center; margin-top: var(--spacing-xl);">
-            <a href="/contact" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
-              Envie d'en savoir plus ? Échangeons
-            </a>
-          </div>
+          <p style="text-align: center; font-size: 1.125rem;">Contenu À propos à venir...</p>
         </div>
       </section>
     </>,
@@ -1407,171 +281,26 @@ app.get('/a-propos', (c) => {
 app.get('/contact', (c) => {
   return c.render(
     <>
-      {/* Hero */}
-      <section class="hero" style="min-height: 50vh;">
-        <div class="hero-content">
-          <h1>Parlons de votre projet</h1>
-          <p style="max-width: 700px; margin: 0 auto;">
-            Un premier échange de 30 minutes, sans engagement, pour explorer le potentiel de l'IA dans votre organisation.
-          </p>
-        </div>
-      </section>
-
-      {/* Contact Layout */}
-      <section class="section section-light">
+      <div class="page-hero">
         <div class="container">
-          <div class="contact-layout">
-            {/* Colonne gauche - Calendly */}
-            <div class="contact-column">
-              <h3 style="color: var(--color-navy); margin-bottom: var(--spacing-md);">
-                📅 Réserver un créneau
-              </h3>
-              <div class="calendly-embed">
-                <iframe
-                  src="https://calendly.com/quube"
-                  width="100%"
-                  height="630"
-                  frameborder="0"
-                  style="border: none; border-radius: 12px;"
-                ></iframe>
-              </div>
-            </div>
-
-            {/* Colonne droite - Formulaire */}
-            <div class="contact-column">
-              <h3 style="color: var(--color-navy); margin-bottom: var(--spacing-md);">
-                ✉️ Nous écrire
-              </h3>
-              
-              <form id="contact-form">
-                <div class="form-group">
-                  <label for="name">Nom et prénom *</label>
-                  <input type="text" id="name" name="name" required placeholder="Jean Dupont" />
-                </div>
-
-                <div class="form-group">
-                  <label for="email">Email professionnel *</label>
-                  <input type="email" id="email" name="email" required placeholder="jean.dupont@etablissement.fr" />
-                </div>
-
-                <div class="form-group">
-                  <label for="organization">Organisation</label>
-                  <input type="text" id="organization" name="organization" placeholder="Nom de votre établissement" />
-                </div>
-
-                <div class="form-group">
-                  <label for="message">Message *</label>
-                  <textarea 
-                    id="message" 
-                    name="message" 
-                    required 
-                    placeholder="Décrivez brièvement votre besoin..."
-                  ></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                  Envoyer le message
-                </button>
-              </form>
-
-              {/* Coordonnées */}
-              <div class="contact-info">
-                <div class="contact-info-item">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                  <a href="mailto:contact@quube.fr" style="color: var(--color-navy); font-weight: 600;">
-                    contact@quube.fr
-                  </a>
-                </div>
-
-                <div class="contact-info-item">
-                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                  </svg>
-                  <a href="https://calendly.com/quube" target="_blank" style="color: var(--color-navy); font-weight: 600;">
-                    Calendly
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+          <h1>Contact</h1>
+          <p>Échangeons sur vos projets IA</p>
         </div>
-      </section>
-
-      {/* FAQ */}
-      <section class="section section-light" style="background: white;">
+      </div>
+      
+      <section class="section-light">
         <div class="container">
-          <h2 class="section-title animate-on-scroll">Questions fréquentes</h2>
-          
-          <div class="faq-container">
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>Combien coûte un accompagnement ?</span>
-                <span class="faq-icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Chaque mission est sur-mesure et dépend de vos besoins spécifiques. Un premier échange nous permet d'évaluer précisément votre contexte 
-                  et de vous proposer une offre adaptée. Nos tarifs sont compétitifs grâce à l'efficacité de l'IA dans nos processus de production.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>Intervenez-vous partout en France ?</span>
-                <span class="faq-icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Oui, nous intervenons sur l'ensemble du territoire français, en présentiel et/ou en distanciel selon vos préférences. 
-                  La plupart de nos formations et accompagnements peuvent être réalisés efficacement en visioconférence, 
-                  ce qui permet une plus grande flexibilité et réduit les coûts de déplacement.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>Faut-il déjà utiliser l'IA pour faire appel à vous ?</span>
-                <span class="faq-icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Pas du tout ! La majorité de nos clients démarrent de zéro avec l'IA. Notre parcours d'accompagnement est justement conçu pour s'adapter 
-                  à votre niveau de maturité actuel. Que vous soyez au stade de la découverte ou que vous ayez déjà quelques expérimentations en cours, 
-                  nous adaptons notre approche à votre situation.
-                </p>
-              </div>
-            </div>
-
-            <div class="faq-item">
-              <button class="faq-question">
-                <span>Travaillez-vous avec un outil IA en particulier ?</span>
-                <span class="faq-icon">+</span>
-              </button>
-              <div class="faq-answer">
-                <p>
-                  Non, nous sommes totalement indépendants et agnostiques sur les outils. Nous travaillons avec les meilleurs outils du marché 
-                  (Claude, ChatGPT, Copilot, Gemini, Mistral...) et recommandons ceux qui correspondent le mieux à vos contraintes : 
-                  conformité RGPD, hébergement des données de santé (HDS), budget, facilité d'usage. Notre objectif est de vous aider à faire le bon choix, 
-                  pas de promouvoir une solution en particulier.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Final */}
-      <section class="section section-dark">
-        <div class="container">
-          <div class="cta-section animate-on-scroll">
-            <h2>Prêt à transformer votre organisation avec l'IA ?</h2>
-            <p>Commençons par un simple échange de 30 minutes pour comprendre vos besoins.</p>
-            <a href="https://calendly.com/quube" target="_blank" class="btn btn-primary" style="font-size: 1.125rem; padding: 1rem 2.5rem;">
-              Réserver un créneau →
+          <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.125rem; margin-bottom: 32px;">
+              <strong>QUUBE×IA Santé</strong><br />
+              10 rue du Colisée<br />
+              75008 Paris
+            </p>
+            <p style="margin-bottom: 32px;">
+              <a href="mailto:contact@quube.fr" style="color: var(--color-accent); font-weight: 600;">contact@quube.fr</a>
+            </p>
+            <a href="https://calendly.com/quube" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+              Prendre rendez-vous via Calendly
             </a>
           </div>
         </div>
