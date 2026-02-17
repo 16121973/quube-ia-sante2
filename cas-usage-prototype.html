@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<!-- saved from url=(0232)file:///Users/botta/Library/Application%20Support/Claude/local-agent-mode-sessions/3f9d5776-a7b8-4450-a70f-3287b75d8a3e/b4bd8565-756b-417d-be74-51ef9133e96b/local_2472dee2-8134-43d6-ab2c-7125817e41e2/outputs/cas-usage-prototype.html -->
+<html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cas d'usage | QUUBE·IA Santé — Prototype v3</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --primary: #1a365d;
+    --primary-light: #2b6cb0;
+    --accent: #38b2ac;
+    --accent-light: #81e6d9;
+    --accent-glow: rgba(56, 178, 172, 0.15);
+    --bg: #f7fafc;
+    --white: #ffffff;
+    --gray-50: #f7fafc;
+    --gray-100: #edf2f7;
+    --gray-200: #e2e8f0;
+    --gray-300: #cbd5e0;
+    --gray-400: #a0aec0;
+    --gray-500: #718096;
+    --gray-600: #4a5568;
+    --gray-700: #2d3748;
+    --gray-800: #1a202c;
+    --orange: #ed8936;
+    --orange-light: #fbd38d;
+    --purple: #805ad5;
+    --purple-light: #d6bcfa;
+    --blue: #4299e1;
+    --blue-light: #bee3f8;
+    --green: #48bb78;
+    --green-light: #c6f6d5;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+    --shadow-lg: 0 10px 30px rgba(0,0,0,0.1);
+    --shadow-xl: 0 20px 50px rgba(0,0,0,0.12);
+    --radius: 16px;
+    --radius-sm: 10px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--gray-700);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--gray-200);
+    padding: 0 2rem;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-size: 1.15rem; font-weight: 700; color: var(--primary);
+    letter-spacing: -0.02em;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; }
+  .nav-links a {
+    text-decoration: none; color: var(--gray-500); font-size: 0.875rem;
+    font-weight: 500; transition: color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--primary); }
+  .nav-cta {
+    background: var(--accent); color: white; padding: 0.5rem 1.25rem;
+    border-radius: 8px; text-decoration: none; font-size: 0.85rem;
+    font-weight: 600; transition: all 0.2s;
+  }
+  .nav-cta:hover { background: #2c9e99; transform: translateY(-1px); }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: var(--accent-glow); border: 1px solid var(--accent-light);
+    padding: 0.4rem 1rem; border-radius: 50px;
+    font-size: 0.8rem; font-weight: 600; color: var(--accent);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.6s ease;
+  }
+  .hero-badge .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .hero h1 {
+    font-size: 3rem; font-weight: 800; color: var(--primary);
+    line-height: 1.15; letter-spacing: -0.03em;
+    margin-bottom: 1.25rem;
+    animation: fadeInUp 0.6s ease 0.1s both;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--accent), var(--primary-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .hero p {
+    font-size: 1.15rem; color: var(--gray-500); max-width: 600px;
+    margin: 0 auto 2rem; line-height: 1.7;
+    animation: fadeInUp 0.6s ease 0.2s both;
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ===== SOCIAL PROOF BAR ===== */
+  .proof-bar {
+    max-width: 900px; margin: 0 auto 3rem;
+    display: flex; justify-content: center; gap: 3rem;
+    flex-wrap: wrap;
+    animation: fadeInUp 0.6s ease 0.3s both;
+  }
+  .proof-item {
+    text-align: center;
+  }
+  .proof-number {
+    font-size: 1.8rem; font-weight: 800; color: var(--primary);
+    line-height: 1;
+  }
+  .proof-label {
+    font-size: 0.78rem; color: var(--gray-400); font-weight: 500;
+    margin-top: 0.25rem;
+  }
+
+  /* ===== HUMANIFEST BANNER ===== */
+  .humanifest-banner {
+    max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem;
+    animation: fadeInUp 0.6s ease 0.35s both;
+  }
+  .humanifest-inner {
+    background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
+    border-radius: var(--radius);
+    padding: 2rem 2.5rem;
+    display: flex; align-items: center; gap: 2rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+  }
+  .humanifest-inner::before {
+    content: '';
+    position: absolute; top: -50%; right: -20%;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(56,178,172,0.2) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .humanifest-icon {
+    width: 56px; height: 56px; flex-shrink: 0;
+    background: rgba(255,255,255,0.15);
+    border-radius: 14px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem;
+  }
+  .humanifest-content { position: relative; z-index: 1; }
+  .humanifest-content strong {
+    font-size: 1rem; display: block; margin-bottom: 0.25rem;
+  }
+  .humanifest-content p {
+    font-size: 0.88rem; opacity: 0.85; line-height: 1.5; margin: 0;
+  }
+  .humanifest-tag {
+    background: var(--accent); color: white;
+    padding: 0.2rem 0.65rem; border-radius: 50px;
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.05em; position: absolute; top: 1.25rem; right: 1.5rem;
+  }
+
+  /* ===== FILTER TABS ===== */
+  .filter-section {
+    max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+  }
+  .filter-label {
+    font-size: 0.8rem; font-weight: 600; color: var(--gray-400);
+    text-transform: uppercase; letter-spacing: 0.08em;
+    margin-bottom: 0.75rem;
+  }
+  .filter-tabs {
+    display: flex; gap: 0.5rem; flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+  .filter-tab {
+    padding: 0.55rem 1.2rem;
+    border-radius: 50px;
+    border: 1.5px solid var(--gray-200);
+    background: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-500);
+    cursor: pointer;
+    transition: all 0.25s;
+    user-select: none;
+  }
+  .filter-tab:hover {
+    border-color: var(--accent-light);
+    color: var(--accent);
+    background: var(--accent-glow);
+  }
+  .filter-tab.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+  }
+
+  /* ===== CARDS GRID ===== */
+  .cards-grid {
+    max-width: 1100px; margin: 0 auto; padding: 0 2rem 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .use-case-card {
+    background: white;
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    border: 1px solid var(--gray-200);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  .use-case-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--primary-light));
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .use-case-card:hover {
+    border-color: var(--accent-light);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  .use-case-card:hover::before { opacity: 1; }
+
+  .card-header {
+    display: flex; align-items: flex-start; gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .card-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.25rem;
+  }
+  .card-icon.blue { background: var(--blue-light); }
+  .card-icon.green { background: var(--green-light); }
+  .card-icon.orange { background: rgba(237, 137, 54, 0.15); }
+  .card-icon.purple { background: var(--purple-light); }
+
+  .card-title {
+    font-size: 1.05rem; font-weight: 700; color: var(--gray-800);
+    line-height: 1.35;
+  }
+
+  .card-result {
+    display: flex; align-items: center; gap: 0.5rem;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    background: var(--gray-50);
+    border-radius: 8px;
+  }
+  .card-result-metric {
+    font-size: 1.35rem; font-weight: 800; color: var(--accent);
+    line-height: 1;
+  }
+  .card-result-text {
+    font-size: 0.8rem; color: var(--gray-500); line-height: 1.3;
+  }
+
+  .card-desc {
+    font-size: 0.88rem; color: var(--gray-500); line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .card-tags {
+    display: flex; gap: 0.4rem; flex-wrap: wrap;
+  }
+  .card-tag {
+    padding: 0.2rem 0.6rem;
+    border-radius: 50px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    background: var(--gray-100);
+    color: var(--gray-500);
+  }
+  .card-tag.dir { background: rgba(66,153,225,0.1); color: var(--blue); }
+  .card-tag.soin { background: rgba(72,187,120,0.1); color: var(--green); }
+  .card-tag.rh { background: rgba(237,137,54,0.1); color: var(--orange); }
+  .card-tag.educ { background: rgba(128,90,213,0.1); color: var(--purple); }
+  .card-tag.qualite { background: rgba(56,178,172,0.1); color: var(--accent); }
+  .card-tag.data { background: rgba(99,102,241,0.1); color: #6366f1; }
+  .card-tag.strat { background: rgba(236,72,153,0.1); color: #ec4899; }
+  .card-icon.indigo { background: rgba(99,102,241,0.15); }
+  .card-icon.pink { background: rgba(236,72,153,0.15); }
+  .card-icon.teal { background: rgba(56,178,172,0.15); }
+
+  .card-cta {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-size: 0.82rem; font-weight: 600; color: var(--accent);
+    margin-top: 0.75rem;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .use-case-card:hover .card-cta { opacity: 1; }
+  .card-cta svg { width: 14px; height: 14px; transition: transform 0.2s; }
+  .use-case-card:hover .card-cta svg { transform: translateX(3px); }
+
+  /* ===== BEFORE/AFTER SECTION ===== */
+  .before-after {
+    max-width: 900px; margin: 2rem auto 4rem; padding: 0 2rem;
+  }
+  .ba-title {
+    text-align: center; font-size: 1.6rem; font-weight: 700;
+    color: var(--primary); margin-bottom: 0.5rem;
+  }
+  .ba-subtitle {
+    text-align: center; color: var(--gray-400); font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+  }
+  .ba-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;
+  }
+  .ba-col { border-radius: var(--radius); padding: 2rem; }
+  .ba-col.before {
+    background: linear-gradient(135deg, #fff5f5, #fed7d7);
+    border: 1px solid #feb2b2;
+  }
+  .ba-col.after {
+    background: linear-gradient(135deg, #f0fff4, #c6f6d5);
+    border: 1px solid #9ae6b4;
+  }
+  .ba-col h3 {
+    font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.08em; margin-bottom: 1.25rem;
+  }
+  .ba-col.before h3 { color: #c53030; }
+  .ba-col.after h3 { color: #276749; }
+  .ba-item {
+    display: flex; align-items: flex-start; gap: 0.6rem;
+    margin-bottom: 0.85rem; font-size: 0.88rem; line-height: 1.5;
+  }
+  .ba-item span { flex-shrink: 0; font-size: 1rem; }
+  .ba-col.before .ba-item { color: #9b2c2c; }
+  .ba-col.after .ba-item { color: #22543d; }
+
+  /* ===== APPROACH SECTION ===== */
+  .approach-section {
+    background: white;
+    padding: 5rem 2rem;
+    border-top: 1px solid var(--gray-200);
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .approach-inner {
+    max-width: 900px; margin: 0 auto; text-align: center;
+  }
+  .approach-inner h2 {
+    font-size: 1.8rem; font-weight: 700; color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  .approach-inner > p {
+    color: var(--gray-500); margin-bottom: 3rem; font-size: 1rem;
+  }
+  .approach-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+    text-align: center;
+  }
+  .approach-step {
+    position: relative;
+  }
+  .step-number {
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--accent-glow); border: 2px solid var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem; font-weight: 800; color: var(--accent);
+    margin: 0 auto 1rem;
+  }
+  .step-title {
+    font-size: 0.9rem; font-weight: 700; color: var(--gray-800);
+    margin-bottom: 0.35rem;
+  }
+  .step-desc {
+    font-size: 0.8rem; color: var(--gray-400); line-height: 1.5;
+  }
+  .approach-step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 24px; left: calc(50% + 32px); right: calc(-50% + 32px);
+    height: 2px;
+    background: var(--gray-200);
+  }
+
+  /* ===== CTA SECTION ===== */
+  .cta-section {
+    max-width: 700px; margin: 0 auto;
+    padding: 5rem 2rem; text-align: center;
+  }
+  .cta-section h2 {
+    font-size: 2rem; font-weight: 800; color: var(--primary);
+    margin-bottom: 0.75rem;
+  }
+  .cta-section p {
+    font-size: 1rem; color: var(--gray-500); margin-bottom: 2rem;
+  }
+  .cta-buttons {
+    display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--accent); color: white;
+    padding: 0.85rem 2rem; border-radius: 10px;
+    text-decoration: none; font-weight: 700; font-size: 0.95rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 14px rgba(56, 178, 172, 0.3);
+  }
+  .btn-primary:hover {
+    background: #2c9e99; transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 178, 172, 0.4);
+  }
+  .btn-secondary {
+    background: white; color: var(--primary);
+    padding: 0.85rem 2rem; border-radius: 10px;
+    text-decoration: none; font-weight: 600; font-size: 0.95rem;
+    border: 2px solid var(--gray-200);
+    transition: all 0.3s;
+  }
+  .btn-secondary:hover {
+    border-color: var(--primary); transform: translateY(-2px);
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    background: var(--primary);
+    color: rgba(255,255,255,0.6);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+  footer strong { color: white; }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    .hero h1 { font-size: 2rem; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .ba-grid { grid-template-columns: 1fr; }
+    .approach-steps { grid-template-columns: 1fr 1fr; }
+    .approach-step::after { display: none; }
+    .proof-bar { gap: 1.5rem; }
+    .humanifest-inner { flex-direction: column; text-align: center; }
+  }
+
+  /* ===== PROTOTYPE RIBBON ===== */
+  .ribbon {
+    position: fixed; bottom: 1rem; right: 1rem; z-index: 200;
+    background: var(--gray-800); color: white;
+    padding: 0.5rem 1rem; border-radius: 8px;
+    font-size: 0.75rem; font-weight: 600;
+    box-shadow: var(--shadow-lg);
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">QUUBE·IA <span>Santé</span></div>
+  <div class="nav-links">
+    <a href="file:///Users/botta/Library/Application%20Support/Claude/local-agent-mode-sessions/3f9d5776-a7b8-4450-a70f-3287b75d8a3e/b4bd8565-756b-417d-be74-51ef9133e96b/local_2472dee2-8134-43d6-ab2c-7125817e41e2/outputs/cas-usage-prototype.html#">Accueil</a>
+    <a href="file:///Users/botta/Library/Application%20Support/Claude/local-agent-mode-sessions/3f9d5776-a7b8-4450-a70f-3287b75d8a3e/b4bd8565-756b-417d-be74-51ef9133e96b/local_2472dee2-8134-43d6-ab2c-7125817e41e2/outputs/cas-usage-prototype.html#">Nos services</a>
+    <a href="file:///Users/botta/Library/Application%20Support/Claude/local-agent-mode-sessions/3f9d5776-a7b8-4450-a70f-3287b75d8a3e/b4bd8565-756b-417d-be74-51ef9133e96b/local_2472dee2-8134-43d6-ab2c-7125817e41e2/outputs/cas-usage-prototype.html#" class="active">Cas d'usage</a>
+    <a href="file:///Users/botta/Library/Application%20Support/Claude/local-agent-mode-sessions/3f9d5776-a7b8-4450-a70f-3287b75d8a3e/b4bd8565-756b-417d-be74-51ef9133e96b/local_2472dee2-8134-43d6-ab2c-7125817e41e2/outputs/cas-usage-prototype.html#">Qui sommes-nous</a>
+  </div>
+  <a href="file:///Users/botta/Library/Application%20Support/Claude/local-agent-mode-sessions/3f9d5776-a7b8-4450-a70f-3287b75d8a3e/b4bd8565-756b-417d-be74-51ef9133e96b/local_2472dee2-8134-43d6-ab2c-7125817e41e2/outputs/cas-usage-prototype.html#" class="nav-cta">Prendre rendez-vous</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">
+    <div class="dot"></div>
+    Cas d'usage co-construits avec des professionnels de terrain
+  </div>
+  <h1>L'IA au service de votre <em>quotidien</em>, pas de la théorie</h1>
+  <p>Chaque cas d'usage a été testé en conditions réelles, dans des établissements sanitaires, médico-sociaux et sociaux. Pas de promesses, des résultats mesurés.</p>
+</section>
+
+<!-- SOCIAL PROOF -->
+<div class="proof-bar">
+  <div class="proof-item">
+    <div class="proof-number">15+</div>
+    <div class="proof-label">établissements<br>accompagnés</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-number">–70%</div>
+    <div class="proof-label">temps de rédaction<br>rapports d'activité</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-number">23</div>
+    <div class="proof-label">cas d'usage validés<br>sur le terrain</div>
+  </div>
+  <div class="proof-item">
+    <div class="proof-number">100%</div>
+    <div class="proof-label">approche éthique<br>RGPD conforme</div>
+  </div>
+</div>
+
+<!-- CREDIBILITY BANNER -->
+<div class="humanifest-banner">
+  <div class="humanifest-inner">
+    <div class="humanifest-tag">Notre approche</div>
+    <div class="humanifest-icon">🔬</div>
+    <div class="humanifest-content">
+      <strong>Des cas d'usage forgés sur le terrain, pas en laboratoire</strong>
+      <p>Nous intervenons aux côtés d'organisations employeurs majeures du secteur, d'établissements de toute taille, et de professionnels en exercice. Chaque cas d'usage ci-dessous a été construit, testé et mesuré en conditions réelles — avec les contraintes du quotidien : temps limité, outils existants, équipes non-techniciennes.</p>
+    </div>
+  </div>
+</div>
+
+<!-- EXPERTISE BADGES -->
+<div style="max-width:900px; margin:0 auto 3rem; padding:0 2rem; display:flex; gap:0.75rem; flex-wrap:wrap; justify-content:center;">
+  <div style="display:inline-flex; align-items:center; gap:0.4rem; background:white; border:1px solid #e2e8f0; padding:0.45rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; color:#4a5568;">
+    <span style="font-size:1rem;">🏥</span> Sanitaire &amp; Médico-social
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:0.4rem; background:white; border:1px solid #e2e8f0; padding:0.45rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; color:#4a5568;">
+    <span style="font-size:1rem;">📋</span> Référentiels HAS
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:0.4rem; background:white; border:1px solid #e2e8f0; padding:0.45rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; color:#4a5568;">
+    <span style="font-size:1rem;">🏛️</span> Conformité ARS &amp; CPOM
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:0.4rem; background:white; border:1px solid #e2e8f0; padding:0.45rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; color:#4a5568;">
+    <span style="font-size:1rem;">♿</span> FALC &amp; Accessibilité
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:0.4rem; background:white; border:1px solid #e2e8f0; padding:0.45rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; color:#4a5568;">
+    <span style="font-size:1rem;">🔒</span> RGPD &amp; Éthique IA
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:0.4rem; background:white; border:1px solid #e2e8f0; padding:0.45rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; color:#4a5568;">
+    <span style="font-size:1rem;">📊</span> SERAFIN-PH
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:0.4rem; background:white; border:1px solid #e2e8f0; padding:0.45rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; color:#4a5568;">
+    <span style="font-size:1rem;">🗄️</span> SAE / ATIH / RTC / PMSI
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:0.4rem; background:white; border:1px solid #e2e8f0; padding:0.45rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; color:#4a5568;">
+    <span style="font-size:1rem;">📐</span> Indicateurs ANAP &amp; CNSA
+  </div>
+  <div style="display:inline-flex; align-items:center; gap:0.4rem; background:white; border:1px solid #e2e8f0; padding:0.45rem 1rem; border-radius:50px; font-size:0.8rem; font-weight:600; color:#4a5568;">
+    <span style="font-size:1rem;">💰</span> EPRD / ERRD / PPI
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filter-section">
+  <div class="filter-label">Je suis...</div>
+  <div class="filter-tabs">
+    <div class="filter-tab active" data-filter="all">Tous les cas d'usage</div>
+    <div class="filter-tab" data-filter="dir">Direction / Stratégie</div>
+    <div class="filter-tab" data-filter="data">Data / Pilotage / Finance</div>
+    <div class="filter-tab" data-filter="soin">Soignant·e</div>
+    <div class="filter-tab" data-filter="rh">RH</div>
+    <div class="filter-tab" data-filter="educ">Éducateur·rice</div>
+    <div class="filter-tab" data-filter="qualite">Qualité / Achats / Contrôle</div>
+    <div class="filter-tab" data-filter="strat">Analyse territoriale / Open Data</div>
+  </div>
+</div>
+
+<!-- CARDS -->
+<div class="cards-grid">
+
+  <!-- Card 1 -->
+  <div class="use-case-card" data-personas="dir">
+    <div class="card-header">
+      <div class="card-icon blue">📊</div>
+      <div class="card-title">Rapport d'activité en 2h au lieu de 2 jours</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">–70%</div>
+      <div class="card-result-text">de temps de rédaction<br>mesuré en accompagnement</div>
+    </div>
+    <div class="card-desc">L'IA agrège vos données multi-services et génère un rapport structuré, conforme aux exigences ARS et Département. Vous relisez et validez.</div>
+    <div class="card-tags">
+      <span class="card-tag dir">Direction</span>
+      <span class="card-tag">ARS</span>
+      <span class="card-tag">CPOM</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="use-case-card" data-personas="soin">
+    <div class="card-header">
+      <div class="card-icon green">📝</div>
+      <div class="card-title">Projets personnalisés structurés en 30 min</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">30 min</div>
+      <div class="card-result-text">au lieu de 2-3h<br>par projet</div>
+    </div>
+    <div class="card-desc">À partir de vos notes de terrain et bilans, l'IA structure le projet personnalisé selon les référentiels HAS. Vous gardez la main clinique.</div>
+    <div class="card-tags">
+      <span class="card-tag soin">Soins</span>
+      <span class="card-tag">HAS</span>
+      <span class="card-tag">PP</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="use-case-card" data-personas="educ">
+    <div class="card-header">
+      <div class="card-icon purple">🎨</div>
+      <div class="card-title">Supports FALC générés en quelques clics</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">×5</div>
+      <div class="card-result-text">plus de supports<br>produits par semaine</div>
+    </div>
+    <div class="card-desc">Transformez n'importe quel document en version Facile à Lire et à Comprendre, avec pictogrammes adaptés. Idéal pour l'accessibilité des usagers.</div>
+    <div class="card-tags">
+      <span class="card-tag educ">Éducatif</span>
+      <span class="card-tag">FALC</span>
+      <span class="card-tag">Accessibilité</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="use-case-card" data-personas="dir">
+    <div class="card-header">
+      <div class="card-icon blue">🏛️</div>
+      <div class="card-title">Préparation CA/CVS : synthèse multi-services automatisée</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">1h</div>
+      <div class="card-result-text">de préparation<br>au lieu d'une journée</div>
+    </div>
+    <div class="card-desc">L'IA compile les remontées de chaque service, crée un support de présentation structuré pour vos instances de gouvernance. Prêt à personnaliser.</div>
+    <div class="card-tags">
+      <span class="card-tag dir">Direction</span>
+      <span class="card-tag">Gouvernance</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="use-case-card" data-personas="qualite">
+    <div class="card-header">
+      <div class="card-icon green">✅</div>
+      <div class="card-title">Protocoles HAS : de la veille à la rédaction</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">–60%</div>
+      <div class="card-result-text">de temps sur la veille<br>réglementaire</div>
+    </div>
+    <div class="card-desc">L'IA identifie les recommandations HAS applicables, synthétise les bonnes pratiques et propose un brouillon de protocole conforme à adapter.</div>
+    <div class="card-tags">
+      <span class="card-tag qualite">Qualité</span>
+      <span class="card-tag soin">Soins</span>
+      <span class="card-tag">HAS</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 6 -->
+  <div class="use-case-card" data-personas="soin">
+    <div class="card-header">
+      <div class="card-icon green">💬</div>
+      <div class="card-title">Transmissions ciblées lisibles en 1 minute</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">1 min</div>
+      <div class="card-result-text">pour lire une synthèse<br>de transmissions</div>
+    </div>
+    <div class="card-desc">Fini les transmissions illisibles. L'IA structure les notes de relève en format clair, priorise les alertes, et facilite la coordination d'équipe.</div>
+    <div class="card-tags">
+      <span class="card-tag soin">Soins</span>
+      <span class="card-tag">Coordination</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 7 -->
+  <div class="use-case-card" data-personas="rh">
+    <div class="card-header">
+      <div class="card-icon orange">👥</div>
+      <div class="card-title">Plan de formation sur mesure en une journée</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">1 jour</div>
+      <div class="card-result-text">au lieu d'une semaine<br>de montage</div>
+    </div>
+    <div class="card-desc">L'IA analyse vos entretiens professionnels, identifie les besoins par service, et propose un plan de formation structuré, prêt à arbitrer.</div>
+    <div class="card-tags">
+      <span class="card-tag rh">RH</span>
+      <span class="card-tag">Formation</span>
+      <span class="card-tag">GPEC</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 8 -->
+  <div class="use-case-card" data-personas="educ">
+    <div class="card-header">
+      <div class="card-icon purple">🧩</div>
+      <div class="card-title">Activités éducatives personnalisées par profil</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">∞</div>
+      <div class="card-result-text">d'idées adaptées<br>au profil de chaque usager</div>
+    </div>
+    <div class="card-desc">L'IA propose des activités éducatives ajustées aux capacités, intérêts et objectifs de chaque usager. L'éducateur choisit, adapte et anime.</div>
+    <div class="card-tags">
+      <span class="card-tag educ">Éducatif</span>
+      <span class="card-tag">Personnalisation</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 9 -->
+  <div class="use-case-card" data-personas="rh dir">
+    <div class="card-header">
+      <div class="card-icon orange">📋</div>
+      <div class="card-title">Réponse aux appels à projets 3× plus vite</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">×3</div>
+      <div class="card-result-text">de rapidité<br>sur le montage dossier</div>
+    </div>
+    <div class="card-desc">L'IA structure votre réponse à partir du cahier des charges, intègre vos données établissement, et génère un dossier de candidature prêt à finaliser.</div>
+    <div class="card-tags">
+      <span class="card-tag dir">Direction</span>
+      <span class="card-tag rh">Admin</span>
+      <span class="card-tag">AAP</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- DATA / PILOTAGE / MODÉLISATION FINANCIÈRE    -->
+  <!-- ============================================ -->
+
+  <!-- Card 10 - Modélisation EPRD/ERRD -->
+  <div class="use-case-card" data-personas="data dir">
+    <div class="card-header">
+      <div class="card-icon indigo">💰</div>
+      <div class="card-title">EPRD/ERRD : modélisation financière en quelques heures</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">–80%</div>
+      <div class="card-result-text">de temps sur la<br>modélisation budgétaire</div>
+    </div>
+    <div class="card-desc">L'IA structure vos données comptables, projette les tendances, et génère un EPRD/ERRD pré-rempli conforme aux cadres ARS. Vous arbitrez, elle calcule.</div>
+    <div class="card-tags">
+      <span class="card-tag data">Data &amp; Finance</span>
+      <span class="card-tag dir">Direction</span>
+      <span class="card-tag">EPRD</span>
+      <span class="card-tag">ERRD</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 11 - PPI -->
+  <div class="use-case-card" data-personas="data dir">
+    <div class="card-header">
+      <div class="card-icon indigo">🏗️</div>
+      <div class="card-title">Plan Pluriannuel d'Investissement : scénarios simulés en temps réel</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">3→1</div>
+      <div class="card-result-text">semaine au lieu de 3<br>pour un PPI complet</div>
+    </div>
+    <div class="card-desc">L'IA modélise différents scénarios d'investissement (travaux, équipements, numérique), simule l'impact sur la CAF et la trésorerie, et génère un plan pluriannuel chiffré.</div>
+    <div class="card-tags">
+      <span class="card-tag data">Data &amp; Finance</span>
+      <span class="card-tag dir">Direction</span>
+      <span class="card-tag">PPI</span>
+      <span class="card-tag">CAF</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 12 - Simulation business model -->
+  <div class="use-case-card" data-personas="data dir">
+    <div class="card-header">
+      <div class="card-icon indigo">📈</div>
+      <div class="card-title">Simulation de business models : tester avant de décider</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">∞</div>
+      <div class="card-result-text">de scénarios testables<br>en quelques clics</div>
+    </div>
+    <div class="card-desc">Ouverture de places, création de service, changement de tarification — l'IA simule l'impact financier de chaque hypothèse et compare les scénarios visuellement.</div>
+    <div class="card-tags">
+      <span class="card-tag data">Data &amp; Finance</span>
+      <span class="card-tag dir">Direction</span>
+      <span class="card-tag">CPOM</span>
+      <span class="card-tag">Tarification</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 13 - Tableaux de bord pilotage -->
+  <div class="use-case-card" data-personas="data dir">
+    <div class="card-header">
+      <div class="card-icon indigo">🎯</div>
+      <div class="card-title">Tableaux de bord pilotage : vos indicateurs en un coup d'œil</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">Temps réel</div>
+      <div class="card-result-text">suivi des indicateurs<br>clés automatisé</div>
+    </div>
+    <div class="card-desc">L'IA agrège vos données RH, financières et d'activité pour produire des dashboards actualisés, avec alertes sur les écarts significatifs. Fini les tableaux Excel manuels.</div>
+    <div class="card-tags">
+      <span class="card-tag data">Data &amp; Finance</span>
+      <span class="card-tag dir">Direction</span>
+      <span class="card-tag">KPI</span>
+      <span class="card-tag">ANAP</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- RH RENFORCÉ                                  -->
+  <!-- ============================================ -->
+
+  <!-- Card 14 - GPEC prédictive -->
+  <div class="use-case-card" data-personas="rh">
+    <div class="card-header">
+      <div class="card-icon orange">📊</div>
+      <div class="card-title">GPEC prédictive : anticiper les départs et besoins en compétences</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">12 mois</div>
+      <div class="card-result-text">de visibilité<br>sur les effectifs</div>
+    </div>
+    <div class="card-desc">L'IA croise pyramide des âges, ancienneté, turnover historique et entretiens pour projeter vos besoins en recrutement et formation sur 1 à 3 ans.</div>
+    <div class="card-tags">
+      <span class="card-tag rh">RH</span>
+      <span class="card-tag">GPEC</span>
+      <span class="card-tag">Prédictif</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 15 - Absentéisme -->
+  <div class="use-case-card" data-personas="rh data">
+    <div class="card-header">
+      <div class="card-icon orange">🔍</div>
+      <div class="card-title">Analyse absentéisme : comprendre les patterns, agir en amont</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">–25%</div>
+      <div class="card-result-text">d'absentéisme visé<br>par l'identification des causes</div>
+    </div>
+    <div class="card-desc">L'IA détecte les corrélations entre absentéisme, services, périodes et profils. Elle identifie les signaux faibles avant que la situation ne se dégrade.</div>
+    <div class="card-tags">
+      <span class="card-tag rh">RH</span>
+      <span class="card-tag data">Data</span>
+      <span class="card-tag">QVT</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 16 - Fiches de poste & recrutement -->
+  <div class="use-case-card" data-personas="rh">
+    <div class="card-header">
+      <div class="card-icon orange">✍️</div>
+      <div class="card-title">Fiches de poste et annonces : rédigées en 15 min, conformes CCN</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">15 min</div>
+      <div class="card-result-text">par fiche de poste<br>prête à diffuser</div>
+    </div>
+    <div class="card-desc">L'IA génère des fiches de poste conformes à votre convention collective (CCN 66, 51, BAD…), adaptées au profil recherché et à votre culture d'établissement.</div>
+    <div class="card-tags">
+      <span class="card-tag rh">RH</span>
+      <span class="card-tag">Recrutement</span>
+      <span class="card-tag">CCN</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- QUALITÉ / ACHATS / DÉTECTION ANOMALIES       -->
+  <!-- ============================================ -->
+
+  <!-- Card 17 - Contrôle achats -->
+  <div class="use-case-card" data-personas="qualite data">
+    <div class="card-header">
+      <div class="card-icon teal">🛒</div>
+      <div class="card-title">Contrôle achats : détecter les surcoûts et doublons automatiquement</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">5-15%</div>
+      <div class="card-result-text">d'économies identifiées<br>sur les achats récurrents</div>
+    </div>
+    <div class="card-desc">L'IA analyse vos bons de commande, factures et contrats fournisseurs. Elle repère les doublons, écarts de prix, et fournisseurs hors marché.</div>
+    <div class="card-tags">
+      <span class="card-tag qualite">Contrôle</span>
+      <span class="card-tag data">Data</span>
+      <span class="card-tag">Achats</span>
+      <span class="card-tag">Anomalies</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 18 - Détection anomalies facturation -->
+  <div class="use-case-card" data-personas="qualite data">
+    <div class="card-header">
+      <div class="card-icon teal">⚠️</div>
+      <div class="card-title">Détection d'anomalies : facturation, pointages, écritures comptables</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">24/7</div>
+      <div class="card-result-text">surveillance automatique<br>des flux de données</div>
+    </div>
+    <div class="card-desc">L'IA scanne en continu vos flux (paie, facturation, comptabilité) et alerte sur les incohérences : montants atypiques, erreurs de saisie, écarts de pointage.</div>
+    <div class="card-tags">
+      <span class="card-tag qualite">Contrôle</span>
+      <span class="card-tag data">Data</span>
+      <span class="card-tag">Anomalies</span>
+      <span class="card-tag">Facturation</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 19 - Audit qualité automatisé -->
+  <div class="use-case-card" data-personas="qualite">
+    <div class="card-header">
+      <div class="card-icon teal">🔎</div>
+      <div class="card-title">Pré-audit qualité : auto-évaluation continue avant le contrôle</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">–50%</div>
+      <div class="card-result-text">de temps de préparation<br>avant évaluation externe</div>
+    </div>
+    <div class="card-desc">L'IA compare vos pratiques documentées aux référentiels HAS/ESSMS. Elle identifie les écarts, génère un plan d'action priorisé, et suit l'avancement des corrections.</div>
+    <div class="card-tags">
+      <span class="card-tag qualite">Qualité</span>
+      <span class="card-tag">HAS</span>
+      <span class="card-tag">Évaluation</span>
+      <span class="card-tag">ESSMS</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- ANALYSE STRATÉGIQUE / OPEN DATA / TERRITOIRE -->
+  <!-- ============================================ -->
+
+  <!-- Card 20 - Benchmark territorial SAE/ATIH -->
+  <div class="use-case-card" data-personas="strat dir data">
+    <div class="card-header">
+      <div class="card-icon pink">🗺️</div>
+      <div class="card-title">Benchmark territorial : positionnez-vous via SAE, ATIH, CNSA</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">Open Data</div>
+      <div class="card-result-text">croisement automatique<br>de bases publiques</div>
+    </div>
+    <div class="card-desc">L'IA interroge les bases SAE, ATIH, RTC, PMSI, CNSA et indicateurs ANAP pour vous situer par rapport aux établissements comparables de votre territoire. Taux d'occupation, coûts, activité — en quelques clics.</div>
+    <div class="card-tags">
+      <span class="card-tag strat">Stratégie</span>
+      <span class="card-tag data">Data</span>
+      <span class="card-tag">SAE</span>
+      <span class="card-tag">ATIH</span>
+      <span class="card-tag">ANAP</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 21 - Analyse besoins territoire -->
+  <div class="use-case-card" data-personas="strat dir">
+    <div class="card-header">
+      <div class="card-icon pink">📍</div>
+      <div class="card-title">Analyse des besoins du territoire : identifier les zones blanches</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">360°</div>
+      <div class="card-result-text">vision territoriale<br>données croisées</div>
+    </div>
+    <div class="card-desc">L'IA croise données démographiques (INSEE), offre existante (FINESS, SAE), indicateurs de précarité et données ARS pour cartographier les besoins non couverts sur votre territoire.</div>
+    <div class="card-tags">
+      <span class="card-tag strat">Stratégie</span>
+      <span class="card-tag">FINESS</span>
+      <span class="card-tag">INSEE</span>
+      <span class="card-tag">PRS</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 22 - Comparaison RTC/coûts -->
+  <div class="use-case-card" data-personas="strat data dir">
+    <div class="card-header">
+      <div class="card-icon pink">⚖️</div>
+      <div class="card-title">Analyse RTC &amp; coûts : comparez votre structure aux référentiels nationaux</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">RTC</div>
+      <div class="card-result-text">retraitement comptable<br>analysé automatiquement</div>
+    </div>
+    <div class="card-desc">L'IA décompose votre RTC, compare chaque poste aux moyennes nationales et régionales (ATIH, CNSA), et identifie les leviers d'optimisation. Idéal pour négocier votre CPOM.</div>
+    <div class="card-tags">
+      <span class="card-tag strat">Stratégie</span>
+      <span class="card-tag data">Data</span>
+      <span class="card-tag">RTC</span>
+      <span class="card-tag">CPOM</span>
+      <span class="card-tag">CNSA</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+  <!-- Card 23 - Veille réglementaire stratégique -->
+  <div class="use-case-card" data-personas="strat dir">
+    <div class="card-header">
+      <div class="card-icon pink">📰</div>
+      <div class="card-title">Veille stratégique : réformes, appels à projets, évolutions tarifaires</div>
+    </div>
+    <div class="card-result">
+      <div class="card-result-metric">Quotidien</div>
+      <div class="card-result-text">veille automatisée<br>filtrée par pertinence</div>
+    </div>
+    <div class="card-desc">L'IA surveille les publications ARS, CNSA, DGCS, Légifrance et vous alerte uniquement sur ce qui impacte votre activité. Plus besoin d'éplucher les bulletins officiels.</div>
+    <div class="card-tags">
+      <span class="card-tag strat">Stratégie</span>
+      <span class="card-tag dir">Direction</span>
+      <span class="card-tag">Veille</span>
+      <span class="card-tag">Réglementaire</span>
+    </div>
+    <div class="card-cta">Voir le détail <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"></path></svg></div>
+  </div>
+
+</div>
+
+<!-- BEFORE / AFTER -->
+<div class="before-after">
+  <h2 class="ba-title">Avant / Après l'IA</h2>
+  <p class="ba-subtitle">Ce que change concrètement notre accompagnement dans votre quotidien</p>
+  <div class="ba-grid">
+    <div class="ba-col before">
+      <h3>❌ Sans IA</h3>
+      <div class="ba-item"><span>⏰</span> 2 jours pour un rapport d'activité</div>
+      <div class="ba-item"><span>📄</span> EPRD/PPI montés manuellement sous Excel</div>
+      <div class="ba-item"><span>😩</span> Aucune visibilité sur votre positionnement territorial</div>
+      <div class="ba-item"><span>🔍</span> Anomalies factures/achats détectées au hasard</div>
+      <div class="ba-item"><span>📝</span> Turnover subi, pas anticipé</div>
+      <div class="ba-item"><span>🗂️</span> Données SAE/ATIH/RTC inexploitées</div>
+    </div>
+    <div class="ba-col after">
+      <h3>✅ Avec QUUBE·IA</h3>
+      <div class="ba-item"><span>⚡</span> Rapport d'activité en 2h, EPRD simulé en 1 jour</div>
+      <div class="ba-item"><span>📈</span> Business models testés en quelques clics</div>
+      <div class="ba-item"><span>🗺️</span> Benchmark territorial automatique via Open Data</div>
+      <div class="ba-item"><span>⚠️</span> Détection d'anomalies 24/7 sur tous vos flux</div>
+      <div class="ba-item"><span>👥</span> GPEC prédictive, absentéisme analysé</div>
+      <div class="ba-item"><span>🎯</span> Données publiques croisées pour piloter votre stratégie</div>
+    </div>
+  </div>
+</div>
+
+<!-- APPROACH -->
+<section class="approach-section">
+  <div class="approach-inner">
+    <h2>Notre méthode en 4 étapes</h2>
+    <p>Un accompagnement ancré dans votre réalité métier, pas une formation catalogue</p>
+    <div class="approach-steps">
+      <div class="approach-step">
+        <div class="step-number">1</div>
+        <div class="step-title">Diagnostic terrain</div>
+        <div class="step-desc">On observe vos pratiques, on identifie les irritants à fort impact IA</div>
+      </div>
+      <div class="approach-step">
+        <div class="step-number">2</div>
+        <div class="step-title">Cas d'usage pilotes</div>
+        <div class="step-desc">On teste 2-3 cas concrets avec vos équipes, on mesure les résultats</div>
+      </div>
+      <div class="approach-step">
+        <div class="step-number">3</div>
+        <div class="step-title">Formation métier</div>
+        <div class="step-desc">Vos équipes apprennent dans leur langage, avec leurs documents</div>
+      </div>
+      <div class="approach-step">
+        <div class="step-number">4</div>
+        <div class="step-title">Autonomie</div>
+        <div class="step-desc">Templates, prompts et process en place. Vous êtes autonomes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <h2>Prêt à gagner du temps sur ce qui compte ?</h2>
+  <p>Échangeons 30 min sur vos cas d'usage. On vous montre concrètement ce que l'IA peut changer dans votre quotidien.</p>
+  <div class="cta-buttons">
+    <a href="file:///Users/botta/Library/Application%20Support/Claude/local-agent-mode-sessions/3f9d5776-a7b8-4450-a70f-3287b75d8a3e/b4bd8565-756b-417d-be74-51ef9133e96b/local_2472dee2-8134-43d6-ab2c-7125817e41e2/outputs/cas-usage-prototype.html#" class="btn-primary">Réserver un créneau →</a>
+    <a href="file:///Users/botta/Library/Application%20Support/Claude/local-agent-mode-sessions/3f9d5776-a7b8-4450-a70f-3287b75d8a3e/b4bd8565-756b-417d-be74-51ef9133e96b/local_2472dee2-8134-43d6-ab2c-7125817e41e2/outputs/cas-usage-prototype.html#" class="btn-secondary">Télécharger nos cas d'usage (PDF)</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>QUUBE·IA Santé</strong> — Cabinet indépendant d'accompagnement IA pour le secteur sanitaire, médico-social et social<br>
+  © 2026 QUUBE·IA Santé. Tous droits réservés.
+</footer>
+
+<!-- PROTOTYPE RIBBON -->
+<div class="ribbon">🎨 Prototype v4 — 23 cas d'usage</div>
+
+<script>
+  // Filter logic
+  const tabs = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('.use-case-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const filter = tab.dataset.filter;
+
+      cards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = '';
+          card.style.animation = 'fadeInUp 0.4s ease';
+        } else {
+          const personas = card.dataset.personas;
+          if (personas && personas.includes(filter)) {
+            card.style.display = '';
+            card.style.animation = 'fadeInUp 0.4s ease';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+
+  // Smooth scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'fadeInUp 0.5s ease';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.use-case-card, .ba-col, .approach-step').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+
+
+</body></html>

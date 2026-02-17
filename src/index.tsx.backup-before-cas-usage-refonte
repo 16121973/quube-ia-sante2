@@ -162,724 +162,144 @@ app.get('/', (c) => {
 // ============================================================================
 // ============================================================================
 // PAGE CAS D'USAGE - 3 CATÉGORIES ACCORDÉON
-// NOUVELLE ROUTE /CAS-USAGE - PAGE COMPLÈTE
-// À remplacer dans index.tsx lignes 166-306
-
+// ============================================================================
 app.get('/cas-usage', (c) => {
   return c.render(
     <>
-      <link rel="stylesheet" href="/static/cas-usage.css" />
-
-      {/* === HERO === */}
-      <section class="hero-cas-usage">
-        <div class="hero-badge-cas">
-          <div class="dot-pulse"></div>
-          Cas d'usage co-construits avec des professionnels de terrain
+      {/* Hero */}
+      <section class="hero-interior">
+        <div class="container">
+          <h1 class="fade-in">Cas d'usage IA par métier</h1>
+          <p class="hero-subtitle fade-in">Des exemples concrets et des bénéfices mesurés pour chaque fonction</p>
         </div>
-        <h1>
-          L'IA au service de votre <em>quotidien</em>, pas de la théorie
-        </h1>
-        <p>
-          Chaque cas d'usage a été testé en conditions réelles, dans des établissements sanitaires, 
-          médico-sociaux et sociaux. Pas de promesses, des résultats mesurés.
-        </p>
       </section>
 
-      {/* === SOCIAL PROOF BAR === */}
-      <div class="proof-bar">
-        <div class="proof-item">
-          <div class="proof-number">15+</div>
-          <div class="proof-label">établissements accompagnés</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-number">–70%</div>
-          <div class="proof-label">temps de rédaction rapports d'activité</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-number">23</div>
-          <div class="proof-label">cas d'usage validés sur le terrain</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-number">100%</div>
-          <div class="proof-label">approche éthique RGPD conforme</div>
-        </div>
-      </div>
+      {/* Accordéons par catégorie métier */}
+      <section class="section-light">
+        <div class="container">
+          <div class="accordion-wrapper">
+            {/* Catégorie 1 - Direction Générale */}
+            <details class="accordion-item accordion-category fade-in" open>
+              <summary class="accordion-header accordion-category-header">
+                <span class="accordion-category-title">Direction Générale</span>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Piloter la stratégie globale de l'établissement, préparer les instances de gouvernance (Conseil d'Administration, CVS), rédiger des rapports d'activité conformes aux exigences réglementaires (ARS, Département), et conduire la transformation digitale dans un contexte de ressources contraintes.</p>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA synthétise les données de multiples services pour préparer des rapports d'activité structurés et conformes, génère des présentations stratégiques pour les instances de gouvernance, aide à la rédaction de notes de cadrage pour les projets d'établissement, et facilite l'analyse de données pour le pilotage de la performance.</p>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Diagnostic des besoins stratégiques et analyse des processus de pilotage actuels</li>
+                    <li>Formation personnalisée aux outils IA de synthèse, structuration et pilotage</li>
+                    <li>Co-création de templates IA pour rapports, présentations et notes stratégiques</li>
+                    <li>Accompagnement sur un cycle de gouvernance complet (préparation CA, CVS, rapport d'activité)</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
 
-      {/* === BANNIÈRE CRÉDIBILITÉ === */}
-      <div class="credibility-banner">
-        <div class="credibility-inner">
-          <div class="credibility-tag">Notre approche</div>
-          <div class="credibility-icon">🔬</div>
-          <div class="credibility-content">
-            <strong>Des cas d'usage forgés sur le terrain, pas en laboratoire</strong>
-            <p>
-              Nous intervenons aux côtés d'organisations employeurs majeures du secteur, d'établissements 
-              de toute taille, et de professionnels en exercice. Chaque cas d'usage ci-dessous a été construit, 
-              testé et mesuré en conditions réelles — avec les contraintes du quotidien : temps limité, 
-              outils existants, équipes non-techniciennes.
-            </p>
-          </div>
-        </div>
-      </div>
+            {/* Catégorie 2 - Services Administratifs & Support */}
+            <details class="accordion-item accordion-category fade-in" open>
+              <summary class="accordion-header accordion-category-header">
+                <span class="accordion-category-title">Services Administratifs & Support</span>
+                <p class="accordion-category-subtitle">Finances, RH, Qualité, Achats, SI, Communication</p>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Les services supports doivent :</p>
+                  <ul>
+                    <li><strong>Finances :</strong> Rédiger CPOM et EPRD conformes, préparer les dialogues de gestion avec les autorités</li>
+                    <li><strong>RH :</strong> Attirer et retenir des talents dans un secteur en tension, gérer GPEC et formations</li>
+                    <li><strong>Qualité :</strong> Préparer les évaluations HAS, rédiger procédures et rapports d'audit</li>
+                    <li><strong>Achats :</strong> Rédiger cahiers des charges, analyser les offres, gérer marchés publics</li>
+                    <li><strong>SI :</strong> Assurer sécurité HDS, conformité RGPD, habilitations et formations utilisateurs</li>
+                    <li><strong>Communication :</strong> Produire contenus réseaux sociaux, communiqués de presse, newsletters internes</li>
+                  </ul>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA apporte une aide concrète sur chaque fonction :</p>
+                  <ul>
+                    <li><strong>Finances :</strong> Structuration CPOM/EPRD, analyse commentée des écarts budgétaires, argumentaires financiers</li>
+                    <li><strong>RH :</strong> Rédaction offres d'emploi attractives, grilles d'entretien, supports de formation GPEC</li>
+                    <li><strong>Qualité :</strong> Auto-évaluations HAS structurées, procédures conformes, plans d'action qualité</li>
+                    <li><strong>Achats :</strong> Rédaction cahiers des charges, analyse comparative offres, rapports de coûts</li>
+                    <li><strong>SI :</strong> Procédures de sécurité, supports formation cybersécurité, documentation RGPD/HDS</li>
+                    <li><strong>Communication :</strong> Génération de contenus multicanaux, posts engageants, communiqués et supports visuels</li>
+                  </ul>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Diagnostic des processus métiers spécifiques à chaque service support</li>
+                    <li>Formations ciblées par fonction (finances, RH, qualité, achats, SI, communication)</li>
+                    <li>Co-création de templates IA adaptés aux documents métiers (CPOM, fiches de poste, procédures, cahiers des charges, etc.)</li>
+                    <li>Accompagnement sur cycle complet (budget, recrutement, certification, appel d'offres, etc.)</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
 
-      {/* === BADGES D'EXPERTISE === */}
-      <div class="expertise-badges">
-        <span class="expertise-badge">🏥 Sanitaire & Médico-social</span>
-        <span class="expertise-badge">📋 Référentiels HAS</span>
-        <span class="expertise-badge">🏛️ Conformité ARS & CPOM</span>
-        <span class="expertise-badge">♿ FALC & Accessibilité</span>
-        <span class="expertise-badge">🔒 RGPD & Éthique IA</span>
-        <span class="expertise-badge">📊 SERAFIN-PH</span>
-        <span class="expertise-badge">🗄️ SAE / ATIH / RTC / PMSI</span>
-        <span class="expertise-badge">📐 Indicateurs ANAP & CNSA</span>
-        <span class="expertise-badge">💰 EPRD / ERRD / PPI</span>
-      </div>
-
-      {/* === FILTRES PAR PERSONA === */}
-      <div class="filter-section">
-        <div class="filter-label">Filtrer par fonction :</div>
-        <div class="filter-tabs">
-          <div class="filter-tab active" data-filter="all">Tous les cas d'usage</div>
-          <div class="filter-tab" data-filter="dir">Direction / Stratégie</div>
-          <div class="filter-tab" data-filter="data">Data / Pilotage / Finance</div>
-          <div class="filter-tab" data-filter="soin">Soignant·e</div>
-          <div class="filter-tab" data-filter="rh">RH</div>
-          <div class="filter-tab" data-filter="educ">Éducateur·rice</div>
-          <div class="filter-tab" data-filter="qualite">Qualité / Achats / Contrôle</div>
-          <div class="filter-tab" data-filter="strat">Analyse territoriale / Open Data</div>
-        </div>
-      </div>
-
-      {/* === GRILLE DE CARTES (23 cartes importées) === */}
-      <div class="cards-grid" id="cards-container">
-        {/* Card 1 - Rapport d'activité */}
-        <div class="use-case-card" data-personas="dir">
-          <div class="card-header">
-            <div class="card-icon blue">📊</div>
-            <div class="card-title">Rapport d'activité en 2h au lieu de 2 jours</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">–70%</div>
-            <div class="card-result-text">de temps de rédaction<br />mesuré en accompagnement</div>
-          </div>
-          <div class="card-desc">L'IA agrège vos données multi-services et génère un rapport structuré, conforme aux exigences ARS et Département. Vous relisez et validez.</div>
-          <div class="card-tags">
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">ARS</span>
-            <span class="card-tag">CPOM</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 2 - Projets personnalisés */}
-        <div class="use-case-card" data-personas="soin">
-          <div class="card-header">
-            <div class="card-icon green">📝</div>
-            <div class="card-title">Projets personnalisés structurés en 30 min</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">30 min</div>
-            <div class="card-result-text">au lieu de 2-3h<br />par projet</div>
-          </div>
-          <div class="card-desc">À partir de vos notes de terrain et bilans, l'IA structure le projet personnalisé selon les référentiels HAS. Vous gardez la main clinique.</div>
-          <div class="card-tags">
-            <span class="card-tag soin">Soins</span>
-            <span class="card-tag">HAS</span>
-            <span class="card-tag">PP</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 3 - Supports FALC */}
-        <div class="use-case-card" data-personas="educ">
-          <div class="card-header">
-            <div class="card-icon purple">🎨</div>
-            <div class="card-title">Supports FALC générés en quelques clics</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">×5</div>
-            <div class="card-result-text">plus de supports produits<br />par semaine</div>
-          </div>
-          <div class="card-desc">Transformez n'importe quel document en version Facile à Lire et à Comprendre, avec pictogrammes adaptés. Idéal pour l'accessibilité des usagers.</div>
-          <div class="card-tags">
-            <span class="card-tag educ">Éducatif</span>
-            <span class="card-tag">FALC</span>
-            <span class="card-tag">Accessibilité</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 4 - Préparation CA/CVS */}
-        <div class="use-case-card" data-personas="dir">
-          <div class="card-header">
-            <div class="card-icon blue">🏛️</div>
-            <div class="card-title">Préparation CA/CVS : synthèse multi-services automatisée</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">1h</div>
-            <div class="card-result-text">de préparation au lieu<br />d'une journée</div>
-          </div>
-          <div class="card-desc">L'IA compile les remontées de chaque service, crée un support de présentation structuré pour vos instances de gouvernance. Prêt à personnaliser.</div>
-          <div class="card-tags">
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">Gouvernance</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 5 - Protocoles HAS */}
-        <div class="use-case-card" data-personas="qualite">
-          <div class="card-header">
-            <div class="card-icon green">✅</div>
-            <div class="card-title">Protocoles HAS : de la veille à la rédaction</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">–60%</div>
-            <div class="card-result-text">de temps sur la veille<br />réglementaire</div>
-          </div>
-          <div class="card-desc">L'IA identifie les recommandations HAS applicables, synthétise les bonnes pratiques et propose un brouillon de protocole conforme à adapter.</div>
-          <div class="card-tags">
-            <span class="card-tag qualite">Qualité</span>
-            <span class="card-tag soin">Soins</span>
-            <span class="card-tag">HAS</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 6 - Transmissions */}
-        <div class="use-case-card" data-personas="soin">
-          <div class="card-header">
-            <div class="card-icon green">💬</div>
-            <div class="card-title">Transmissions ciblées lisibles en 1 minute</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">1 min</div>
-            <div class="card-result-text">pour lire une synthèse<br />de transmissions</div>
-          </div>
-          <div class="card-desc">Fini les transmissions illisibles. L'IA structure les notes de relève en format clair, priorise les alertes, et facilite la coordination d'équipe.</div>
-          <div class="card-tags">
-            <span class="card-tag soin">Soins</span>
-            <span class="card-tag">Coordination</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 7 - Plan de formation */}
-        <div class="use-case-card" data-personas="rh">
-          <div class="card-header">
-            <div class="card-icon orange">👥</div>
-            <div class="card-title">Plan de formation sur mesure en une journée</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">1 jour</div>
-            <div class="card-result-text">au lieu d'une semaine<br />de montage</div>
-          </div>
-          <div class="card-desc">L'IA analyse vos entretiens professionnels, identifie les besoins par service, et propose un plan de formation structuré, prêt à arbitrer.</div>
-          <div class="card-tags">
-            <span class="card-tag rh">RH</span>
-            <span class="card-tag">Formation</span>
-            <span class="card-tag">GPEC</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 8 - Activités éducatives */}
-        <div class="use-case-card" data-personas="educ">
-          <div class="card-header">
-            <div class="card-icon purple">🧩</div>
-            <div class="card-title">Activités éducatives personnalisées par profil</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">∞</div>
-            <div class="card-result-text">d'idées adaptées au profil<br />de chaque usager</div>
-          </div>
-          <div class="card-desc">L'IA propose des activités éducatives ajustées aux capacités, intérêts et objectifs de chaque usager. L'éducateur choisit, adapte et anime.</div>
-          <div class="card-tags">
-            <span class="card-tag educ">Éducatif</span>
-            <span class="card-tag">Personnalisation</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 9 - Appels à projets */}
-        <div class="use-case-card" data-personas="rh dir">
-          <div class="card-header">
-            <div class="card-icon orange">📋</div>
-            <div class="card-title">Réponse aux appels à projets 3× plus vite</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">×3</div>
-            <div class="card-result-text">de rapidité sur le<br />montage dossier</div>
-          </div>
-          <div class="card-desc">L'IA structure votre réponse à partir du cahier des charges, intègre vos données établissement, et génère un dossier de candidature prêt à finaliser.</div>
-          <div class="card-tags">
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">Admin</span>
-            <span class="card-tag">AAP</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 10 - EPRD/ERRD */}
-        <div class="use-case-card" data-personas="data dir">
-          <div class="card-header">
-            <div class="card-icon indigo">💰</div>
-            <div class="card-title">EPRD/ERRD : modélisation financière en quelques heures</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">–80%</div>
-            <div class="card-result-text">de temps sur la<br />modélisation budgétaire</div>
-          </div>
-          <div class="card-desc">L'IA structure vos données comptables, projette les tendances, et génère un EPRD/ERRD pré-rempli conforme aux cadres ARS. Vous arbitrez, elle calcule.</div>
-          <div class="card-tags">
-            <span class="card-tag data">Data & Finance</span>
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">EPRD</span>
-            <span class="card-tag">ERRD</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 11 - PPI */}
-        <div class="use-case-card" data-personas="data dir">
-          <div class="card-header">
-            <div class="card-icon indigo">🏗️</div>
-            <div class="card-title">Plan Pluriannuel d'Investissement : scénarios simulés en temps réel</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">3→1</div>
-            <div class="card-result-text">semaine au lieu de 3<br />pour un PPI complet</div>
-          </div>
-          <div class="card-desc">L'IA modélise différents scénarios d'investissement (travaux, équipements, numérique), simule l'impact sur la CAF et la trésorerie, et génère un plan pluriannuel chiffré.</div>
-          <div class="card-tags">
-            <span class="card-tag data">Data & Finance</span>
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">PPI</span>
-            <span class="card-tag">CAF</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 12 - Business models */}
-        <div class="use-case-card" data-personas="data dir">
-          <div class="card-header">
-            <div class="card-icon indigo">📈</div>
-            <div class="card-title">Simulation de business models : tester avant de décider</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">∞</div>
-            <div class="card-result-text">de scénarios testables<br />en quelques clics</div>
-          </div>
-          <div class="card-desc">Ouverture de places, création de service, changement de tarification — l'IA simule l'impact financier de chaque hypothèse et compare les scénarios visuellement.</div>
-          <div class="card-tags">
-            <span class="card-tag data">Data & Finance</span>
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">CPOM</span>
-            <span class="card-tag">Tarification</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 13 - Tableaux de bord */}
-        <div class="use-case-card" data-personas="data dir">
-          <div class="card-header">
-            <div class="card-icon indigo">🎯</div>
-            <div class="card-title">Tableaux de bord pilotage : vos indicateurs en un coup d'œil</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">Temps réel</div>
-            <div class="card-result-text">suivi des indicateurs<br />clés automatisé</div>
-          </div>
-          <div class="card-desc">L'IA agrège vos données RH, financières et d'activité pour produire des dashboards actualisés, avec alertes sur les écarts significatifs. Fini les tableaux Excel manuels.</div>
-          <div class="card-tags">
-            <span class="card-tag data">Data & Finance</span>
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">KPI</span>
-            <span class="card-tag">ANAP</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 14 - GPEC prédictive */}
-        <div class="use-case-card" data-personas="rh">
-          <div class="card-header">
-            <div class="card-icon orange">📊</div>
-            <div class="card-title">GPEC prédictive : anticiper les départs et besoins en compétences</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">12 mois</div>
-            <div class="card-result-text">de visibilité<br />sur les effectifs</div>
-          </div>
-          <div class="card-desc">L'IA croise pyramide des âges, ancienneté, turnover historique et entretiens pour projeter vos besoins en recrutement et formation sur 1 à 3 ans.</div>
-          <div class="card-tags">
-            <span class="card-tag rh">RH</span>
-            <span class="card-tag">GPEC</span>
-            <span class="card-tag">Prédictif</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 15 - Analyse absentéisme */}
-        <div class="use-case-card" data-personas="rh data">
-          <div class="card-header">
-            <div class="card-icon orange">🔍</div>
-            <div class="card-title">Analyse absentéisme : comprendre les patterns, agir en amont</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">–25%</div>
-            <div class="card-result-text">d'absentéisme visé par<br />l'identification des causes</div>
-          </div>
-          <div class="card-desc">L'IA détecte les corrélations entre absentéisme, services, périodes et profils. Elle identifie les signaux faibles avant que la situation ne se dégrade.</div>
-          <div class="card-tags">
-            <span class="card-tag rh">RH</span>
-            <span class="card-tag data">Data</span>
-            <span class="card-tag">QVT</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 16 - Fiches de poste */}
-        <div class="use-case-card" data-personas="rh">
-          <div class="card-header">
-            <div class="card-icon orange">✍️</div>
-            <div class="card-title">Fiches de poste et annonces : rédigées en 15 min, conformes CCN</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">15 min</div>
-            <div class="card-result-text">par fiche de poste<br />prête à diffuser</div>
-          </div>
-          <div class="card-desc">L'IA génère des fiches de poste conformes à votre convention collective (CCN 66, 51, BAD…), adaptées au profil recherché et à votre culture d'établissement.</div>
-          <div class="card-tags">
-            <span class="card-tag rh">RH</span>
-            <span class="card-tag">Recrutement</span>
-            <span class="card-tag">CCN</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 17 - Contrôle achats */}
-        <div class="use-case-card" data-personas="qualite data">
-          <div class="card-header">
-            <div class="card-icon teal">🛒</div>
-            <div class="card-title">Contrôle achats : détecter les surcoûts et doublons automatiquement</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">5-15%</div>
-            <div class="card-result-text">d'économies identifiées sur<br />les achats récurrents</div>
-          </div>
-          <div class="card-desc">L'IA analyse vos bons de commande, factures et contrats fournisseurs. Elle repère les doublons, écarts de prix, et fournisseurs hors marché.</div>
-          <div class="card-tags">
-            <span class="card-tag qualite">Contrôle</span>
-            <span class="card-tag data">Data</span>
-            <span class="card-tag">Achats</span>
-            <span class="card-tag">Anomalies</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 18 - Détection d'anomalies */}
-        <div class="use-case-card" data-personas="qualite data">
-          <div class="card-header">
-            <div class="card-icon teal">⚠️</div>
-            <div class="card-title">Détection d'anomalies : facturation, pointages, écritures comptables</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">24/7</div>
-            <div class="card-result-text">surveillance automatique<br />des flux de données</div>
-          </div>
-          <div class="card-desc">L'IA scanne en continu vos flux (paie, facturation, comptabilité) et alerte sur les incohérences : montants atypiques, erreurs de saisie, écarts de pointage.</div>
-          <div class="card-tags">
-            <span class="card-tag qualite">Contrôle</span>
-            <span class="card-tag data">Data</span>
-            <span class="card-tag">Anomalies</span>
-            <span class="card-tag">Facturation</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 19 - Pré-audit qualité */}
-        <div class="use-case-card" data-personas="qualite">
-          <div class="card-header">
-            <div class="card-icon teal">🔎</div>
-            <div class="card-title">Pré-audit qualité : auto-évaluation continue avant le contrôle</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">–50%</div>
-            <div class="card-result-text">de temps de préparation<br />avant évaluation externe</div>
-          </div>
-          <div class="card-desc">L'IA compare vos pratiques documentées aux référentiels HAS/ESSMS. Elle identifie les écarts, génère un plan d'action priorisé, et suit l'avancement des corrections.</div>
-          <div class="card-tags">
-            <span class="card-tag qualite">Qualité</span>
-            <span class="card-tag">HAS</span>
-            <span class="card-tag">Évaluation</span>
-            <span class="card-tag">ESSMS</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 20 - Benchmark territorial */}
-        <div class="use-case-card" data-personas="strat dir data">
-          <div class="card-header">
-            <div class="card-icon pink">🗺️</div>
-            <div class="card-title">Benchmark territorial : positionnez-vous via SAE, ATIH, CNSA</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">Open Data</div>
-            <div class="card-result-text">croisement automatique<br />de bases publiques</div>
-          </div>
-          <div class="card-desc">L'IA interroge les bases SAE, ATIH, RTC, PMSI, CNSA et indicateurs ANAP pour vous situer par rapport aux établissements comparables de votre territoire. Taux d'occupation, coûts, activité — en quelques clics.</div>
-          <div class="card-tags">
-            <span class="card-tag strat">Stratégie</span>
-            <span class="card-tag data">Data</span>
-            <span class="card-tag">SAE</span>
-            <span class="card-tag">ATIH</span>
-            <span class="card-tag">ANAP</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 21 - Analyse besoins territoire */}
-        <div class="use-case-card" data-personas="strat dir">
-          <div class="card-header">
-            <div class="card-icon pink">📍</div>
-            <div class="card-title">Analyse des besoins du territoire : identifier les zones blanches</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">360°</div>
-            <div class="card-result-text">vision territoriale<br />données croisées</div>
-          </div>
-          <div class="card-desc">L'IA croise données démographiques (INSEE), offre existante (FINESS, SAE), indicateurs de précarité et données ARS pour cartographier les besoins non couverts sur votre territoire.</div>
-          <div class="card-tags">
-            <span class="card-tag strat">Stratégie</span>
-            <span class="card-tag">FINESS</span>
-            <span class="card-tag">INSEE</span>
-            <span class="card-tag">PRS</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 22 - Analyse RTC & coûts */}
-        <div class="use-case-card" data-personas="strat data dir">
-          <div class="card-header">
-            <div class="card-icon pink">⚖️</div>
-            <div class="card-title">Analyse RTC & coûts : comparez votre structure aux référentiels nationaux</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">RTC</div>
-            <div class="card-result-text">retraitement comptable<br />analysé automatiquement</div>
-          </div>
-          <div class="card-desc">L'IA décompose votre RTC, compare chaque poste aux moyennes nationales et régionales (ATIH, CNSA), et identifie les leviers d'optimisation. Idéal pour négocier votre CPOM.</div>
-          <div class="card-tags">
-            <span class="card-tag strat">Stratégie</span>
-            <span class="card-tag data">Data</span>
-            <span class="card-tag">RTC</span>
-            <span class="card-tag">CPOM</span>
-            <span class="card-tag">CNSA</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 23 - Veille stratégique */}
-        <div class="use-case-card" data-personas="strat dir">
-          <div class="card-header">
-            <div class="card-icon pink">📰</div>
-            <div class="card-title">Veille stratégique : réformes, appels à projets, évolutions tarifaires</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">Quotidien</div>
-            <div class="card-result-text">veille automatisée<br />filtrée par pertinence</div>
-          </div>
-          <div class="card-desc">L'IA surveille les publications ARS, CNSA, DGCS, Légifrance et vous alerte uniquement sur ce qui impacte votre activité. Plus besoin d'éplucher les bulletins officiels.</div>
-          <div class="card-tags">
-            <span class="card-tag strat">Stratégie</span>
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">Veille</span>
-            <span class="card-tag">Réglementaire</span>
-          </div>
-          <div class="card-cta">
-            Voir le détail
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-      </div>
-
-      {/* === SECTION AVANT/APRÈS === */}
-      <div class="before-after">
-        <h2 class="ba-title">Votre quotidien, avant et après l'IA</h2>
-        <p class="ba-subtitle">Constats terrain sur 15+ établissements accompagnés</p>
-        <div class="ba-grid">
-          <div class="ba-col before">
-            <h3>❌ Sans IA</h3>
-            <div class="ba-item"><span>⏰</span> 2 jours pour un rapport d'activité</div>
-            <div class="ba-item"><span>📄</span> EPRD/PPI montés manuellement sous Excel</div>
-            <div class="ba-item"><span>😩</span> Aucune visibilité sur votre positionnement territorial</div>
-            <div class="ba-item"><span>🔍</span> Anomalies factures/achats détectées au hasard</div>
-            <div class="ba-item"><span>📝</span> Turnover subi, pas anticipé</div>
-            <div class="ba-item"><span>🗂️</span> Données SAE/ATIH/RTC inexploitées</div>
-          </div>
-          <div class="ba-col after">
-            <h3>✅ Avec QUUBE·IA</h3>
-            <div class="ba-item"><span>⚡</span> Rapport d'activité en 2h, EPRD simulé en 1 jour</div>
-            <div class="ba-item"><span>📈</span> Business models testés en quelques clics</div>
-            <div class="ba-item"><span>🗺️</span> Benchmark territorial automatique via Open Data</div>
-            <div class="ba-item"><span>⚠️</span> Détection d'anomalies 24/7 sur tous vos flux</div>
-            <div class="ba-item"><span>👥</span> GPEC prédictive, absentéisme analysé</div>
-            <div class="ba-item"><span>🎯</span> Données publiques croisées pour piloter votre stratégie</div>
-          </div>
-        </div>
-      </div>
-
-      {/* === SECTION MÉTHODE === */}
-      <section class="approach-section">
-        <div class="approach-inner">
-          <h2>Notre méthode en 4 étapes</h2>
-          <p>Un accompagnement concret, ancré dans vos pratiques réelles</p>
-          <div class="approach-steps">
-            <div class="approach-step">
-              <div class="step-number">1</div>
-              <div class="step-title">Diagnostic terrain</div>
-              <div class="step-desc">On observe vos pratiques, on identifie les irritants à fort impact IA</div>
-            </div>
-            <div class="approach-step">
-              <div class="step-number">2</div>
-              <div class="step-title">Cas d'usage pilotes</div>
-              <div class="step-desc">On teste 2-3 cas concrets avec vos équipes, on mesure les résultats</div>
-            </div>
-            <div class="approach-step">
-              <div class="step-number">3</div>
-              <div class="step-title">Formation métier</div>
-              <div class="step-desc">Vos équipes apprennent dans leur langage, avec leurs documents</div>
-            </div>
-            <div class="approach-step">
-              <div class="step-number">4</div>
-              <div class="step-title">Autonomie</div>
-              <div class="step-desc">Templates, prompts et process en place. Vous êtes autonomes.</div>
-            </div>
+            {/* Catégorie 3 - Cœur de Métier Santé */}
+            <details class="accordion-item accordion-category fade-in" open>
+              <summary class="accordion-header accordion-category-header">
+                <span class="accordion-category-title">Cœur de Métier Santé</span>
+                <p class="accordion-category-subtitle">Soins, Accompagnement Éducatif, Direction des Soins</p>
+                <svg class="accordion-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </summary>
+              <div class="accordion-content">
+                <div class="use-case-detail">
+                  <h4>Challenge</h4>
+                  <p>Les professionnels du soin et de l'accompagnement font face à :</p>
+                  <ul>
+                    <li><strong>Soins & Accompagnement :</strong> Rédiger des projets personnalisés de qualité, assurer transmissions efficaces, coordonner prises en charge pluridisciplinaires</li>
+                    <li><strong>Accompagnement Éducatif :</strong> Créer supports pédagogiques adaptés (FALC, pictogrammes), concevoir activités éducatives personnalisées, documenter projets individuels</li>
+                    <li><strong>Direction des Soins :</strong> Élaborer protocoles conformes aux bonnes pratiques HAS, piloter projets de soins, former équipes, réaliser audits de pratiques</li>
+                  </ul>
+                  
+                  <h4>Bénéfice IA</h4>
+                  <p>L'IA soutient le cœur de métier sans jamais remplacer l'expertise professionnelle :</p>
+                  <ul>
+                    <li><strong>Soins & Accompagnement :</strong> Structuration projets personnalisés, synthèse transmissions, comptes rendus coordination, supports d'information familles</li>
+                    <li><strong>Accompagnement Éducatif :</strong> Génération supports FALC, propositions activités adaptées aux profils, aide rédaction projets éducatifs</li>
+                    <li><strong>Direction des Soins :</strong> Rédaction protocoles basés sur recommandations HAS, synthèse retours audits, supports formation, suivi pratiques</li>
+                  </ul>
+                  
+                  <h4>Notre approche</h4>
+                  <ul>
+                    <li>Analyse des besoins spécifiques des équipes de terrain (soins, éducatif, direction)</li>
+                    <li>Formations adaptées aux professionnels de terrain (langage métier, respect des pratiques)</li>
+                    <li>Co-création de templates IA pour projets personnalisés, supports FALC, protocoles de soins</li>
+                    <li>Accompagnement respectueux des référentiels métier et des pratiques professionnelles</li>
+                  </ul>
+                </div>
+              </div>
+            </details>
           </div>
         </div>
       </section>
 
-      {/* === CTA FINAL === */}
-      <div class="cta-cas-usage">
-        <h2>Prêt à gagner du temps sur ce qui compte ?</h2>
-        <p>Échangeons 30 min sur vos cas d'usage. On vous montre concrètement ce que l'IA peut changer dans votre quotidien.</p>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn-primary-cas">Réserver un créneau →</a>
-          <a href="#" class="btn-secondary-cas">Télécharger nos cas d'usage (PDF)</a>
+      {/* CTA final */}
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content fade-in">
+            <h2 class="cta-title">Prêt à transformer votre métier avec l'IA ?</h2>
+            <p class="cta-subtitle">Échangeons sur vos cas d'usage spécifiques et vos défis quotidiens</p>
+            <a href="/contact" class="btn btn-primary btn-large">Prendre rendez-vous</a>
+          </div>
         </div>
-      </div>
+      </section>
     </>,
     { title: 'Cas d\'usage' }
   )

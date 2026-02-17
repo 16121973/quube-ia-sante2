@@ -208,5 +208,53 @@ document.addEventListener('DOMContentLoaded', () => {
     return icons[name] || '';
   };
 
+  // === FILTRAGE CAS D'USAGE (PAGE /CAS-USAGE) ===
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const useCaseCards = document.querySelectorAll('.use-case-card');
+
+  if (filterTabs.length > 0 && useCaseCards.length > 0) {
+    filterTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Retirer la classe active de tous les onglets
+        filterTabs.forEach(t => t.classList.remove('active'));
+        // Ajouter la classe active à l'onglet cliqué
+        tab.classList.add('active');
+        
+        const filter = tab.dataset.filter;
+
+        // Filtrer les cartes
+        useCaseCards.forEach(card => {
+          if (filter === 'all') {
+            card.style.display = '';
+            card.style.animation = 'fadeInUp 0.4s ease';
+          } else {
+            const personas = card.dataset.personas;
+            if (personas && personas.includes(filter)) {
+              card.style.display = '';
+              card.style.animation = 'fadeInUp 0.4s ease';
+            } else {
+              card.style.display = 'none';
+            }
+          }
+        });
+      });
+    });
+  }
+
+  // === ANIMATIONS SCROLL POUR CAS D'USAGE ===
+  const casUsageObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.animation = 'fadeInUp 0.5s ease';
+        casUsageObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  // Observer les cartes, colonnes avant/après et étapes de la méthode
+  document.querySelectorAll('.use-case-card, .ba-col, .approach-step').forEach(el => {
+    casUsageObserver.observe(el);
+  });
+
   console.log('✅ QUUBE×IA Santé - JavaScript chargé');
 });
