@@ -169,89 +169,60 @@ app.get('/cas-usage', (c) => {
   return c.render(
     <>
       <link rel="stylesheet" href="/static/cas-usage.css" />
+      <link rel="stylesheet" href="/static/cas-usage-v3.css" />
 
-      {/* === HERO === */}
-      <section class="hero-cas-usage">
-        <div class="hero-badge-cas">
-          <div class="dot-pulse"></div>
-          Cas d'usage co-construits avec des professionnels de terrain
-        </div>
-        <h1>
-          L'IA au service de votre <em>quotidien</em>, pas de la théorie
-        </h1>
-        <p>
-          Chaque cas d'usage a été testé en conditions réelles, dans des établissements sanitaires, 
-          médico-sociaux et sociaux. Pas de promesses, des résultats mesurés.
-        </p>
-      </section>
-
-      {/* === SOCIAL PROOF BAR === */}
-      <div class="proof-bar">
-        <div class="proof-item">
-          <div class="proof-number">15+</div>
-          <div class="proof-label">établissements accompagnés</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-number">–70%</div>
-          <div class="proof-label">temps de rédaction rapports d'activité</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-number">23</div>
-          <div class="proof-label">cas d'usage validés sur le terrain</div>
-        </div>
-        <div class="proof-item">
-          <div class="proof-number">100%</div>
-          <div class="proof-label">approche éthique RGPD conforme</div>
-        </div>
-      </div>
-
-      {/* === BANNIÈRE CRÉDIBILITÉ === */}
-      <div class="credibility-banner">
-        <div class="credibility-inner">
-          <div class="credibility-tag">Notre approche</div>
-          <div class="credibility-icon">🔬</div>
-          <div class="credibility-content">
-            <strong>Des cas d'usage forgés sur le terrain, pas en laboratoire</strong>
-            <p>
-              Nous intervenons aux côtés d'organisations employeurs majeures du secteur, d'établissements 
-              de toute taille, et de professionnels en exercice. Chaque cas d'usage ci-dessous a été construit, 
-              testé et mesuré en conditions réelles — avec les contraintes du quotidien : temps limité, 
-              outils existants, équipes non-techniciennes.
+      {/* === SECTION 1: HERO COMPACT (Fusion Hero + Social Proof + Crédibilité) === */}
+      <section class="hero-cas-usage-v3">
+        <div class="container">
+          <div class="hero-content-v3">
+            <div class="hero-badge-v3">
+              <div class="dot-pulse"></div>
+              23 cas d'usage testés en conditions réelles
+            </div>
+            <h1>L'IA au service de votre <em>quotidien</em>, pas de la théorie</h1>
+            <p class="hero-subtitle-v3">
+              Chaque cas d'usage ci-dessous a été co-construit et validé avec des professionnels de terrain. 
+              Pas de promesses, des <strong>résultats mesurés</strong> dans des établissements sanitaires et médico-sociaux.
             </p>
+            
+            {/* Mini social proof intégré */}
+            <div class="hero-stats-v3">
+              <div class="stat-item-v3">
+                <span class="stat-number-v3">15+</span>
+                <span class="stat-label-v3">établissements</span>
+              </div>
+              <div class="stat-item-v3">
+                <span class="stat-number-v3">–70%</span>
+                <span class="stat-label-v3">temps rapports</span>
+              </div>
+              <div class="stat-item-v3">
+                <span class="stat-number-v3">100%</span>
+                <span class="stat-label-v3">RGPD conforme</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* === BADGES D'EXPERTISE === */}
-      <div class="expertise-badges">
-        <span class="expertise-badge">🏥 Sanitaire & Médico-social</span>
-        <span class="expertise-badge">📋 Référentiels HAS</span>
-        <span class="expertise-badge">🏛️ Conformité ARS & CPOM</span>
-        <span class="expertise-badge">♿ FALC & Accessibilité</span>
-        <span class="expertise-badge">🔒 RGPD & Éthique IA</span>
-        <span class="expertise-badge">📊 SERAFIN-PH</span>
-        <span class="expertise-badge">🗄️ SAE / ATIH / RTC / PMSI</span>
-        <span class="expertise-badge">📐 Indicateurs ANAP & CNSA</span>
-        <span class="expertise-badge">💰 EPRD / ERRD / PPI</span>
-      </div>
+      {/* === SECTION 2: FILTRES + CARTES === */}
+      <section class="section-cas-usage-v3">
+        <div class="container">
+          <div class="filter-section-v3">
+            <h2 class="filter-title-v3">Filtrer par fonction</h2>
+            <div class="filter-tabs-v3">
+              <div class="filter-tab-v3 active" data-filter="all">Tous</div>
+              <div class="filter-tab-v3" data-filter="dir">Direction</div>
+              <div class="filter-tab-v3" data-filter="data">Data / Finance</div>
+              <div class="filter-tab-v3" data-filter="soin">Soignant·e</div>
+              <div class="filter-tab-v3" data-filter="rh">RH</div>
+              <div class="filter-tab-v3" data-filter="educ">Éducateur·rice</div>
+              <div class="filter-tab-v3" data-filter="qualite">Qualité</div>
+              <div class="filter-tab-v3" data-filter="strat">Stratégie</div>
+            </div>
+          </div>
 
-      {/* === FILTRES PAR PERSONA === */}
-      <div class="filter-section">
-        <div class="filter-label">Filtrer par fonction :</div>
-        <div class="filter-tabs">
-          <div class="filter-tab active" data-filter="all">Tous les cas d'usage</div>
-          <div class="filter-tab" data-filter="dir">Direction / Stratégie</div>
-          <div class="filter-tab" data-filter="data">Data / Pilotage / Finance</div>
-          <div class="filter-tab" data-filter="soin">Soignant·e</div>
-          <div class="filter-tab" data-filter="rh">RH</div>
-          <div class="filter-tab" data-filter="educ">Éducateur·rice</div>
-          <div class="filter-tab" data-filter="qualite">Qualité / Achats / Contrôle</div>
-          <div class="filter-tab" data-filter="strat">Analyse territoriale / Open Data</div>
-        </div>
-      </div>
-
-      {/* === GRILLE DE CARTES (23 cartes importées) === */}
-      <div class="cards-grid" id="cards-container">
+          {/* === GRILLE DE CARTES (23 cartes importées) === */}
+          <div class="cards-grid" id="cards-container">
         {/* Card 1 - Rapport d'activité */}
         <div class="use-case-card" data-personas="dir">
           <div class="card-header">
@@ -813,73 +784,61 @@ app.get('/cas-usage', (c) => {
             </svg>
           </div>
         </div>
-      </div>
-
-      {/* === SECTION AVANT/APRÈS === */}
-      <div class="before-after">
-        <h2 class="ba-title">Votre quotidien, avant et après l'IA</h2>
-        <p class="ba-subtitle">Constats terrain sur 15+ établissements accompagnés</p>
-        <div class="ba-grid">
-          <div class="ba-col before">
-            <h3>❌ Sans IA</h3>
-            <div class="ba-item"><span>⏰</span> 2 jours pour un rapport d'activité</div>
-            <div class="ba-item"><span>📄</span> EPRD/PPI montés manuellement sous Excel</div>
-            <div class="ba-item"><span>😩</span> Aucune visibilité sur votre positionnement territorial</div>
-            <div class="ba-item"><span>🔍</span> Anomalies factures/achats détectées au hasard</div>
-            <div class="ba-item"><span>📝</span> Turnover subi, pas anticipé</div>
-            <div class="ba-item"><span>🗂️</span> Données SAE/ATIH/RTC inexploitées</div>
-          </div>
-          <div class="ba-col after">
-            <h3>✅ Avec QUUBE·IA</h3>
-            <div class="ba-item"><span>⚡</span> Rapport d'activité en 2h, EPRD simulé en 1 jour</div>
-            <div class="ba-item"><span>📈</span> Business models testés en quelques clics</div>
-            <div class="ba-item"><span>🗺️</span> Benchmark territorial automatique via Open Data</div>
-            <div class="ba-item"><span>⚠️</span> Détection d'anomalies 24/7 sur tous vos flux</div>
-            <div class="ba-item"><span>👥</span> GPEC prédictive, absentéisme analysé</div>
-            <div class="ba-item"><span>🎯</span> Données publiques croisées pour piloter votre stratégie</div>
           </div>
         </div>
-      </div>
+      </section>
 
-      {/* === SECTION MÉTHODE === */}
-      <section class="approach-section">
-        <div class="approach-inner">
-          <h2>Notre méthode en 4 étapes</h2>
-          <p>Un accompagnement concret, ancré dans vos pratiques réelles</p>
-          <div class="approach-steps">
-            <div class="approach-step">
-              <div class="step-number">1</div>
-              <div class="step-title">Diagnostic terrain</div>
-              <div class="step-desc">On observe vos pratiques, on identifie les irritants à fort impact IA</div>
+      {/* === SECTION 3: IMPACT & MÉTHODE (fusion Avant/Après + Méthode) === */}
+      <section class="section-impact-v3">
+        <div class="container">
+          <h2 class="impact-title-v3">Notre méthode : diagnostic, test, autonomie</h2>
+          <p class="impact-subtitle-v3">Un accompagnement ancré dans vos pratiques réelles</p>
+          
+          <div class="impact-grid-v3">
+            <div class="impact-step-v3">
+              <div class="step-icon-v3">🔬</div>
+              <h3>Diagnostic terrain</h3>
+              <p>On observe vos irritants et identifie les cas d'usage à fort impact</p>
             </div>
-            <div class="approach-step">
-              <div class="step-number">2</div>
-              <div class="step-title">Cas d'usage pilotes</div>
-              <div class="step-desc">On teste 2-3 cas concrets avec vos équipes, on mesure les résultats</div>
+            <div class="impact-step-v3">
+              <div class="step-icon-v3">⚡</div>
+              <h3>Pilotes mesurés</h3>
+              <p>On teste 2-3 cas concrets avec vos équipes et on mesure les gains</p>
             </div>
-            <div class="approach-step">
-              <div class="step-number">3</div>
-              <div class="step-title">Formation métier</div>
-              <div class="step-desc">Vos équipes apprennent dans leur langage, avec leurs documents</div>
+            <div class="impact-step-v3">
+              <div class="step-icon-v3">🎯</div>
+              <h3>Autonomie</h3>
+              <p>Templates, prompts et process en place. Vous pilotez l'IA en interne</p>
             </div>
-            <div class="approach-step">
-              <div class="step-number">4</div>
-              <div class="step-title">Autonomie</div>
-              <div class="step-desc">Templates, prompts et process en place. Vous êtes autonomes.</div>
+          </div>
+          
+          <div class="impact-results-v3">
+            <div class="result-stat-v3">
+              <span class="result-number-v3">–70%</span>
+              <span class="result-label-v3">Temps de rédaction rapports</span>
+            </div>
+            <div class="result-stat-v3">
+              <span class="result-number-v3">×3</span>
+              <span class="result-label-v3">Vitesse montage projets</span>
+            </div>
+            <div class="result-stat-v3">
+              <span class="result-number-v3">100%</span>
+              <span class="result-label-v3">Équipes autonomes après formation</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* === CTA FINAL === */}
-      <div class="cta-cas-usage">
-        <h2>Prêt à gagner du temps sur ce qui compte ?</h2>
-        <p>Échangeons 30 min sur vos cas d'usage. On vous montre concrètement ce que l'IA peut changer dans votre quotidien.</p>
-        <div class="cta-buttons">
-          <a href="/contact" class="btn-primary-cas">Réserver un créneau →</a>
-          <a href="#" class="btn-secondary-cas">Télécharger nos cas d'usage (PDF)</a>
+      {/* === SECTION 4: CTA FINAL === */}
+      <section class="section-cta-final">
+        <div class="container">
+          <div class="cta-content fade-in">
+            <h2 class="cta-title">Prêt à tester l'IA sur vos propres cas d'usage ?</h2>
+            <p class="cta-subtitle">Échangeons 30 min. On vous montre concrètement ce que l'IA peut changer dans votre quotidien.</p>
+            <a href="/contact" class="btn btn-primary btn-large">Réserver un créneau</a>
+          </div>
         </div>
-      </div>
+      </section>
     </>,
     { title: 'Cas d\'usage' }
   )

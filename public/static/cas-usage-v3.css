@@ -1,0 +1,336 @@
+/* ====================================================================
+   CAS D'USAGE V3 - VERSION SIMPLIFIÉE (4 SECTIONS AU LIEU DE 8)
+   ==================================================================== */
+
+/* === SECTION 1: HERO COMPACT V3 === */
+.hero-cas-usage-v3 {
+  background: var(--color-gris);
+  padding: clamp(80px, 12vh, 120px) 0 clamp(60px, 10vh, 100px);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-cas-usage-v3::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 70%;
+  height: 140%;
+  background: var(--color-violet);
+  opacity: 1;
+  transform: rotate(12deg);
+  border-radius: 80px;
+  z-index: 0;
+}
+
+.hero-content-v3 {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-badge-v3 {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background: var(--color-blanc);
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-noir);
+  margin-bottom: 32px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.dot-pulse {
+  width: 8px;
+  height: 8px;
+  background: var(--color-vert);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.hero-cas-usage-v3 h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-noir);
+  margin-bottom: 24px;
+  line-height: 1.1;
+}
+
+.hero-cas-usage-v3 h1 em {
+  font-style: italic;
+  color: var(--color-vert);
+}
+
+.hero-subtitle-v3 {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  line-height: 1.6;
+  color: rgba(0,0,0,0.8);
+  margin-bottom: 48px;
+}
+
+.hero-subtitle-v3 strong {
+  font-weight: 700;
+  color: var(--color-noir);
+}
+
+/* Mini stats intégrées dans le hero */
+.hero-stats-v3 {
+  display: flex;
+  justify-content: center;
+  gap: clamp(24px, 4vw, 48px);
+  flex-wrap: wrap;
+  margin-top: 48px;
+}
+
+.stat-item-v3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-number-v3 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  color: var(--color-noir);
+}
+
+.stat-label-v3 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(0,0,0,0.7);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* === SECTION 2: FILTRES + CARTES V3 === */
+.section-cas-usage-v3 {
+  padding: clamp(60px, 10vh, 100px) 0;
+  background: var(--color-blanc);
+}
+
+.filter-section-v3 {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.filter-title-v3 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-noir);
+  margin-bottom: 24px;
+}
+
+.filter-tabs-v3 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.filter-tab-v3 {
+  padding: 12px 24px;
+  border-radius: 50px;
+  background: var(--color-gris);
+  color: rgba(0,0,0,0.7);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid transparent;
+}
+
+.filter-tab-v3:hover {
+  background: var(--color-blanc);
+  border-color: var(--color-vert);
+  color: var(--color-noir);
+}
+
+.filter-tab-v3.active {
+  background: var(--color-vert);
+  color: var(--color-blanc);
+  border-color: var(--color-vert);
+}
+
+/* Les cartes gardent leur style existant (23 cartes) */
+/* Import du fichier cas-usage.css pour les cartes existantes */
+
+/* === SECTION 3: IMPACT & MÉTHODE V3 === */
+.section-impact-v3 {
+  padding: clamp(60px, 10vh, 100px) 0;
+  background: var(--color-gris);
+  position: relative;
+  overflow: hidden;
+}
+
+.section-impact-v3::before {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -15%;
+  width: 60%;
+  height: 160%;
+  background: var(--color-jaune);
+  opacity: 1;
+  transform: rotate(-15deg);
+  border-radius: 80px;
+  z-index: 0;
+}
+
+.section-impact-v3 .container {
+  position: relative;
+  z-index: 1;
+}
+
+.impact-title-v3 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--color-noir);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.impact-subtitle-v3 {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  color: rgba(0,0,0,0.7);
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.impact-grid-v3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  margin-bottom: 64px;
+}
+
+.impact-step-v3 {
+  background: var(--color-blanc);
+  padding: 40px 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+}
+
+.impact-step-v3:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+}
+
+.step-icon-v3 {
+  font-size: 3rem;
+  margin-bottom: 24px;
+}
+
+.impact-step-v3 h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-noir);
+  margin-bottom: 16px;
+}
+
+.impact-step-v3 p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.7);
+}
+
+/* Résultats chiffrés */
+.impact-results-v3 {
+  display: flex;
+  justify-content: center;
+  gap: clamp(32px, 6vw, 64px);
+  flex-wrap: wrap;
+  padding: 48px 0 0;
+  border-top: 2px solid rgba(0,0,0,0.1);
+}
+
+.result-stat-v3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.result-number-v3 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  color: var(--color-noir);
+}
+
+.result-label-v3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(0,0,0,0.7);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  max-width: 180px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .hero-cas-usage-v3::before {
+    width: 100%;
+    right: -30%;
+  }
+
+  .hero-stats-v3 {
+    gap: 24px;
+  }
+
+  .filter-tabs-v3 {
+    gap: 8px;
+  }
+
+  .filter-tab-v3 {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .impact-grid-v3 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .impact-results-v3 {
+    gap: 32px;
+  }
+
+  .section-impact-v3::before {
+    width: 90%;
+    left: -20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-badge-v3 {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+  }
+
+  .hero-subtitle-v3 {
+    font-size: 1rem;
+  }
+
+  .stat-number-v3 {
+    font-size: 2rem;
+  }
+
+  .stat-label-v3 {
+    font-size: 0.75rem;
+  }
+}
