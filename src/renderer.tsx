@@ -6,10 +6,10 @@ export const renderer = jsxRenderer(({ children, title }) => {
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{title ? `${title} | QUUBE×IA Santé` : 'QUUBE×IA Santé'}</title>
+        <title>{title ? `${title} | QUUBE·IA Santé` : 'QUUBE·IA Santé'}</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
         <link href="/static/styles.css" rel="stylesheet" />
       </head>
       <body class="site-container">
@@ -17,7 +17,8 @@ export const renderer = jsxRenderer(({ children, title }) => {
         <header>
           <div class="container">
             <a href="/" class="logo">
-              <img src="https://www.genspark.ai/api/files/s/1Md7TeiG" alt="QUUBE" />
+              <span class="logo-main">QUUBE·IA</span>
+              <span class="logo-sub">Santé</span>
             </a>
             <nav>
               <a href="/">Accueil</a>
@@ -41,7 +42,7 @@ export const renderer = jsxRenderer(({ children, title }) => {
             <div class="footer-content">
               {/* Colonne 1 - Identité */}
               <div class="footer-section">
-                <h4>QUUBE×IA Santé</h4>
+                <h4>QUUBE·IA Santé</h4>
                 <p>
                   Cabinet indépendant de conseil et formation en IA pour les organisations de santé et médico-sociales.
                 </p>
@@ -83,7 +84,7 @@ export const renderer = jsxRenderer(({ children, title }) => {
 
             {/* Copyright */}
             <div class="footer-bottom">
-              © {new Date().getFullYear()} QUUBE×IA Santé. Tous droits réservés.
+              © {new Date().getFullYear()} QUUBE·IA Santé. Tous droits réservés.
             </div>
           </div>
         </footer>
