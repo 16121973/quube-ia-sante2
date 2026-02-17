@@ -7,6 +7,8 @@ export const renderer = jsxRenderer(({ children, title }) => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title ? `${title} | QUUBE·IA Santé` : 'QUUBE·IA Santé'}</title>
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        {/* Police TWK Everett via Adobe Fonts (fallback Arial + Inter) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -17,19 +19,36 @@ export const renderer = jsxRenderer(({ children, title }) => {
         <header>
           <div class="container">
             <a href="/" class="logo">
-              <span class="logo-main">QUUBE·IA</span>
-              <span class="logo-sub">Santé</span>
+              <img src="/static/logo-quube.svg" alt="QUUBE" class="logo-img" height="32" />
+              <span class="logo-divider">×</span>
+              <span class="logo-sub">IA Santé</span>
             </a>
-            <nav>
+            <nav class="desktop-nav">
               <a href="/">Accueil</a>
               <a href="/services">Nos services</a>
               <a href="/cas-usage">Cas d'usage</a>
               <a href="/a-propos">Qui sommes-nous</a>
               <a href="/contact" class="btn-contact">Contact</a>
             </nav>
-            <button class="mobile-menu-toggle" aria-label="Menu">☰</button>
+            <button class="mobile-menu-toggle" aria-label="Ouvrir le menu" id="mobile-menu-btn">
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
           </div>
         </header>
+
+        {/* Menu Mobile Overlay - Plein écran vert QUUBE */}
+        <div class="mobile-menu-overlay" id="mobile-menu">
+          <button class="mobile-menu-close" aria-label="Fermer le menu" id="mobile-menu-close">✕</button>
+          <nav class="mobile-nav">
+            <a href="/" class="mobile-nav-link">Accueil</a>
+            <a href="/services" class="mobile-nav-link">Nos services</a>
+            <a href="/cas-usage" class="mobile-nav-link">Cas d'usage</a>
+            <a href="/a-propos" class="mobile-nav-link">Qui sommes-nous</a>
+            <a href="/contact" class="mobile-nav-link mobile-nav-cta">Contact</a>
+          </nav>
+        </div>
 
         {/* Contenu principal */}
         <main>

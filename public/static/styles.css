@@ -23,8 +23,8 @@
   --color-bleu: #95CFFF;
   --color-vert: #37CAB0;
   
-  /* Typography */
-  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Typography - TWK Everett (charte QUUBE) avec fallback Arial > Inter */
+  --font-primary: 'TWK Everett', Arial, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   
   /* Layout */
   --max-width: 1400px;
@@ -104,8 +104,8 @@ header {
   right: 0;
   background: var(--color-blanc);
   z-index: 1000;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-  padding: 20px 0;
+  border-bottom: 2px solid var(--color-noir); /* Plus marqué */
+  padding: 24px 0; /* Plus d'air */
 }
 
 header .container {
@@ -116,8 +116,8 @@ header .container {
 
 .logo {
   display: flex;
-  align-items: baseline;
-  gap: 0.3em;
+  align-items: center; /* Center pour logo image */
+  gap: 12px;
   text-decoration: none;
   color: var(--color-noir);
   font-family: var(--font-primary);
@@ -128,6 +128,18 @@ header .container {
   opacity: 0.7;
 }
 
+.logo-img {
+  height: 32px;
+  width: auto;
+}
+
+.logo-divider {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(0,0,0,0.3);
+  line-height: 1;
+}
+
 .logo-main {
   font-weight: 900;
   font-size: 1.5rem;
@@ -136,14 +148,22 @@ header .container {
 
 .logo-sub {
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1.125rem;
   color: var(--color-noir);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
 }
 
-nav {
+.desktop-nav {
   display: flex;
   gap: 48px;
   align-items: center;
+}
+
+@media (max-width: 900px) {
+  .desktop-nav {
+    display: none;
+  }
 }
 
 nav a {
@@ -174,6 +194,121 @@ nav a:hover {
 
 .mobile-menu-toggle {
   display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 6px;
+  z-index: 1001;
+}
+
+.hamburger-line {
+  width: 28px;
+  height: 3px;
+  background: var(--color-noir);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+@media (max-width: 900px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+}
+
+/* === MENU MOBILE OVERLAY - Plein écran vert QUUBE === */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-vert); /* Vert QUUBE */
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(24px, 5vh, 48px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: transparent;
+  border: none;
+  color: var(--color-blanc);
+  font-size: 3rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.2s;
+}
+
+.mobile-menu-close:hover {
+  transform: rotate(90deg);
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(16px, 3vh, 32px);
+}
+
+.mobile-nav-link {
+  color: var(--color-blanc);
+  text-decoration: none;
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.mobile-nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-blanc);
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.mobile-nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.mobile-nav-link.mobile-nav-cta {
+  background: var(--color-noir);
+  color: var(--color-blanc);
+  padding: clamp(16px, 3vw, 24px) clamp(32px, 6vw, 56px);
+  border-radius: 12px;
+  margin-top: clamp(16px, 3vh, 32px);
+}
+
+.mobile-nav-link.mobile-nav-cta::after {
+  display: none;
+}
+
+.mobile-nav-link.mobile-nav-cta:hover {
+  background: var(--color-jaune);
+  color: var(--color-noir);
+  transform: scale(1.05);
 }
 
 /* === SECTIONS WITH GEOMETRIC SHAPES === */
@@ -193,19 +328,34 @@ section {
   background: var(--color-gris);
 }
 
-/* Grande forme géométrique background - style Marie-Louise */
+/* FORME GÉOMÉTRIQUE MASSIVE - Violet (charte QUUBE) */
 .hero::before {
   content: '';
   position: absolute;
-  top: 10%;
-  right: -10%;
-  width: 60%;
-  height: 80%;
-  background: linear-gradient(135deg, var(--color-violet) 0%, var(--color-bleu) 100%);
-  transform: rotate(-8deg) skewY(-3deg);
-  border-radius: 40px;
+  top: -5%;           /* Déborde légèrement */
+  right: 5%;          /* Visible dans viewport */
+  width: 85%;         /* MASSIF - 85% */
+  height: 95%;
+  background: var(--color-violet); /* Couleur unie */
+  transform: rotate(12deg);  /* Rotation simple et marquée */
+  border-radius: 80px; /* Très arrondi */
   z-index: 0;
-  opacity: 0.95;
+  opacity: 1.0;       /* OPAQUE - 100% */
+}
+
+/* FORME SECONDAIRE - Jaune accent (charte QUUBE) */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -8%;
+  left: -3%;
+  width: 35%;
+  height: 45%;
+  background: var(--color-jaune); /* Jaune accent */
+  border-radius: 60px;
+  opacity: 1.0;       /* OPAQUE */
+  z-index: 0;
+  transform: rotate(-15deg);
 }
 
 .hero-content {
@@ -283,12 +433,13 @@ section {
 }
 
 .card {
-  background: var(--color-blanc);
+  background: #F7F7F7; /* Gris léger QUUBE */
   padding: 48px 40px;
   border-radius: 12px;
   position: relative;
-  transition: all 0.3s;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
 }
 
 /* Bordure colorée gauche */
@@ -306,6 +457,8 @@ section {
 .card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  background: var(--color-blanc); /* Blanc au hover */
+  border-color: var(--color-vert); /* Bordure verte */
 }
 
 .card:nth-child(1) { --card-color: var(--color-violet); }
@@ -508,12 +661,13 @@ section {
 }
 
 .offer-card {
-  background: var(--color-blanc);
+  background: #F7F7F7; /* Gris léger QUUBE */
   padding: 48px;
   border-radius: 16px;
   box-shadow: 0 6px 24px rgba(0,0,0,0.08);
   position: relative;
-  transition: all 0.3s;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
 }
 
 .offer-card::before {
@@ -530,6 +684,8 @@ section {
 .offer-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 16px 48px rgba(0,0,0,0.15);
+  background: var(--color-blanc);
+  border-color: var(--color-vert);
 }
 
 .offer-card-title {
@@ -770,16 +926,19 @@ details[open] .accordion-icon {
 }
 
 .vision-card {
-  background: var(--color-blanc);
+  background: #F7F7F7; /* Gris léger QUUBE */
   padding: 40px;
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-  transition: all 0.3s;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
 }
 
 .vision-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+  background: var(--color-blanc);
+  border-color: var(--color-vert);
 }
 
 .vision-icon {
