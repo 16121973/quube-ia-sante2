@@ -7,24 +7,26 @@ export const renderer = jsxRenderer(({ children, title }) => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title ? `${title} | QUUBE·IA Santé` : 'QUUBE·IA Santé'}</title>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="description" content="Cabinet indépendant de conseil et formation en IA pour les organisations de santé et médico-sociales." />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         {/* Police TWK Everett via Adobe Fonts (fallback Arial + Inter) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" as="style" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link rel="preload" href="/static/styles.css" as="style" />
         <link href="/static/styles.css" rel="stylesheet" />
       </head>
       <body class="site-container">
         {/* Header - Charte QUUBE officielle */}
-        <header>
+        <header role="banner">
           <div class="container">
-            <a href="/" class="logo">
+            <a href="/" class="logo" aria-label="QUUBE IA Santé - Retour à l'accueil">
               <img src="/static/logo-quube.svg" alt="QUUBE" class="logo-img" height="32" />
               <span class="logo-divider">×</span>
               <span class="logo-sub">IA Santé</span>
             </a>
-            <nav class="desktop-nav">
+            <nav class="desktop-nav" role="navigation" aria-label="Navigation principale">
               <a href="/">Accueil</a>
               <a href="/services">Nos services</a>
               <a href="/cas-usage">Cas d'usage</a>
@@ -42,7 +44,7 @@ export const renderer = jsxRenderer(({ children, title }) => {
         {/* Menu Mobile Overlay - Plein écran vert QUUBE */}
         <div class="mobile-menu-overlay" id="mobile-menu">
           <button class="mobile-menu-close" aria-label="Fermer le menu" id="mobile-menu-close">✕</button>
-          <nav class="mobile-nav">
+          <nav class="mobile-nav" role="navigation" aria-label="Menu mobile">
             <a href="/" class="mobile-nav-link">Accueil</a>
             <a href="/services" class="mobile-nav-link">Nos services</a>
             <a href="/cas-usage" class="mobile-nav-link">Cas d'usage</a>
@@ -52,12 +54,12 @@ export const renderer = jsxRenderer(({ children, title }) => {
         </div>
 
         {/* Contenu principal */}
-        <main>
+        <main role="main" aria-label="Contenu principal">
           {children}
         </main>
 
         {/* Footer - Charte QUUBE officielle */}
-        <footer>
+        <footer role="contentinfo">
           <div class="container">
             <div class="footer-content">
               {/* Colonne 1 - Identité */}
@@ -110,7 +112,7 @@ export const renderer = jsxRenderer(({ children, title }) => {
         </footer>
 
         {/* JavaScript */}
-        <script src="/static/app.js"></script>
+        <script src="/static/app.js" defer></script>
       </body>
     </html>
   )

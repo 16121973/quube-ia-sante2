@@ -161,6 +161,17 @@ header .container {
   align-items: center;
 }
 
+/* ====================================================================
+   BREAKPOINTS RESPONSIVE - Standards modernes
+   ==================================================================== 
+   - Mobile S:  < 640px  (petits smartphones)
+   - Mobile L:  < 768px  (smartphones larges)  
+   - Tablet:    < 900px  (tablettes)
+   - Desktop:   < 1024px (petits écrans desktop)
+   - Large:     >= 1024px (écrans larges)
+*/
+
+/* === BREAKPOINT TABLET - Navigation mobile (max-width: 900px) === */
 @media (max-width: 900px) {
   .desktop-nav {
     display: none;
@@ -1300,7 +1311,8 @@ footer {
 .fade-in:nth-child(5) { animation-delay: 0.5s; }
 
 /* === RESPONSIVE === */
-@media (max-width: 968px) {
+/* === BREAKPOINT DESKTOP (max-width: 1024px) === */
+@media (max-width: 1024px) {
   h1 { font-size: clamp(2.5rem, 8vw, 5rem); }
   h2 { font-size: clamp(2rem, 6vw, 4rem); }
   
@@ -1341,6 +1353,23 @@ footer {
   }
 }
 
+/* === BREAKPOINT MOBILE L (max-width: 768px) === */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: clamp(2.5rem, 10vw, 7rem);
+  }
+  
+  .section-title {
+    font-size: clamp(2rem, 7vw, 4.5rem);
+  }
+  
+  .values-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* === BREAKPOINT MOBILE S (max-width: 640px) === */
 @media (max-width: 640px) {
   :root {
     --section-spacing: 60px;
