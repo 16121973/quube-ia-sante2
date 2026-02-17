@@ -3,20 +3,24 @@
    Cartes filtrables + Social proof + Avant/Après
    =================================== */
 
-/* Variables spécifiques page cas-usage */
+/* Variables spécifiques page cas-usage - CHARTE QUUBE 2024 */
 :root {
-  --primary-cas: #1a365d;
-  --primary-light-cas: #2b6cb0;
-  --accent-cas: #38b2ac;
-  --accent-light-cas: #81e6d9;
-  --accent-glow-cas: rgba(56, 178, 172, 0.15);
-  --orange-cas: #ed8936;
-  --purple-cas: #805ad5;
-  --blue-cas: #4299e1;
-  --green-cas: #48bb78;
-  --indigo-cas: #6366f1;
-  --pink-cas: #ec4899;
-  --teal-cas: #38b2ac;
+  /* Charte officielle QUUBE 2024 */
+  --primary-cas: #000000;
+  --primary-light-cas: #1a202c;
+  --accent-cas: #37CAB0;  /* Vert QUUBE */
+  --accent-light-cas: #7bdec4;
+  --accent-glow-cas: rgba(55, 202, 176, 0.15);
+  --orange-cas: #F96566;  /* Rouge QUUBE */
+  --purple-cas: #7E71C4;  /* Violet QUUBE */
+  --blue-cas: #95CFFF;    /* Bleu QUUBE */
+  --green-cas: #37CAB0;   /* Vert QUUBE */
+  --yellow-cas: #FCF474;  /* Jaune QUUBE */
+  --indigo-cas: #7E71C4;
+  --pink-cas: #F96566;
+  --teal-cas: #37CAB0;
+  --gray-light: #F1F1F1;  /* Gris QUUBE */
+  --white: #FFFFFF;
   --shadow-md-cas: 0 4px 14px rgba(0,0,0,0.08);
   --shadow-lg-cas: 0 10px 30px rgba(0,0,0,0.1);
   --radius-cas: 16px;
@@ -59,21 +63,20 @@
 }
 
 .hero-cas-usage h1 {
-  font-size: 3rem;
-  font-weight: 800;
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 900;
   color: var(--primary-cas);
-  line-height: 1.15;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.25rem;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
   animation: fadeInUp 0.6s ease 0.1s both;
 }
 
 .hero-cas-usage h1 em {
   font-style: normal;
-  background: linear-gradient(135deg, var(--accent-cas), var(--primary-light-cas));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-cas);
+  font-weight: 900;
 }
 
 .hero-cas-usage p {
@@ -134,7 +137,7 @@
 }
 
 .credibility-inner {
-  background: linear-gradient(135deg, var(--primary-cas) 0%, #2c5282 100%);
+  background: linear-gradient(135deg, var(--primary-cas) 0%, var(--primary-light-cas) 100%);
   border-radius: var(--radius-cas);
   padding: 2rem 2.5rem;
   display: flex;
@@ -461,13 +464,13 @@
 }
 
 .ba-col.before {
-  background: linear-gradient(135deg, #fff5f5, #fed7d7);
-  border: 1px solid #feb2b2;
+  background: linear-gradient(135deg, #fff5f5, #ffd7d7);
+  border: 2px solid var(--orange-cas);
 }
 
 .ba-col.after {
-  background: linear-gradient(135deg, #f0fff4, #c6f6d5);
-  border: 1px solid #9ae6b4;
+  background: linear-gradient(135deg, #f0fff4, #d7ffe8);
+  border: 2px solid var(--green-cas);
 }
 
 .ba-col h3 {
@@ -478,8 +481,8 @@
   margin-bottom: 1.25rem;
 }
 
-.ba-col.before h3 { color: #c53030; }
-.ba-col.after h3 { color: #276749; }
+.ba-col.before h3 { color: var(--orange-cas); }
+.ba-col.after h3 { color: var(--green-cas); }
 
 .ba-item {
   display: flex;

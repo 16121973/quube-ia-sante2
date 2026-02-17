@@ -28,7 +28,7 @@
   
   /* Layout */
   --max-width: 1400px;
-  --section-spacing: clamp(80px, 10vw, 160px);
+  --section-spacing: clamp(60px, 8vw, 100px);
   --card-gap: 40px;
 }
 
@@ -941,7 +941,7 @@ details[open] .accordion-icon {
 
 .section-cta {
   text-align: center;
-  margin-top: 64px;
+  margin-top: 40px;
 }
 
 /* === CTA SECTION === */
