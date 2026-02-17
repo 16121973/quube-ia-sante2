@@ -23,7 +23,7 @@ app.get('/', (c) => {
       {/* Section 1 - HERO (fond sombre gradient, 100vh) */}
       <section class="hero">
         <div class="hero-content">
-          <h1 class="fade-in">L'IA en Santé,<br />En Toute Confiance</h1>
+          <h1 class="fade-in" style="font-size: clamp(3rem, 12vw, 9rem) !important;">L'IA en Santé,<br />En Toute Confiance</h1>
           <p class="hero-subtitle fade-in">
             Cabinet indépendant de conseil et formation en IA pour les organisations de santé et médico-sociales. 
             De la stratégie aux usages concrets, nous vous guidons sans jargon, au service des soignants et des patients.
@@ -40,7 +40,7 @@ app.get('/', (c) => {
       <section class="section-light">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title">Comment pouvons-nous vous aider ?</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Comment pouvons-nous vous aider ?</h2>
             <p class="section-subtitle">Trois approches complémentaires pour réussir votre transformation IA</p>
           </div>
           <div class="cards-grid">
@@ -118,7 +118,7 @@ app.get('/', (c) => {
       <section class="section-light">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title">Explorez des cas d'usage par métier</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Explorez des cas d'usage par métier</h2>
             <p class="section-subtitle">Que vous soyez directeur, manager ou professionnel de terrain, découvrez comment l'IA répond à vos défis</p>
           </div>
           <div class="use-cases-grid use-cases-grouped">
