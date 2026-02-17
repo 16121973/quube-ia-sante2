@@ -881,62 +881,99 @@ details[open] .accordion-icon {
   grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
 }
 
+/* Cartes cas d'usage page d'accueil - CHARTE QUUBE 2024 */
 .use-case-card {
-  background: var(--color-blanc);
+  background: var(--color-gris);
   padding: 40px;
   border-radius: 12px;
   text-decoration: none;
-  transition: all 0.3s;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.use-case-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-vert);
+  opacity: 0;
+  transition: opacity 0.3s;
 }
 
 .use-case-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  background: var(--color-blanc);
+  border-color: var(--color-vert);
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.use-case-card:hover::before {
+  opacity: 1;
 }
 
 .use-case-card-large {
   padding: 48px 40px;
 }
 
+/* Tags avec couleurs QUUBE officielles */
 .use-case-tag {
   display: inline-block;
-  padding: 8px 16px;
-  background: linear-gradient(135deg, var(--color-violet), var(--color-bleu));
-  color: var(--color-blanc);
-  border-radius: 6px;
+  padding: 8px 18px;
+  background: var(--color-blanc);
+  color: var(--color-noir);
+  border: 1.5px solid rgba(0,0,0,0.1);
+  border-radius: 50px;
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   margin-bottom: 20px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.05em;
+  transition: all 0.25s;
 }
 
 .use-case-card:nth-child(1) .use-case-tag {
-  background: linear-gradient(135deg, var(--color-violet), var(--color-bleu));
+  border-color: var(--color-violet);
+  color: var(--color-violet);
 }
 
 .use-case-card:nth-child(2) .use-case-tag {
-  background: linear-gradient(135deg, var(--color-bleu), var(--color-vert));
+  border-color: var(--color-bleu);
+  color: var(--color-bleu);
 }
 
 .use-case-card:nth-child(3) .use-case-tag {
-  background: linear-gradient(135deg, var(--color-vert), var(--color-jaune));
+  border-color: var(--color-vert);
+  color: var(--color-vert);
 }
 
+.use-case-card:hover .use-case-tag {
+  background: var(--color-vert);
+  border-color: var(--color-vert);
+  color: var(--color-blanc);
+}
+
+/* Titre carte - Typographie QUUBE */
 .use-case-title {
-  font-size: 1.75rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--color-noir);
   margin-bottom: 16px;
   line-height: 1.3;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
 }
 
 .use-case-description {
   font-size: 1rem;
-  line-height: 1.7;
-  color: rgba(0,0,0,0.7);
+  line-height: 1.6;
+  color: rgba(0,0,0,0.65);
 }
 
 .section-cta {
