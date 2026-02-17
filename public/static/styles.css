@@ -43,9 +43,18 @@ body {
   overflow-x: hidden;
 }
 
-/* === TYPOGRAPHIE QUUBE (tailles ajustées pour lisibilité) === */
+/* === TYPOGRAPHIE MASSIVE QUUBE (style quube.fr) === */
 h1 {
-  font-size: clamp(3.5rem, 8vw, 7rem);
+  font-size: clamp(3rem, 12vw, 9rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
   font-weight: 900;
   line-height: 1.0;
   letter-spacing: -0.025em;
@@ -53,20 +62,11 @@ h1 {
   margin-bottom: 24px;
 }
 
-h2 {
-  font-size: clamp(2rem, 5vw, 4rem);
+h3 {
+  font-size: clamp(1.75rem, 4vw, 3rem);
   font-weight: 800;
   line-height: 1.1;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-
-h3 {
-  font-size: clamp(1.5rem, 3vw, 2.25rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
   margin-bottom: 16px;
 }
 
@@ -959,21 +959,21 @@ details[open] .accordion-icon {
   color: var(--color-blanc);
 }
 
-/* Titre carte - Taille restaurée pour meilleure visibilité */
+/* Titre carte - Taille augmentée pour impact visuel */
 .use-case-title {
-  font-size: 1.75rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--color-noir);
   margin-bottom: 16px;
-  line-height: 1.3;
+  line-height: 1.25;
   text-transform: uppercase;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 
 .use-case-description {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: rgba(0,0,0,0.7);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  color: rgba(0,0,0,0.75);
 }
 
 .section-cta {
