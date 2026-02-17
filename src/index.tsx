@@ -893,7 +893,7 @@ app.get('/services', (c) => {
       {/* Hero */}
       <section class="hero-interior">
         <div class="container">
-          <h1 class="fade-in">Nos services</h1>
+          <h1 class="fade-in" style="font-size: clamp(3rem, 12vw, 9rem) !important;">Nos services</h1>
           <p class="hero-subtitle fade-in">Trois approches complémentaires pour réussir votre transformation IA</p>
         </div>
       </section>
@@ -902,7 +902,7 @@ app.get('/services', (c) => {
       <section class="section-light" id="formation">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title">Formation & Montée en compétences</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Formation & Montée en compétences</h2>
             <p class="section-subtitle">Vos équipes deviennent autonomes sur l'IA. Programmes progressifs 100% santé.</p>
           </div>
           
@@ -954,7 +954,7 @@ app.get('/services', (c) => {
       <section class="section-alt" id="conseil">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title">Conseil & Stratégie IA</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Conseil & Stratégie IA</h2>
             <p class="section-subtitle">Construisons ensemble votre feuille de route IA</p>
           </div>
           
@@ -1026,7 +1026,7 @@ app.get('/services', (c) => {
         <div class="container">
           <div class="section-header fade-in">
             <div class="offer-badge-large">Offre signature</div>
-            <h2 class="section-title">Accélération de Projet</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Accélération de Projet</h2>
             <p class="section-subtitle">L'IA comme outil de production. Nous co-créons avec vous et livrons vos livrables plus rapidement.</p>
           </div>
           
@@ -1086,7 +1086,7 @@ app.get('/services', (c) => {
       <section class="section-alt">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title">Notre méthodologie en 5 phases</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Notre méthodologie en 5 phases</h2>
             <p class="section-subtitle">Un accompagnement structuré et itératif</p>
           </div>
           
@@ -1144,7 +1144,7 @@ app.get('/a-propos', (c) => {
       {/* Hero */}
       <section class="hero-interior">
         <div class="container">
-          <h1 class="fade-in">Qui sommes-nous ?</h1>
+          <h1 class="fade-in" style="font-size: clamp(3rem, 12vw, 9rem) !important;">Qui sommes-nous ?</h1>
           <p class="hero-subtitle fade-in">Expertise santé et intelligence artificielle au service de votre transformation</p>
         </div>
       </section>
@@ -1171,7 +1171,7 @@ app.get('/a-propos', (c) => {
       <section class="section-light">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title">Notre vision</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Notre vision</h2>
             <p class="section-subtitle">Quatre piliers pour un accompagnement réussi</p>
           </div>
           
@@ -1215,7 +1215,7 @@ app.get('/a-propos', (c) => {
       <section class="section-alt">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title">Notre méthodologie</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Notre méthodologie</h2>
             <p class="section-subtitle">Un accompagnement structuré en 5 phases</p>
           </div>
           
@@ -1253,7 +1253,7 @@ app.get('/a-propos', (c) => {
       <section class="section-light">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title">Nos terrains d'intervention</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Nos terrains d'intervention</h2>
             <p class="section-subtitle">Une expertise reconnue dans 10 secteurs du système de santé français</p>
           </div>
           
@@ -1346,7 +1346,7 @@ app.get('/contact', (c) => {
       {/* Hero */}
       <section class="hero-interior">
         <div class="container">
-          <h1 class="fade-in">Parlons de votre projet</h1>
+          <h1 class="fade-in" style="font-size: clamp(3rem, 12vw, 9rem) !important;">Parlons de votre projet</h1>
           <p class="hero-subtitle fade-in">Nous vous répondons sous 48h</p>
         </div>
       </section>
@@ -1449,7 +1449,7 @@ app.get('/contact', (c) => {
       <section class="section-alt">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title">Questions fréquentes</h2>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Questions fréquentes</h2>
           </div>
           
           <div class="faq-wrapper">
