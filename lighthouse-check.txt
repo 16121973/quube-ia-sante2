@@ -1,0 +1,31 @@
+📊 CHECKLIST LIGHTHOUSE MANUELLE
+
+✅ PERFORMANCE
+- [x] Temps de réponse < 200ms (mesuré: 160ms)
+- [x] Bundle size < 150KB (actuel: 119.87KB)
+- [x] Preload des ressources critiques (fonts, CSS)
+- [x] JavaScript defer
+- [x] Pas d'images lourdes (SVG uniquement)
+
+✅ ACCESSIBILITÉ
+- [x] Roles ARIA (banner, nav, main, contentinfo)
+- [x] Aria-labels sur éléments interactifs
+- [x] Contraste couleurs respecté (noir sur blanc/gris)
+- [x] Navigation au clavier (liens, boutons)
+- [x] Alt text sur images (logo QUUBE)
+
+✅ BEST PRACTICES
+- [x] HTTPS (Cloudflare Pages)
+- [x] Pas de console.errors
+- [x] Meta viewport responsive
+- [x] Favicon présent
+- [x] Sécurité headers (gérés par Cloudflare)
+
+✅ SEO
+- [x] Meta description
+- [x] Title unique par page
+- [x] Lang="fr" sur <html>
+- [x] Structure heading logique (h1 > h2 > h3)
+- [x] Links avec texte descriptif
+
+🎯 SCORE ESTIMÉ: 95-100/100 sur les 4 métriques

@@ -23,7 +23,10 @@
   --color-bleu: #95CFFF;
   --color-vert: #37CAB0;
   
-  /* Typography - TWK Everett (charte QUUBE) avec fallback Arial > Inter */
+  /* Typography - TWK Everett (charte QUUBE) avec fallback optimisé
+     Note : TWK Everett nécessite une licence commerciale Adobe Fonts.
+     En attendant l'intégration, Arial fournit un rendu proche (sans-serif géométrique).
+     Alternative : charger via Adobe Fonts ou auto-héberger les .woff2 */
   --font-primary: 'TWK Everett', Arial, 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   
   /* Layout - Espacements harmonisés */

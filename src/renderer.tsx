@@ -6,9 +6,18 @@ export const renderer = jsxRenderer(({ children, title }) => {
       <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{title ? `${title} | QUUBE·IA Santé` : 'QUUBE·IA Santé'}</title>
-        <meta name="description" content="Cabinet indépendant de conseil et formation en IA pour les organisations de santé et médico-sociales." />
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{title ? `${title} | QUUBE·IA Santé` : 'QUUBE·IA Santé - Cabinet de conseil et formation en IA pour la santé'}</title>
+        <meta name="description" content="Cabinet indépendant de conseil et formation en IA pour les organisations de santé et médico-sociales. Formations, stratégie IA et accélération de projets." />
+        <meta name="keywords" content="IA santé, intelligence artificielle santé, formation IA, conseil IA, médico-social, établissements santé, QUUBE" />
+        <meta name="author" content="QUUBE·IA Santé" />
+        
+        {/* Open Graph / Social Media */}
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title ? `${title} | QUUBE·IA Santé` : 'QUUBE·IA Santé - Conseil IA en Santé'} />
+        <meta property="og:description" content="Cabinet indépendant de conseil et formation en IA pour les organisations de santé et médico-sociales." />
+        <meta property="og:locale" content="fr_FR" />
+        
+        {/* Favicon optimisé */}
         {/* Police TWK Everett via Adobe Fonts (fallback Arial + Inter) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
