@@ -30,10 +30,8 @@ export const renderer = jsxRenderer(({ children, title }) => {
         {/* Header - Charte QUUBE officielle */}
         <header role="banner">
           <div class="container">
-            <a href="/" class="logo" aria-label="QUUBE IA Santé - Retour à l'accueil">
-              <img src="/static/logo-quube.svg" alt="QUUBE" class="logo-img" height="32" />
-              <span class="logo-divider">×</span>
-              <span class="logo-sub">IA Santé</span>
+            <a href="/" class="logo" aria-label="QUUBE - Retour à l'accueil">
+              <img src="/static/logo-quube.svg" alt="QUUBE" class="logo-img" height="48" />
             </a>
             <nav class="desktop-nav" role="navigation" aria-label="Navigation principale">
               <a href="/">Accueil</a>
