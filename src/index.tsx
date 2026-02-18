@@ -160,38 +160,7 @@ app.get('/cas-usage', (c) => {
             <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">Un cas d'usage qui n'est pas adopté par les équipes n'existe pas — il reste une démonstration. Identifier un cas d'usage, c'est 10% du travail. Le déployer, l'ancrer dans les pratiques, le scaler : c'est les 90% restants.</p>
           </div>
 
-          {/* Bloc 2 : Les 4 dimensions */}
-          <div class="section-header fade-in" style="margin-top: 4rem; margin-bottom: 3rem;">
-            <h3 style="font-size: 2rem; font-weight: 800; color: var(--color-noir);">Les 4 dimensions d'un cas d'usage bien construit</h3>
-          </div>
-
-          <div class="dimensions-grid fade-in">
-            <div class="dimension-card">
-              <div class="dimension-number">①</div>
-              <h4 class="dimension-title">Le problème métier — Le bon point de départ</h4>
-              <p class="dimension-description">Pas "que peut faire l'IA ?" mais "quel est votre vrai point de friction quotidien ?" Surcharge administrative, pression qualité, complexité réglementaire, manque de temps soignant. Le cas d'usage doit adresser un nœud réel — pas une opportunité théorique.</p>
-            </div>
-
-            <div class="dimension-card">
-              <div class="dimension-number">②</div>
-              <h4 class="dimension-title">La capacité IA — Le bon outil</h4>
-              <p class="dimension-description">L'IA n'est pas la réponse à tout. Un bon cas d'usage précise : quel type d'IA, quel outil, quelles données, quelles contraintes RGPD et HDS. Nous n'avons aucun partenariat éditeur — notre seul critère est ce qui fonctionne pour vous.</p>
-            </div>
-
-            <div class="dimension-card">
-              <div class="dimension-number">③</div>
-              <h4 class="dimension-title">L'humain au centre — Le facteur décisif</h4>
-              <p class="dimension-description">Les projets IA qui échouent échouent sur l'humain, pas sur la technologie. Qui utilise le cas d'usage ? Avec quelle compétence ? Quelle résistance anticiper ?</p>
-            </div>
-
-            <div class="dimension-card">
-              <div class="dimension-number">④</div>
-              <h4 class="dimension-title">Le scale — Là où la valeur devient structurelle</h4>
-              <p class="dimension-description">Un cas d'usage maîtrisé se réplique et s'automatise. Il tourne seul, se déploie sur d'autres services, d'autres établissements. C'est là que les gains deviennent durables — pas dans un pourcentage affiché a priori.</p>
-            </div>
-          </div>
-
-          {/* Bloc 3 : Démarche en 4 temps */}
+          {/* Démarche en 4 temps */}
           <div class="section-header fade-in" style="margin-top: 5rem; margin-bottom: 3rem;">
             <h3 style="font-size: 2rem; font-weight: 800; color: var(--color-noir);">Notre démarche en 4 temps</h3>
           </div>
