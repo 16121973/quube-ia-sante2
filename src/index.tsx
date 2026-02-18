@@ -823,74 +823,58 @@ app.get('/a-propos', (c) => {
         </div>
       </section>
 
-      {/* Terrains d'intervention */}
+      {/* Terrains d'intervention - Version catégorisée */}
       <section class="section-light">
         <div class="container">
           <div class="section-header fade-in">
             <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Nos terrains d'intervention</h2>
-            <p class="section-subtitle">Une expertise reconnue dans 10 secteurs du système de santé français</p>
+            <p class="section-subtitle">14 secteurs accompagnés dans l'écosystème santé français</p>
           </div>
           
-          <div class="sectors-list fade-in">
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Établissements et services médico-sociaux (ESSMS)</span>
+          <div class="sectors-categories fade-in">
+            {/* Catégorie 1 : Établissements de Santé */}
+            <div class="sector-category">
+              <div class="category-header">
+                <div class="category-icon">🏥</div>
+                <h3 class="category-title">Établissements de Santé</h3>
+              </div>
+              <div class="category-list">
+                <div class="sector-item-v2">Hôpitaux publics & CHU</div>
+                <div class="sector-item-v2">Cliniques privées</div>
+                <div class="sector-item-v2">EHPAD</div>
+                <div class="sector-item-v2">Cabinets médicaux</div>
+                <div class="sector-item-v2">Cabinets dentaires</div>
+                <div class="sector-item-v2">Pharmacies</div>
+                <div class="sector-item-v2">Biologie médicale</div>
+              </div>
             </div>
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Établissements de santé (hôpitaux, cliniques, EHPAD)</span>
+
+            {/* Catégorie 2 : Secteur Médico-Social */}
+            <div class="sector-category">
+              <div class="category-header">
+                <div class="category-icon">🤝</div>
+                <h3 class="category-title">Secteur Médico-Social</h3>
+              </div>
+              <div class="category-list">
+                <div class="sector-item-v2">Handicap (ESSMS)</div>
+                <div class="sector-item-v2">Social & protection de l'enfance</div>
+                <div class="sector-item-v2">Services à domicile (SAAD, SSIAD)</div>
+              </div>
             </div>
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Services d'aide et de soins à domicile (SAAD, SSIAD, SPASAD)</span>
-            </div>
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Centres hospitaliers universitaires (CHU)</span>
-            </div>
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Groupements hospitaliers de territoire (GHT)</span>
-            </div>
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Agences régionales de santé (ARS) et organismes de santé publique</span>
-            </div>
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Fédérations et têtes de réseau du secteur santé/social</span>
-            </div>
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Organismes de formation secteur santé</span>
-            </div>
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Collectivités territoriales (volet santé/social)</span>
-            </div>
-            <div class="sector-item">
-              <svg class="sector-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Cabinets de conseil spécialisés santé</span>
+
+            {/* Catégorie 3 : Écosystème Santé */}
+            <div class="sector-category">
+              <div class="category-header">
+                <div class="category-icon">🌐</div>
+                <h3 class="category-title">Écosystème Santé</h3>
+              </div>
+              <div class="category-list">
+                <div class="sector-item-v2">Mutuelles & Institutions de Prévoyance</div>
+                <div class="sector-item-v2">Recherche médicale</div>
+                <div class="sector-item-v2">Associations & Fondations de santé</div>
+                <div class="sector-item-v2">Institutionnels (fédérations, syndicats, think tanks)</div>
+                <div class="sector-item-v2">Groupements hospitaliers de territoire (GHT)</div>
+              </div>
             </div>
           </div>
         </div>
