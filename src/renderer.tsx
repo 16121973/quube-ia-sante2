@@ -7,14 +7,14 @@ export const renderer = jsxRenderer(({ children, title }) => {
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title ? `${title} | QUUBE·IA Santé` : 'QUUBE·IA Santé - Cabinet de conseil et formation en IA pour la santé'}</title>
-        <meta name="description" content="Studio d'accélération des usages IA — Santé & Médico-social. Cas d'usage concrets, mis en routine avec vos équipes, autonomie transférée." />
+        <meta name="description" content="Studio d'accélération des usages IA. Santé & Médico-social — Cas d'usage concrets, mis en routine avec vos équipes, autonomie transférée." />
         <meta name="keywords" content="IA santé, intelligence artificielle santé, formation IA, conseil IA, médico-social, établissements santé, QUUBE" />
         <meta name="author" content="QUUBE·IA Santé" />
         
         {/* Open Graph / Social Media */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title ? `${title} | QUUBE·IA Santé` : 'QUUBE·IA Santé - Conseil IA en Santé'} />
-        <meta property="og:description" content="Studio d'accélération des usages IA — Santé & Médico-social. Cas d'usage concrets, mis en routine avec vos équipes, autonomie transférée." />
+        <meta property="og:description" content="Studio d'accélération des usages IA. Santé & Médico-social — Cas d'usage concrets, mis en routine avec vos équipes, autonomie transférée." />
         <meta property="og:locale" content="fr_FR" />
         
         {/* Favicon optimisé */}
@@ -75,8 +75,8 @@ export const renderer = jsxRenderer(({ children, title }) => {
               <div class="footer-section">
                 <h4>QUUBE·IA Santé</h4>
                 <p>
-                  Studio d'accélération des usages IA — Santé & Médico-social<br />
-                  Cas d'usage concrets, mis en routine avec vos équipes, autonomie transférée.
+                  Studio d'accélération des usages IA<br />
+                  Santé & Médico-social — Cas d'usage concrets, mis en routine avec vos équipes, autonomie transférée.
                 </p>
                 <p>
                   <strong>10 rue du Colisée</strong><br />
