@@ -652,17 +652,39 @@ app.get('/services/trajectoire-ia', (c) => {
       {/* Corps de page */}
       <section class="section-light">
         <div class="container">
+          {/* Intro enrichie */}
           <div class="offer-intro fade-in">
-            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">L'IA n'est pas un projet comme les autres. Elle se construit dans le mouvement, par itérations, avec vos équipes dans la boucle.</p>
-            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">Notre approche : lire votre situation réelle, co-définir une direction claire, puis vous accompagner à avancer — décision après décision.</p>
-            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 3rem;"><strong>Pas de méthode imposée. Pas de solution vendue.</strong> Un regard extérieur indépendant et une expertise terrain du secteur santé.</p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">L'IA n'est pas un projet comme les autres. Elle se construit dans le mouvement, par itérations, avec vos équipes dans la boucle à chaque étape.</p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">Notre approche est délibérément itérative : on ne vous remet pas une feuille de route de 80 pages. On lit votre situation réelle, on co-définit un cap, puis on avance avec vous — décision après décision, en ajustant au fil des apprentissages.</p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 3rem;"><strong>Pas de méthode imposée. Pas de solution vendue.</strong> Un regard extérieur indépendant, une expertise terrain de 25 ans dans le secteur santé et médico-social.</p>
           </div>
 
-          <div class="section-header fade-in">
+          {/* Deux modes d'intervention */}
+          <div class="section-header fade-in" style="margin-top: 4rem; margin-bottom: 3rem;">
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Deux modes d'intervention</h2>
+          </div>
+
+          <div class="intervention-modes fade-in">
+            <div class="mode-card mode-ponctuel">
+              <div class="mode-number">1</div>
+              <h3 class="mode-title">Mission ponctuelle</h3>
+              <p class="mode-description">Pour cadrer, orienter et prioriser. Idéal pour démarrer ou remettre le cap.</p>
+              <p class="mode-duration"><strong>Durée :</strong> quelques semaines</p>
+            </div>
+            <div class="mode-card mode-duree">
+              <div class="mode-number">2</div>
+              <h3 class="mode-title">Accompagnement dans la durée</h3>
+              <p class="mode-description">Pour co-piloter la transformation dans le temps. On reste dans la boucle, mission après mission, en ajustant à chaque étape.</p>
+              <p class="mode-duration"><strong>Durée :</strong> plusieurs mois</p>
+            </div>
+          </div>
+
+          {/* Ce qu'on construit ensemble */}
+          <div class="section-header fade-in" style="margin-top: 5rem;">
             <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Ce qu'on construit ensemble</h2>
           </div>
 
-          <div class="values-grid fade-in">
+          <div class="values-grid fade-in" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
             <div class="value-item">
               <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
@@ -683,6 +705,14 @@ app.get('/services/trajectoire-ia', (c) => {
               </svg>
               <h4 class="value-title">Cap stratégique</h4>
               <p class="value-description">Feuille de route et déploiement adaptés à votre réalité terrain</p>
+            </div>
+            <div class="value-item value-item-highlight">
+              <div class="value-badge">Nouveau</div>
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+              </svg>
+              <h4 class="value-title">AI Act & Cadre réglementaire santé</h4>
+              <p class="value-description">Comprendre et anticiper les obligations réglementaires : AI Act, RGPD, HDS. Transformer la conformité en avantage stratégique plutôt qu'en contrainte subie.</p>
             </div>
             <div class="value-item">
               <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -706,6 +736,13 @@ app.get('/services/trajectoire-ia', (c) => {
               <p class="value-description">Accompagnement humain pour faire de l'IA un levier d'épanouissement</p>
             </div>
           </div>
+
+          {/* Une posture, pas une méthode */}
+          <div class="posture-block fade-in">
+            <h3 class="posture-title">Une posture, pas une méthode.</h3>
+            <p class="posture-text">La plupart des cabinets vous livrent un rapport et repartent. Notre posture est différente : nous construisons avec vous, pas pour vous. Chaque étape renforce votre autonomie — pas notre indispensabilité.</p>
+            <p class="posture-text" style="margin-top: 1.5rem;"><strong>Nous n'avons aucun partenariat éditeur. Aucune solution à vous vendre. Notre seul intérêt : que votre transformation réussisse.</strong></p>
+          </div>
         </div>
       </section>
 
@@ -714,7 +751,7 @@ app.get('/services/trajectoire-ia', (c) => {
         <div class="container">
           <div class="cta-content fade-in">
             <h2 class="cta-title">Définissons ensemble votre trajectoire IA</h2>
-            <p class="cta-subtitle">Échangeons 30 minutes sur votre contexte et vos ambitions</p>
+            <p class="cta-subtitle">Que vous ayez besoin d'un cadrage ponctuel ou d'un accompagnement dans la durée, échangeons 30 minutes sur votre contexte.</p>
             <a href="/contact" class="btn btn-primary btn-large">Prendre rendez-vous</a>
           </div>
         </div>

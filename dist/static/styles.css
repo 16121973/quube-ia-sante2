@@ -1862,3 +1862,242 @@ footer {
     font-size: 1rem;
   }
 }
+
+/* ============================================================================
+   INTERVENTION MODES (Trajectoire IA)
+   ============================================================================ */
+
+.intervention-modes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-bottom: 5rem;
+}
+
+.mode-card {
+  background: var(--color-blanc);
+  border-radius: 16px;
+  padding: 48px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid transparent;
+}
+
+.mode-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  border-radius: 16px 16px 0 0;
+  transition: height 0.3s;
+}
+
+.mode-ponctuel::before {
+  background: linear-gradient(90deg, var(--color-violet), var(--color-bleu));
+}
+
+.mode-duree::before {
+  background: linear-gradient(90deg, var(--color-vert), var(--color-jaune));
+}
+
+.mode-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+}
+
+.mode-card:hover::before {
+  height: 10px;
+}
+
+.mode-ponctuel:hover {
+  border-color: var(--color-violet);
+}
+
+.mode-duree:hover {
+  border-color: var(--color-vert);
+}
+
+.mode-number {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--color-violet), var(--color-bleu));
+  color: var(--color-blanc);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin-bottom: 24px;
+}
+
+.mode-duree .mode-number {
+  background: linear-gradient(135deg, var(--color-vert), var(--color-jaune));
+}
+
+.mode-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--color-noir);
+  margin-bottom: 20px;
+}
+
+.mode-description {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.75);
+  margin-bottom: 24px;
+}
+
+.mode-duration {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0;
+}
+
+/* Value item highlight with badge */
+.value-item-highlight {
+  position: relative;
+  border: 2px solid var(--color-jaune);
+  background: linear-gradient(135deg, rgba(252,244,116,0.05), var(--color-blanc));
+}
+
+.value-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--color-jaune);
+  color: var(--color-noir);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(252, 244, 116, 0.4);
+}
+
+/* Posture block */
+.posture-block {
+  background: linear-gradient(135deg, var(--color-gris), var(--color-blanc));
+  border-left: 6px solid var(--color-violet);
+  border-radius: 16px;
+  padding: 48px 56px;
+  margin: 5rem 0 4rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.posture-block::before {
+  content: '"';
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 120px;
+  font-weight: 900;
+  color: var(--color-violet);
+  opacity: 0.08;
+  z-index: 0;
+  line-height: 1;
+}
+
+.posture-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-noir);
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.posture-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .intervention-modes {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mode-card {
+    padding: 36px 28px;
+  }
+
+  .mode-number {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+
+  .mode-title {
+    font-size: 1.5rem;
+  }
+
+  .mode-description {
+    font-size: 1rem;
+  }
+
+  .posture-block {
+    padding: 32px 28px;
+    margin: 4rem 0 3rem;
+  }
+
+  .posture-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .posture-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 640px) {
+  .mode-card {
+    padding: 28px 20px;
+  }
+
+  .mode-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .mode-title {
+    font-size: 1.35rem;
+  }
+
+  .posture-block {
+    padding: 24px 20px;
+    border-left-width: 4px;
+  }
+
+  .posture-title {
+    font-size: 1.35rem;
+  }
+
+  .posture-text {
+    font-size: 1rem;
+  }
+
+  .value-badge {
+    top: -10px;
+    right: 12px;
+    padding: 4px 12px;
+    font-size: 0.7rem;
+  }
+}
