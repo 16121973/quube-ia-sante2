@@ -508,45 +508,113 @@ app.get('/services/parcours-competences-ia', (c) => {
         </div>
       </section>
 
-      {/* 6 offres en timeline */}
+      {/* Intro */}
       <section class="section-light">
         <div class="container">
-          <div class="methodology-timeline fade-in">
-            <div class="timeline-item">
-              <div class="timeline-number">①</div>
-              <h3 class="timeline-title">Initiation IA</h3>
-              <p class="offer-duration">Durée : 1h30 — Acculturer</p>
-              <p class="timeline-description">Lever les idées reçues, comprendre les possibles, volet éthique intégré (données, confidentialité, bonnes pratiques). <strong>Objectif : éclairer, pas convaincre.</strong></p>
+          <div class="offer-intro fade-in">
+            <p style="font-size: 1.25rem; line-height: 1.8; text-align: center; max-width: 900px; margin: 0 auto;">
+              <strong>Trois entrées selon votre besoin.</strong> Des formats complémentaires pour embarquer vos équipes, vous former en tant que dirigeant, et engager vos instances de gouvernance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* PORTE 1 - Mes équipes */}
+      <section class="section-light" style="padding-top: 0;">
+        <div class="container">
+          <div class="porte-container porte-equipes fade-in">
+            <div class="porte-header">
+              <div class="porte-icon">👥</div>
+              <h2 class="porte-title">Mes équipes comprennent et utilisent l'IA</h2>
+              <p class="porte-subtitle">Pour embarquer toute l'organisation, du premier contact à l'autonomie durable.</p>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-number">②</div>
-              <h3 class="timeline-title">Atelier Cas d'Usages</h3>
-              <p class="offer-duration">Durée : 1 à 2 jours — Initier</p>
-              <p class="timeline-description">Explorer et expérimenter des cas d'usage concrets issus du secteur santé. Chaque participant repart avec des usages opérationnels immédiatement transposables.</p>
+            
+            <div class="porte-progression">
+              <div class="progression-item">
+                <div class="progression-number">①</div>
+                <h3 class="progression-title">Initiation IA</h3>
+                <p class="progression-duration">1h30</p>
+                <p class="progression-description">Lever les idées reçues, comprendre les possibles, volet éthique intégré (données, confidentialité, bonnes pratiques). <strong>Objectif : éclairer, pas convaincre.</strong></p>
+              </div>
+              
+              <div class="progression-arrow">→</div>
+              
+              <div class="progression-item">
+                <div class="progression-number">②</div>
+                <h3 class="progression-title">Atelier Cas d'Usages</h3>
+                <p class="progression-duration">1 à 2 jours</p>
+                <p class="progression-description">Explorer et expérimenter des cas d'usage concrets issus du secteur santé et médico-social. Chaque participant repart avec des usages opérationnels immédiatement transposables dans son quotidien professionnel.</p>
+              </div>
+              
+              <div class="progression-arrow">→</div>
+              
+              <div class="progression-item">
+                <div class="progression-number">③</div>
+                <h3 class="progression-title">Ambassadeurs IA</h3>
+                <p class="progression-duration">Programme structuré</p>
+                <p class="progression-description">Former des relais internes capables de diffuser les usages, accompagner leurs collègues et ancrer la culture IA dans la durée. <strong>Des passeurs, pas des experts techniques.</strong></p>
+              </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-number">③</div>
-              <h3 class="timeline-title">Approfondissement IA</h3>
-              <p class="offer-duration">Format sur-mesure, plusieurs semaines — Faire</p>
-              <p class="timeline-description">Construire, affiner et déployer des cas d'usage propres à l'organisation. Produire des résultats concrets. Maîtriser ce qui compte pour son métier.</p>
+            
+            <div class="porte-cta">
+              <a href="/contact?sujet=parcours-equipes" class="btn btn-primary">Construire le parcours de mes équipes →</a>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-number">④</div>
-              <h3 class="timeline-title">Ambassadeurs IA</h3>
-              <p class="offer-duration">Programme structuré — Rôle transversal</p>
-              <p class="timeline-description">Former des relais internes : diffuser les usages, accompagner les collègues, ancrer la culture IA dans la durée. <strong>Des passeurs, pas des experts techniques.</strong></p>
+          </div>
+        </div>
+      </section>
+
+      {/* PORTE 2 - Dirigeant augmenté */}
+      <section class="section-alt">
+        <div class="container">
+          <div class="porte-container porte-dirigeant fade-in">
+            <div class="porte-header">
+              <div class="porte-icon">🎯</div>
+              <h2 class="porte-title">Le dirigeant augmenté</h2>
+              <p class="porte-subtitle">L'IA ne se pilote pas à distance. Elle se comprend de l'intérieur.</p>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-number">⑤</div>
-              <h3 class="timeline-title">Coaching Dirigeants</h3>
-              <p class="offer-duration">Offre dédiée aux directeurs et cadres dirigeants</p>
-              <p class="timeline-description"><strong>3 dimensions :</strong> pratique hands-on de l'IA / vision et posture personnelle / intégration dans la stratégie et le modèle organisationnel.<br/><strong>Modalités :</strong> individuel / collectif (4-5 personnes ou CODIR) / instances (CA, Bureau, CME, CSE, CVS, CDU)</p>
+            
+            <div class="porte-offers">
+              <div class="offer-card fade-in">
+                <div class="offer-number">①</div>
+                <h3 class="offer-card-title">Coaching Dirigeants</h3>
+                <p class="offer-description">Accompagnement individuel ou collectif sur <strong>3 dimensions :</strong> prendre en main l'IA par la pratique, construire sa vision et sa posture, intégrer l'IA dans sa stratégie et son modèle organisationnel.</p>
+                <p class="offer-description"><strong>Modalités :</strong> individuel / groupe 4-5 personnes / CODIR entier.</p>
+              </div>
+              
+              <div class="offer-card fade-in">
+                <div class="offer-number">②</div>
+                <h3 class="offer-card-title">Bootcamp IA — 3 jours intensifs</h3>
+                <p class="offer-description">Le format le plus engageant pour un dirigeant pressé. 3 jours pour passer de la curiosité à la maîtrise opérationnelle : comprendre les enjeux, pratiquer les outils, identifier ses premiers cas d'usage prioritaires.</p>
+                <p class="offer-description"><strong>Cible :</strong> directeurs, directeurs adjoints, cadres dirigeants.</p>
+              </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-number">⑥</div>
-              <h3 class="timeline-title">Outillage & Tutorat</h3>
-              <p class="offer-duration">Offre autonome</p>
-              <p class="timeline-description">Maîtrise opérationnelle des outils IA :<br/>• <strong>LLM :</strong> ChatGPT, Copilot, Claude, Mistral, Gemini, Perplexity<br/>• <strong>Automatisation :</strong> N8N, Make, Zapier<br/>Sans prérequis technique. Format tutorat individualisé ou petit groupe.</p>
+            
+            <div class="porte-cta">
+              <a href="/contact?sujet=parcours-dirigeant" class="btn btn-primary">Découvrir le parcours dirigeant →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PORTE 3 - Instances */}
+      <section class="section-light">
+        <div class="container">
+          <div class="porte-container porte-instances fade-in">
+            <div class="porte-header">
+              <div class="porte-icon">⚖️</div>
+              <h2 class="porte-title">Les instances au cœur de la transformation IA</h2>
+              <p class="porte-subtitle">Vos instances ne sont pas spectatrices de la transformation IA. Elles en sont les garantes.</p>
+            </div>
+            
+            <div class="offer-card-large fade-in">
+              <h3 class="offer-card-title">Offre Instances</h3>
+              <p class="offer-description">Des interventions spécifiquement conçues pour vos instances de gouvernance : sensibiliser, outiller et engager les décideurs là où les orientations stratégiques se prennent.</p>
+              <p class="offer-description"><strong>Formats :</strong> séminaire stratégique, atelier gouvernance IA, réflexion opportunités et business model, introduction à l'AI Act et au cadre réglementaire santé.</p>
+              <p class="offer-description"><strong>Instances concernées :</strong> CA · Bureau · CODIR · CME · CSE · CVS · CDU</p>
+            </div>
+            
+            <div class="porte-cta">
+              <a href="/contact?sujet=parcours-instances" class="btn btn-primary">Préparer mes instances →</a>
             </div>
           </div>
         </div>
@@ -556,8 +624,8 @@ app.get('/services/parcours-competences-ia', (c) => {
       <section class="section-cta-final">
         <div class="container">
           <div class="cta-content fade-in">
-            <h2 class="cta-title">Construisons votre parcours IA</h2>
-            <p class="cta-subtitle">Échangeons 30 minutes sur vos besoins de montée en compétences</p>
+            <h2 class="cta-title">Vous ne savez pas par où commencer ?</h2>
+            <p class="cta-subtitle">Échangeons 30 minutes. On vous aide à identifier la porte d'entrée la plus adaptée à votre situation.</p>
             <a href="/contact" class="btn btn-primary btn-large">Prendre rendez-vous</a>
           </div>
         </div>
