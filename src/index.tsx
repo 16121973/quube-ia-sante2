@@ -25,8 +25,8 @@ app.get('/', (c) => {
         <div class="hero-content">
           <h1 class="fade-in" style="font-size: clamp(3rem, 12vw, 9rem) !important;">L'IA en Santé,<br />En Toute Confiance</h1>
           <p class="hero-subtitle fade-in">
-            Cabinet indépendant de conseil et formation en IA pour les organisations de santé et médico-sociales. 
-            De la stratégie aux usages concrets, nous vous guidons sans jargon, au service des soignants et des patients.
+            Studio d'accélération des usages IA — Santé & Médico-social<br />
+            Cas d'usage concrets, mis en routine avec vos équipes, autonomie transférée.
           </p>
           <div class="hero-cta fade-in">
             <a href="/services" class="btn btn-primary btn-large">Découvrir nos services</a>
