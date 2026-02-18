@@ -722,23 +722,6 @@ app.get('/a-propos', (c) => {
         </div>
       </section>
 
-      {/* Section Fondateur */}
-      <section class="section-founder">
-        <div class="container">
-          <div class="founder-content fade-in">
-            <div class="founder-image">
-              <img src="https://cdn.prod.website-files.com/6693d568b935c546e51f1b34/66acd25a39ef72c39238a511_samuel_bottaro.webp" alt="Samuel Bottaro, Fondateur" />
-            </div>
-            <div class="founder-bio">
-              <h2>Samuel Bottaro</h2>
-              <h3>Fondateur QUUBE IA Santé</h3>
-              <p>Consultant indépendant depuis 2000, j'accompagne les acteurs de la santé et du médico-social dans leurs transformations stratégiques et opérationnelles.</p>
-              <p>En 2023, j'ai décidé de créer QUUBE IA Santé pour répondre à une conviction forte : l'intelligence artificielle peut être un levier majeur d'efficience et d'épanouissement professionnel dans le secteur de la santé, à condition d'être maîtrisée avec méthode et éthique.</p>
-              <p>Fort d'une expérience de plus de 25 ans dans le secteur, je connais les réalités du terrain, la complexité des organisations et l'importance de l'humain dans toute démarche de transformation.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Vision - 4 Piliers */}
       <section class="section-light">
@@ -817,6 +800,24 @@ app.get('/a-propos', (c) => {
               <div class="timeline-number">5</div>
               <h3 class="timeline-title">Suivi</h3>
               <p class="timeline-description">Accompagnement post-livraison, mesure des impacts, ajustements et consolidation de l'autonomie.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section Fondateur */}
+      <section class="section-founder">
+        <div class="container">
+          <div class="founder-content fade-in">
+            <div class="founder-image">
+              <img src="https://cdn.prod.website-files.com/6693d568b935c546e51f1b34/66acd25a39ef72c39238a511_samuel_bottaro.webp" alt="Samuel Bottaro, Fondateur" />
+            </div>
+            <div class="founder-bio">
+              <h2>Samuel Bottaro</h2>
+              <h3>Fondateur QUUBE IA Santé</h3>
+              <p>Consultant indépendant depuis 2000, j'accompagne les acteurs de la santé et du médico-social dans leurs transformations stratégiques et opérationnelles.</p>
+              <p>En 2023, j'ai décidé de créer QUUBE IA Santé pour répondre à une conviction forte : l'intelligence artificielle peut être un levier majeur d'efficience et d'épanouissement professionnel dans le secteur de la santé, à condition d'être maîtrisée avec méthode et éthique.</p>
+              <p>Fort d'une expérience de plus de 25 ans dans le secteur, je connais les réalités du terrain, la complexité des organisations et l'importance de l'humain dans toute démarche de transformation.</p>
             </div>
           </div>
         </div>
