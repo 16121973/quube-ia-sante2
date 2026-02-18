@@ -155,8 +155,7 @@ app.get('/cas-usage', (c) => {
 
           {/* Bloc 1 : Ce qu'est vraiment un cas d'usage IA */}
           <div class="methodology-intro fade-in">
-            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">Un cas d'usage IA, c'est la rencontre entre <span>un problème métier réel, une capacité IA démontrée, et une organisation prête à l'adopter.</span></p>
-            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;"><strong>Sans les 3 éléments, ça ne fonctionne pas.</strong></p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">Un cas d'usage IA, c'est la rencontre entre <span>un problème métier réel, une capacité IA démontrée, et une organisation prête à l'adopter.</span> Le bon point de départ n'est pas "que peut faire l'IA ?" mais "quel est votre vrai point de friction quotidien ?" Surcharge administrative, pression qualité, complexité réglementaire, manque de temps soignant. Le cas d'usage doit adresser un nœud réel.</p>
           </div>
 
           {/* Ce que nous faisons avec vous */}
