@@ -960,8 +960,8 @@ details[open] .accordion-icon {
 /* === VISION GRID === */
 .vision-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(4, 1fr); /* 4 colonnes alignées */
+  gap: 32px;
   margin-top: 64px;
 }
 
@@ -1370,6 +1370,12 @@ footer {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+  
+  /* Vision grid : 2 colonnes sur tablette */
+  .vision-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
 }
 
 /* === BREAKPOINT MOBILE S (max-width: 640px) === */
@@ -1389,5 +1395,11 @@ footer {
   .btn {
     width: 100%;
     text-align: center;
+  }
+  
+  /* Vision grid : 1 colonne sur mobile */
+  .vision-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }
