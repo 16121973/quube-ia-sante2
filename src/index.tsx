@@ -50,7 +50,7 @@ app.get('/', (c) => {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
               <h3 class="card-title">Parcours Compétences IA</h3>
-              <p class="card-description"><strong>Parce que la transformation IA se construit de l'intérieur.</strong><br />De la sensibilisation à l'autonomie, 5 formats adaptés à chaque étape.</p>
+              <p class="card-description"><strong>Parce que la transformation IA se construit de l'intérieur.</strong><br />De la sensibilisation à l'autonomie, des formats adaptés à chaque étape.</p>
               <a href="/services/parcours-competences-ia" class="card-link">Découvrir →</a>
             </div>
 
@@ -451,7 +451,7 @@ app.get('/services', (c) => {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
               <h3 class="card-title">Parcours Compétences IA</h3>
-              <p class="card-description"><strong>Parce que la transformation IA se construit de l'intérieur.</strong><br/>De la sensibilisation à l'autonomie, 6 formats adaptés à chaque étape.<br/><br/><em>→ Bénéfice clé : vos équipes maîtrisent l'IA et l'intègrent durablement.</em></p>
+              <p class="card-description"><strong>Parce que la transformation IA se construit de l'intérieur.</strong><br/>De la sensibilisation à l'autonomie, des formats adaptés à chaque étape.<br/><br/><em>→ Bénéfice clé : vos équipes maîtrisent l'IA et l'intègrent durablement.</em></p>
               <a href="/services/parcours-competences-ia" class="card-link">Découvrir le parcours →</a>
             </div>
 
