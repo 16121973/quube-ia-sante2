@@ -44,35 +44,35 @@ app.get('/', (c) => {
             <p class="section-subtitle">Trois approches complémentaires pour réussir votre transformation IA</p>
           </div>
           <div class="cards-grid">
-            {/* Offre 1 - Formation */}
+            {/* Offre 1 - Parcours Compétences IA */}
             <div class="card fade-in">
               <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
-              <h3 class="card-title">Formation & Montée en compétences</h3>
-              <p class="card-description">Vos équipes deviennent autonomes sur l'IA. Du dirigeant au professionnel de terrain, des programmes progressifs 100% santé.</p>
-              <a href="/services#formation" class="card-link">Découvrir →</a>
+              <h3 class="card-title">Parcours Compétences IA</h3>
+              <p class="card-description"><strong>Parce que la transformation IA se construit de l'intérieur.</strong><br />De la sensibilisation à l'autonomie, 5 formats adaptés à chaque étape.</p>
+              <a href="/services/parcours-competences-ia" class="card-link">Découvrir →</a>
             </div>
 
-            {/* Offre 2 - Conseil */}
+            {/* Offre 2 - Trajectoire IA */}
             <div class="card fade-in">
               <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
               </svg>
-              <h3 class="card-title">Conseil & Stratégie IA</h3>
-              <p class="card-description">Construisons ensemble votre feuille de route IA : diagnostic de maturité, choix de solutions, pilotage de projet, conduite du changement.</p>
-              <a href="/services#conseil" class="card-link">Découvrir →</a>
+              <h3 class="card-title">Trajectoire IA</h3>
+              <p class="card-description"><strong>Construisons ensemble votre cap — et les moyens de le tenir.</strong><br />Diagnostic, choix stratégiques, co-pilotage, conduite du changement.</p>
+              <a href="/services/trajectoire-ia" class="card-link">Découvrir →</a>
             </div>
 
-            {/* Offre 3 - Accélération (SIGNATURE) */}
+            {/* Offre 3 - Conseil Augmenté (SIGNATURE) */}
             <div class="card card-signature fade-in">
               <div class="card-badge">Offre signature</div>
               <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
-              <h3 class="card-title">Accélération de Projet</h3>
-              <p class="card-description">L'IA comme outil de production. Nous co-créons avec vous et livrons vos livrables plus rapidement avec un transfert de compétences intégré.</p>
-              <a href="/services#acceleration" class="card-link">Découvrir l'offre →</a>
+              <h3 class="card-title">Conseil Augmenté</h3>
+              <p class="card-description"><strong>Vos projets réels, réalisés plus vite, mieux — et vous gardez la méthode.</strong><br />Co-production de livrables outillée par l'IA, transfert de compétences intégré.</p>
+              <a href="/services/conseil-augmente" class="card-link">Découvrir →</a>
             </div>
           </div>
         </div>
@@ -114,37 +114,7 @@ app.get('/', (c) => {
         </div>
       </section>
 
-      {/* Section 4 - 10 MÉTIERS CARDS (fond clair) */}
-      <section class="section-light">
-        <div class="container">
-          <div class="section-header fade-in">
-            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Explorez des cas d'usage par métier</h2>
-            <p class="section-subtitle">Que vous soyez directeur, manager ou professionnel de terrain, découvrez comment l'IA répond à vos défis</p>
-          </div>
-          <div class="use-cases-grid use-cases-grouped">
-            <a href="/cas-usage#direction" class="use-case-card use-case-card-large fade-in">
-              <span class="use-case-tag">Direction Générale</span>
-              <h3 class="use-case-title">Stratégie, pilotage et transformation organisationnelle</h3>
-              <p class="use-case-description">Pilotage stratégique, CPOM, EPRD, conseils d'administration, communication interne</p>
-            </a>
-            <a href="/cas-usage#administratif" class="use-case-card use-case-card-large fade-in">
-              <span class="use-case-tag">Services Administratifs & Support</span>
-              <h3 class="use-case-title">Finances, RH, Qualité, Achats, SI, Communication</h3>
-              <p class="use-case-description">CPOM & EPRD, recrutement, HAS, appels d'offres, RGPD, valorisation projets</p>
-            </a>
-            <a href="/cas-usage#coeur-metier" class="use-case-card use-case-card-large fade-in">
-              <span class="use-case-tag">Cœur de Métier Santé</span>
-              <h3 class="use-case-title">Médical-soignant, Accompagnement, Direction des soins</h3>
-              <p class="use-case-description">Projets personnalisés, transmissions, supports FALC, protocoles, audits de pratiques</p>
-            </a>
-          </div>
-          <div class="section-cta fade-in">
-            <a href="/cas-usage" class="btn btn-primary">Voir tous les cas d'usage →</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Section 6 - CTA FINAL (fond sombre) */}
+      {/* Section 4 - CTA FINAL (fond sombre) */}
       <section class="section-cta-final">
         <div class="container">
           <div class="cta-content fade-in">
@@ -471,223 +441,39 @@ app.get('/services', (c) => {
         </div>
       </section>
 
-      {/* Section Formation */}
-      <section class="section-light" id="formation">
+      {/* 3 Cartes offres */}
+      <section class="section-light">
         <div class="container">
-          <div class="section-header fade-in">
-            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Formation & Montée en compétences</h2>
-            <p class="section-subtitle">Vos équipes deviennent autonomes sur l'IA. Programmes progressifs 100% santé.</p>
-          </div>
-          
-          <div class="offer-cards-grid">
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Niveau 1 : Sensibilisation</h3>
-              <p class="offer-duration">Durée : 2 heures</p>
-              <p class="offer-description">Conférence ou atelier découverte pour lever les craintes, montrer des exemples concrets du secteur santé et identifier les premiers cas d'usage.</p>
-              <ul class="offer-list">
-                <li>Qu'est-ce que l'IA générative ?</li>
-                <li>Opportunités et risques en santé</li>
-                <li>Exemples de cas d'usage par métier</li>
-                <li>Éthique, RGPD et AI Act</li>
-              </ul>
+          <div class="cards-grid">
+            {/* Offre 1 - Parcours Compétences IA */}
+            <div class="card fade-in">
+              <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <h3 class="card-title">Parcours Compétences IA</h3>
+              <p class="card-description"><strong>Parce que la transformation IA se construit de l'intérieur.</strong><br/>De la sensibilisation à l'autonomie, 6 formats adaptés à chaque étape.<br/><br/><em>→ Bénéfice clé : vos équipes maîtrisent l'IA et l'intègrent durablement.</em></p>
+              <a href="/services/parcours-competences-ia" class="card-link">Découvrir le parcours →</a>
             </div>
 
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Niveau 2 : Initiation</h3>
-              <p class="offer-duration">Durée : 1 jour</p>
-              <p class="offer-description">Formation pratique pour prendre en main les outils IA (ChatGPT, Claude, etc.), maîtriser les prompts et intégrer l'IA dans son quotidien professionnel.</p>
-              <ul class="offer-list">
-                <li>Choisir le bon outil selon l'usage</li>
-                <li>Rédiger des prompts efficaces</li>
-                <li>Cas pratiques métier (CPOM, fiches de poste, protocoles)</li>
-                <li>Bonnes pratiques de sécurité des données</li>
-              </ul>
+            {/* Offre 2 - Trajectoire IA */}
+            <div class="card fade-in">
+              <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+              <h3 class="card-title">Trajectoire IA</h3>
+              <p class="card-description"><strong>Construisons ensemble votre cap — et les moyens de le tenir.</strong><br/>Diagnostic, choix stratégiques, co-pilotage, conduite du changement.<br/><br/><em>→ Bénéfice clé : une feuille de route claire, adaptée à votre réalité terrain.</em></p>
+              <a href="/services/trajectoire-ia" class="card-link">Découvrir la démarche →</a>
             </div>
 
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Niveau 3 : Expertise</h3>
-              <p class="offer-duration">Durée : 2 à 3 jours</p>
-              <p class="offer-description">Programme avancé pour les power-users : automatisation de processus, création de GPTs personnalisés, pilotage de projets IA.</p>
-              <ul class="offer-list">
-                <li>Techniques avancées de prompting</li>
-                <li>Création de GPTs métier personnalisés</li>
-                <li>Intégration IA dans les workflows existants</li>
-                <li>Accompagnement de la transformation IA</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="section-cta fade-in">
-            <a href="/contact" class="btn btn-primary">Demander un devis formation</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Section Conseil */}
-      <section class="section-alt" id="conseil">
-        <div class="container">
-          <div class="section-header fade-in">
-            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Conseil & Stratégie IA</h2>
-            <p class="section-subtitle">Construisons ensemble votre feuille de route IA</p>
-          </div>
-          
-          <div class="offer-cards-grid">
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Diagnostic de maturité IA</h3>
-              <p class="offer-description">Audit complet de votre organisation pour identifier le niveau de maturité IA, les freins et les opportunités.</p>
-              <ul class="offer-list">
-                <li>Cartographie des usages potentiels</li>
-                <li>Analyse des compétences existantes</li>
-                <li>Évaluation de la gouvernance et des risques</li>
-                <li>Recommandations priorisées</li>
-              </ul>
-            </div>
-
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Feuille de route IA</h3>
-              <p class="offer-description">Co-construction d'une stratégie IA adaptée à vos enjeux, avec un plan d'action opérationnel sur 12 à 24 mois.</p>
-              <ul class="offer-list">
-                <li>Définition des objectifs et KPIs</li>
-                <li>Roadmap par métier et par usage</li>
-                <li>Budgétisation et ROI attendu</li>
-                <li>Plan de formation et de conduite du changement</li>
-              </ul>
-            </div>
-
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Choix de solutions IA</h3>
-              <p class="offer-description">Accompagnement neutre et indépendant pour sélectionner les outils IA adaptés à vos besoins (aucun partenariat éditeur).</p>
-              <ul class="offer-list">
-                <li>Benchmark des solutions du marché</li>
-                <li>Grille d'analyse multicritères</li>
-                <li>Tests et POC avec vos équipes</li>
-                <li>Support au cahier des charges</li>
-              </ul>
-            </div>
-
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Pilotage de projet IA</h3>
-              <p class="offer-description">Assistance à maîtrise d'ouvrage pour piloter vos projets de transformation IA de bout en bout.</p>
-              <ul class="offer-list">
-                <li>Cadrage et gouvernance projet</li>
-                <li>Coordination des parties prenantes</li>
-                <li>Suivi des jalons et livrables</li>
-                <li>Mesure du ROI et ajustements</li>
-              </ul>
-            </div>
-
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Conduite du changement</h3>
-              <p class="offer-description">Accompagnement humain de vos équipes pour faire de l'IA un levier d'épanouissement professionnel.</p>
-              <ul class="offer-list">
-                <li>Analyse des impacts et résistances</li>
-                <li>Plan de communication interne</li>
-                <li>Formation des ambassadeurs IA</li>
-                <li>Suivi et évaluation post-déploiement</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="section-cta fade-in">
-            <a href="/contact" class="btn btn-primary">Échanger sur votre projet</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Section Accélération */}
-      <section class="section-light" id="acceleration">
-        <div class="container">
-          <div class="section-header fade-in">
-            <div class="offer-badge-large">Offre signature</div>
-            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Accélération de Projet</h2>
-            <p class="section-subtitle">L'IA comme outil de production. Nous co-créons avec vous et livrons vos livrables plus rapidement.</p>
-          </div>
-          
-          <div class="offer-intro fade-in">
-            <p>Dans cette offre, nous ne nous contentons pas de vous conseiller : nous travaillons en binôme avec vous, l'IA à la main, pour produire vos livrables. Vous gagnez du temps, vous apprenez en faisant, et vous gardez la main sur le contenu.</p>
-          </div>
-
-          <div class="offer-cards-grid">
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Stratégie & feuilles de route</h3>
-              <ul class="offer-list">
-                <li>Schéma directeur des systèmes d'information</li>
-                <li>Plan stratégique d'établissement</li>
-                <li>Roadmap transformation numérique</li>
-                <li>Stratégie de communication</li>
-              </ul>
-            </div>
-
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Documents financiers & pilotage</h3>
-              <ul class="offer-list">
-                <li>CPOM (Contrat Pluriannuel d'Objectifs et de Moyens)</li>
-                <li>EPRD (État Prévisionnel des Recettes et Dépenses)</li>
-                <li>Business plans et dossiers de financement</li>
-                <li>Tableaux de bord et reportings</li>
-              </ul>
-            </div>
-
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Appels d'offres & cahiers des charges</h3>
-              <ul class="offer-list">
-                <li>Cahiers des charges SI, achats, travaux</li>
-                <li>Analyse et comparaison d'offres</li>
-                <li>Grilles d'évaluation multicritères</li>
-                <li>Support à la négociation</li>
-              </ul>
-            </div>
-
-            <div class="offer-card fade-in">
-              <h3 class="offer-card-title">Qualité, certification & conformité</h3>
-              <ul class="offer-list">
-                <li>Auto-évaluations HAS</li>
-                <li>Procédures qualité et protocoles</li>
-                <li>Registres RGPD et analyses d'impact</li>
-                <li>Rapports d'audit et plans d'action</li>
-              </ul>
-            </div>
-          </div>
-          
-          <div class="section-cta fade-in">
-            <a href="/contact" class="btn btn-primary">Accélérer votre prochain projet</a>
-          </div>
-        </div>
-      </section>
-
-      {/* Méthodologie 5 phases */}
-      <section class="section-alt">
-        <div class="container">
-          <div class="section-header fade-in">
-            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Notre méthodologie en 5 phases</h2>
-            <p class="section-subtitle">Un accompagnement structuré et itératif</p>
-          </div>
-          
-          <div class="methodology-timeline fade-in">
-            <div class="timeline-item">
-              <div class="timeline-number">1</div>
-              <h3 class="timeline-title">Cadrage</h3>
-              <p class="timeline-description">Compréhension de vos enjeux, objectifs et contraintes. Définition du périmètre et des livrables attendus.</p>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-number">2</div>
-              <h3 class="timeline-title">Diagnostic</h3>
-              <p class="timeline-description">Analyse de l'existant, identification des opportunités IA et des points de vigilance (RGPD, éthique, faisabilité).</p>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-number">3</div>
-              <h3 class="timeline-title">Co-création</h3>
-              <p class="timeline-description">Ateliers collaboratifs pour concevoir les solutions, rédiger les premiers livrables et former vos équipes en pratique.</p>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-number">4</div>
-              <h3 class="timeline-title">Livraison</h3>
-              <p class="timeline-description">Remise des livrables finalisés (documents, outils, procédures) et transfert de compétences complet.</p>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-number">5</div>
-              <h3 class="timeline-title">Suivi</h3>
-              <p class="timeline-description">Accompagnement post-livraison, mesure des impacts, ajustements et consolidation de l'autonomie.</p>
+            {/* Offre 3 - Conseil Augmenté (SIGNATURE) */}
+            <div class="card card-signature fade-in">
+              <div class="card-badge">Offre signature</div>
+              <svg class="card-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <h3 class="card-title">Conseil Augmenté</h3>
+              <p class="card-description"><strong>Vos projets réels, réalisés plus vite, mieux — et vous gardez la méthode.</strong><br/>Co-production de livrables outillée par l'IA, transfert de compétences intégré.<br/><br/><em>→ Bénéfice clé : qualité supérieure + gain de temps + autonomie acquise.</em></p>
+              <a href="/services/conseil-augmente" class="card-link">Découvrir l'offre →</a>
             </div>
           </div>
         </div>
@@ -697,14 +483,239 @@ app.get('/services', (c) => {
       <section class="section-cta-final">
         <div class="container">
           <div class="cta-content fade-in">
-            <h2 class="cta-title">Quelle offre vous correspond ?</h2>
-            <p class="cta-subtitle">Échangeons 30 minutes sur vos enjeux</p>
+            <h2 class="cta-title">Prêt à engager votre transformation IA ?</h2>
+            <p class="cta-subtitle">Échangeons 30 minutes sur vos enjeux. Sans engagement.</p>
             <a href="/contact" class="btn btn-primary btn-large">Prendre rendez-vous</a>
           </div>
         </div>
       </section>
     </>,
     { title: 'Nos services' }
+  )
+})
+
+// ============================================================================
+// PAGE PARCOURS COMPÉTENCES IA
+// ============================================================================
+app.get('/services/parcours-competences-ia', (c) => {
+  return c.render(
+    <>
+      {/* Hero */}
+      <section class="hero-interior">
+        <div class="container">
+          <h1 class="fade-in" style="font-size: clamp(3rem, 12vw, 9rem) !important;">Parcours Compétences IA</h1>
+          <p class="hero-subtitle fade-in">Parce que la transformation IA se construit de l'intérieur</p>
+        </div>
+      </section>
+
+      {/* 6 offres en timeline */}
+      <section class="section-light">
+        <div class="container">
+          <div class="methodology-timeline fade-in">
+            <div class="timeline-item">
+              <div class="timeline-number">①</div>
+              <h3 class="timeline-title">Initiation IA</h3>
+              <p class="offer-duration">Durée : 1h30 — Acculturer</p>
+              <p class="timeline-description">Lever les idées reçues, comprendre les possibles, volet éthique intégré (données, confidentialité, bonnes pratiques). <strong>Objectif : éclairer, pas convaincre.</strong></p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-number">②</div>
+              <h3 class="timeline-title">Atelier Cas d'Usages</h3>
+              <p class="offer-duration">Durée : 1 à 2 jours — Initier</p>
+              <p class="timeline-description">Explorer et expérimenter des cas d'usage concrets issus du secteur santé. Chaque participant repart avec des usages opérationnels immédiatement transposables.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-number">③</div>
+              <h3 class="timeline-title">Approfondissement IA</h3>
+              <p class="offer-duration">Format sur-mesure, plusieurs semaines — Faire</p>
+              <p class="timeline-description">Construire, affiner et déployer des cas d'usage propres à l'organisation. Produire des résultats concrets. Maîtriser ce qui compte pour son métier.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-number">④</div>
+              <h3 class="timeline-title">Ambassadeurs IA</h3>
+              <p class="offer-duration">Programme structuré — Rôle transversal</p>
+              <p class="timeline-description">Former des relais internes : diffuser les usages, accompagner les collègues, ancrer la culture IA dans la durée. <strong>Des passeurs, pas des experts techniques.</strong></p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-number">⑤</div>
+              <h3 class="timeline-title">Coaching Dirigeants</h3>
+              <p class="offer-duration">Offre dédiée aux directeurs et cadres dirigeants</p>
+              <p class="timeline-description"><strong>3 dimensions :</strong> pratique hands-on de l'IA / vision et posture personnelle / intégration dans la stratégie et le modèle organisationnel.<br/><strong>Modalités :</strong> individuel / collectif (4-5 personnes ou CODIR) / instances (CA, Bureau, CME, CSE, CVS, CDU)</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-number">⑥</div>
+              <h3 class="timeline-title">Outillage & Tutorat</h3>
+              <p class="offer-duration">Offre autonome</p>
+              <p class="timeline-description">Maîtrise opérationnelle des outils IA :<br/>• <strong>LLM :</strong> ChatGPT, Copilot, Claude, Mistral, Gemini, Perplexity<br/>• <strong>Automatisation :</strong> N8N, Make, Zapier<br/>Sans prérequis technique. Format tutorat individualisé ou petit groupe.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section class="section-cta-final">
+        <div class="container">
+          <div class="cta-content fade-in">
+            <h2 class="cta-title">Construisons votre parcours IA</h2>
+            <p class="cta-subtitle">Échangeons 30 minutes sur vos besoins de montée en compétences</p>
+            <a href="/contact" class="btn btn-primary btn-large">Prendre rendez-vous</a>
+          </div>
+        </div>
+      </section>
+    </>,
+    { title: 'Parcours Compétences IA' }
+  )
+})
+
+// ============================================================================
+// PAGE TRAJECTOIRE IA
+// ============================================================================
+app.get('/services/trajectoire-ia', (c) => {
+  return c.render(
+    <>
+      {/* Hero */}
+      <section class="hero-interior">
+        <div class="container">
+          <h1 class="fade-in" style="font-size: clamp(3rem, 12vw, 9rem) !important;">Trajectoire IA</h1>
+          <p class="hero-subtitle fade-in">Construisons ensemble votre cap — et les moyens de le tenir</p>
+        </div>
+      </section>
+
+      {/* Corps de page */}
+      <section class="section-light">
+        <div class="container">
+          <div class="offer-intro fade-in">
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">L'IA n'est pas un projet comme les autres. Elle se construit dans le mouvement, par itérations, avec vos équipes dans la boucle.</p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">Notre approche : lire votre situation réelle, co-définir une direction claire, puis vous accompagner à avancer — décision après décision.</p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 3rem;"><strong>Pas de méthode imposée. Pas de solution vendue.</strong> Un regard extérieur indépendant et une expertise terrain du secteur santé.</p>
+          </div>
+
+          <div class="section-header fade-in">
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Ce qu'on construit ensemble</h2>
+          </div>
+
+          <div class="values-grid fade-in">
+            <div class="value-item">
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+              </svg>
+              <h4 class="value-title">Lecture de maturité IA</h4>
+              <p class="value-description">État des lieux objectif de vos pratiques, compétences et opportunités IA</p>
+            </div>
+            <div class="value-item">
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+              </svg>
+              <h4 class="value-title">Cap stratégique</h4>
+              <p class="value-description">Feuille de route claire, priorisée et adaptée à votre réalité terrain</p>
+            </div>
+            <div class="value-item">
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <h4 class="value-title">Choix de solutions</h4>
+              <p class="value-description">Accompagnement neutre pour sélectionner les outils adaptés à vos besoins</p>
+            </div>
+            <div class="value-item">
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+              </svg>
+              <h4 class="value-title">Co-pilotage</h4>
+              <p class="value-description">Assistance à maîtrise d'ouvrage, coordination et suivi de vos projets IA</p>
+            </div>
+            <div class="value-item">
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h4 class="value-title">Conduite du changement</h4>
+              <p class="value-description">Accompagnement humain pour faire de l'IA un levier d'épanouissement</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section class="section-cta-final">
+        <div class="container">
+          <div class="cta-content fade-in">
+            <h2 class="cta-title">Définissons ensemble votre trajectoire IA</h2>
+            <p class="cta-subtitle">Échangeons 30 minutes sur votre contexte et vos ambitions</p>
+            <a href="/contact" class="btn btn-primary btn-large">Prendre rendez-vous</a>
+          </div>
+        </div>
+      </section>
+    </>,
+    { title: 'Trajectoire IA' }
+  )
+})
+
+// ============================================================================
+// PAGE CONSEIL AUGMENTÉ
+// ============================================================================
+app.get('/services/conseil-augmente', (c) => {
+  return c.render(
+    <>
+      {/* Hero */}
+      <section class="hero-interior">
+        <div class="container">
+          <div class="offer-badge-large">Offre signature</div>
+          <h1 class="fade-in" style="font-size: clamp(3rem, 12vw, 9rem) !important;">Conseil Augmenté</h1>
+          <p class="hero-subtitle fade-in">Vos projets réels, réalisés plus vite, mieux — et vous gardez la méthode</p>
+        </div>
+      </section>
+
+      {/* Corps de page */}
+      <section class="section-light">
+        <div class="container">
+          <div class="offer-intro fade-in">
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">Vous avez un projet concret à produire : transformation de l'offre, appel à projet, projet innovant, analyse de positionnement stratégique, benchmark, plan stratégique, appels à projets, revue de processus, plan d'efficience, data-analyses, simulation financière, nouveaux business models...</p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;"><strong>On le co-produit avec vous, outillés par l'IA.</strong></p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">Résultat : un livrable de qualité supérieure, livré plus rapidement. Et en chemin, vous avez appris à faire — pas juste à recevoir.</p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 3rem;"><strong>Le transfert de compétences n'est pas un bonus : il est intégré dès le départ.</strong></p>
+          </div>
+
+          <div class="section-header fade-in">
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">La promesse triple</h2>
+          </div>
+
+          <div class="values-grid fade-in">
+            <div class="value-item">
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <h4 class="value-title">↑ Qualité du livrable</h4>
+              <p class="value-description">Résultat de niveau supérieur grâce à l'IA et à l'expertise métier santé</p>
+            </div>
+            <div class="value-item">
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+              <h4 class="value-title">⚡ Gain de temps</h4>
+              <p class="value-description">Production accélérée sans sacrifier la qualité ni la personnalisation</p>
+            </div>
+            <div class="value-item">
+              <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              <h4 class="value-title">🎓 Compétence acquise</h4>
+              <p class="value-description">Transférabilité et reproductibilité : vous savez refaire seul·e</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section class="section-cta-final">
+        <div class="container">
+          <div class="cta-content fade-in">
+            <h2 class="cta-title">Accélérons votre prochain projet</h2>
+            <p class="cta-subtitle">Échangeons 30 minutes sur votre projet concret</p>
+            <a href="/contact" class="btn btn-primary btn-large">Prendre rendez-vous</a>
+          </div>
+        </div>
+      </section>
+    </>,
+    { title: 'Conseil Augmenté' }
   )
 })
 
