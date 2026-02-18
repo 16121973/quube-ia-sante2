@@ -742,6 +742,12 @@ app.get('/services/conseil-augmente', (c) => {
       {/* Corps de page */}
       <section class="section-light">
         <div class="container">
+          {/* Accroche intro */}
+          <div class="offer-intro fade-in">
+            <p style="font-size: 1.35rem; line-height: 1.8; margin-bottom: 2.5rem; font-weight: 500;">Certains projets stratégiques méritent mieux qu'un PowerPoint standard ou un rapport figé. Avec le Conseil Augmenté, vous bénéficiez d'une expertise métier santé combinée à la puissance de l'IA — et vous gardez la maîtrise de bout en bout.</p>
+          </div>
+
+          {/* Liste de projets */}
           <div class="offer-intro fade-in">
             <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;">Vous avez un projet concret à produire : transformation de l'offre, appel à projet, projet innovant, analyse de positionnement stratégique, benchmark, plan stratégique, appels à projets, revue de processus, plan d'efficience, data-analyses, simulation financière, nouveaux business models...</p>
             <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 2rem;"><strong>On le co-produit avec vous, outillés par l'IA.</strong></p>
@@ -749,7 +755,42 @@ app.get('/services/conseil-augmente', (c) => {
             <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 3rem;"><strong>Le transfert de compétences n'est pas un bonus : il est intégré dès le départ.</strong></p>
           </div>
 
-          <div class="section-header fade-in">
+          {/* Comment ça se passe */}
+          <div class="section-header fade-in" style="margin-top: 5rem;">
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Comment ça se passe ?</h2>
+          </div>
+
+          <div class="methodology-timeline fade-in" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 5rem;">
+            <div class="timeline-item">
+              <div class="timeline-number" style="background: linear-gradient(135deg, var(--color-violet), var(--color-bleu));">①</div>
+              <h3 class="timeline-title">Cadrage</h3>
+              <p class="timeline-description">On définit ensemble le périmètre, les objectifs et les livrables attendus. Une demi-journée suffit.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-number" style="background: linear-gradient(135deg, var(--color-bleu), var(--color-vert));">②</div>
+              <h3 class="timeline-title">Co-production</h3>
+              <p class="timeline-description">On travaille ensemble, outillés par l'IA : vous apportez la connaissance terrain, nous apportons la méthode et les outils.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-number" style="background: linear-gradient(135deg, var(--color-vert), var(--color-jaune));">③</div>
+              <h3 class="timeline-title">Livraison</h3>
+              <p class="timeline-description">Un livrable de qualité supérieure, dans les délais convenus. Prêt à l'emploi.</p>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-number" style="background: linear-gradient(135deg, var(--color-jaune), var(--color-rouge));">④</div>
+              <h3 class="timeline-title">Transfert</h3>
+              <p class="timeline-description">Vous repartez avec la méthode, les prompts et les outils utilisés. Vous savez reproduire seul.</p>
+            </div>
+          </div>
+
+          {/* Pas un cabinet classique */}
+          <div class="differentiator-block fade-in">
+            <h3 class="differentiator-title">Pas un cabinet classique.</h3>
+            <p class="differentiator-text">Un cabinet traditionnel vous remet un rapport. Nous co-produisons avec vous — ce qui change tout : vous restez aux commandes, vous comprenez chaque étape, et vous repartez avec une capacité nouvelle. La dépendance n'est pas notre modèle.</p>
+          </div>
+
+          {/* La promesse triple */}
+          <div class="section-header fade-in" style="margin-top: 5rem;">
             <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">La promesse triple</h2>
           </div>
 
@@ -759,21 +800,21 @@ app.get('/services/conseil-augmente', (c) => {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               <h4 class="value-title">↑ Qualité du livrable</h4>
-              <p class="value-description">Résultat de niveau supérieur grâce à l'IA et à l'expertise métier santé</p>
+              <p class="value-description">L'IA démultiplie la capacité d'analyse et de production. Vous obtenez un livrable plus complet, plus argumenté, plus percutant — dans un temps réduit.</p>
             </div>
             <div class="value-item">
               <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
               <h4 class="value-title">⚡ Gain de temps</h4>
-              <p class="value-description">Production accélérée sans sacrifier la qualité ni la personnalisation</p>
+              <p class="value-description">Ce qui prenait des semaines se produit en jours. Sans sacrifier la rigueur ni la personnalisation à votre contexte.</p>
             </div>
             <div class="value-item">
               <svg class="value-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
               </svg>
-              <h4 class="value-title">🎓 Compétence acquise</h4>
-              <p class="value-description">Transférabilité et reproductibilité : vous savez refaire seul·e</p>
+              <h4 class="value-title">🎓 Compétence acquise en interne</h4>
+              <p class="value-description">Le transfert de compétences n'est pas un bonus : il est intégré dès le départ. Vous repartez avec la méthode, les outils et les prompts utilisés. Vous savez reproduire seul.</p>
             </div>
           </div>
         </div>

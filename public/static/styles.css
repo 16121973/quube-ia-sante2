@@ -1783,3 +1783,82 @@ footer {
     font-size: 1.25rem;
   }
 }
+
+/* ============================================================================
+   DIFFERENTIATOR BLOCK (Conseil Augmenté)
+   ============================================================================ */
+
+.differentiator-block {
+  background: linear-gradient(135deg, #FFFFFF, #F7F7F7);
+  border-left: 6px solid var(--color-vert);
+  border-radius: 16px;
+  padding: 48px 56px;
+  margin: 4rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.differentiator-block::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 300px;
+  height: 300px;
+  background: var(--color-vert);
+  border-radius: 50%;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.differentiator-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-noir);
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.differentiator-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.85);
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .differentiator-block {
+    padding: 32px 28px;
+    margin: 3rem 0;
+  }
+
+  .differentiator-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .differentiator-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 640px) {
+  .differentiator-block {
+    padding: 24px 20px;
+    border-left-width: 4px;
+  }
+
+  .differentiator-title {
+    font-size: 1.35rem;
+  }
+
+  .differentiator-text {
+    font-size: 1rem;
+  }
+}
