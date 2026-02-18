@@ -138,288 +138,179 @@ app.get('/', (c) => {
 app.get('/cas-usage', (c) => {
   return c.render(
     <>
-      <link rel="stylesheet" href="/static/cas-usage.css" />
-      <link rel="stylesheet" href="/static/cas-usage-v3.css" />
-
-      {/* === SECTION 1: HERO COMPACT (discours de preuve honnête) === */}
-      <section class="hero-cas-usage-v3">
+      {/* Hero */}
+      <section class="hero-interior">
         <div class="container">
-          <div class="hero-content-v3">
-            <div class="hero-badge-v3">
-              <div class="dot-pulse"></div>
-              23 cas d'usage conçus à partir de 25 ans d'expérience terrain
+          <h1 class="fade-in" style="font-size: clamp(3rem, 12vw, 9rem) !important;">Cas d'usage IA en santé</h1>
+          <p class="hero-subtitle fade-in">Pas un catalogue. Une démarche.</p>
+        </div>
+      </section>
+
+      {/* Méthodologie QUUBE */}
+      <section class="section-methodology">
+        <div class="container">
+          <div class="section-header fade-in">
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Méthodologie QUUBE</h2>
+          </div>
+
+          {/* Bloc 1 : Ce qu'est vraiment un cas d'usage IA */}
+          <div class="methodology-intro fade-in">
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">Un cas d'usage IA, c'est la rencontre entre un problème métier réel, une capacité IA démontrée, et une organisation prête à l'adopter.</p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;"><strong>Sans les 3 éléments, ça ne fonctionne pas.</strong></p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">Un cas d'usage qui n'est pas adopté par les équipes n'existe pas — il reste une démonstration. Identifier un cas d'usage, c'est 10% du travail. Le déployer, l'ancrer dans les pratiques, le scaler : c'est les 90% restants.</p>
+          </div>
+
+          {/* Bloc 2 : Les 4 dimensions */}
+          <div class="section-header fade-in" style="margin-top: 4rem; margin-bottom: 3rem;">
+            <h3 style="font-size: 2rem; font-weight: 800; color: var(--color-noir);">Les 4 dimensions d'un cas d'usage bien construit</h3>
+          </div>
+
+          <div class="dimensions-grid fade-in">
+            <div class="dimension-card">
+              <div class="dimension-number">①</div>
+              <h4 class="dimension-title">Le problème métier — Le bon point de départ</h4>
+              <p class="dimension-description">Pas "que peut faire l'IA ?" mais "quel est votre vrai point de friction quotidien ?" Surcharge administrative, pression qualité, complexité réglementaire, manque de temps soignant. Le cas d'usage doit adresser un nœud réel — pas une opportunité théorique.</p>
             </div>
-            <h1>L'IA au service de votre <em>quotidien</em>, pas de la théorie</h1>
-            <p class="hero-subtitle-v3">
-              Chaque cas d'usage ci-dessous a été conçu à partir de problématiques terrain rencontrées pendant 25 ans dans le secteur sanitaire et médico-social. 
-              Des gains estimés de <strong>50 à 70% sur vos tâches à forte valeur ajoutée</strong> — à mesurer ensemble sur votre contexte.
-            </p>
+
+            <div class="dimension-card">
+              <div class="dimension-number">②</div>
+              <h4 class="dimension-title">La capacité IA — Le bon outil</h4>
+              <p class="dimension-description">L'IA n'est pas la réponse à tout. Un bon cas d'usage précise : quel type d'IA, quel outil, quelles données, quelles contraintes RGPD et HDS. Nous n'avons aucun partenariat éditeur — notre seul critère est ce qui fonctionne pour vous.</p>
+            </div>
+
+            <div class="dimension-card">
+              <div class="dimension-number">③</div>
+              <h4 class="dimension-title">L'humain au centre — Le facteur décisif</h4>
+              <p class="dimension-description">Les projets IA qui échouent échouent sur l'humain, pas sur la technologie. Qui utilise le cas d'usage ? Avec quelle compétence ? Quelle résistance anticiper ?</p>
+            </div>
+
+            <div class="dimension-card">
+              <div class="dimension-number">④</div>
+              <h4 class="dimension-title">Le scale — Là où la valeur devient structurelle</h4>
+              <p class="dimension-description">Un cas d'usage maîtrisé se réplique et s'automatise. Il tourne seul, se déploie sur d'autres services, d'autres établissements. C'est là que les gains deviennent durables — pas dans un pourcentage affiché a priori.</p>
+            </div>
+          </div>
+
+          {/* Bloc 3 : Démarche en 4 temps */}
+          <div class="section-header fade-in" style="margin-top: 5rem; margin-bottom: 3rem;">
+            <h3 style="font-size: 2rem; font-weight: 800; color: var(--color-noir);">Notre démarche en 4 temps</h3>
+          </div>
+
+          <div class="demarche-timeline fade-in">
+            <div class="timeline-step">
+              <div class="timeline-badge">1</div>
+              <h4 class="timeline-step-title">Découverte (le bon problème)</h4>
+              <p class="timeline-step-description">On part du terrain, pas de l'IA. Cartographie des frictions, interviews métiers, identification des cas à fort potentiel : tâche répétitive, haute fréquence, données disponibles, valeur ajoutée humaine faible.</p>
+            </div>
+            <div class="timeline-connector"></div>
             
-            {/* Mini social proof intégré - reformulé */}
-            <div class="hero-stats-v3">
-              <div class="stat-item-v3">
-                <span class="stat-number-v3">25 ans</span>
-                <span class="stat-label-v3">d'expérience terrain</span>
-              </div>
-              <div class="stat-item-v3">
-                <span class="stat-number-v3">50-70%</span>
-                <span class="stat-label-v3">gains estimés</span>
-              </div>
-              <div class="stat-item-v3">
-                <span class="stat-number-v3">100%</span>
-                <span class="stat-label-v3">RGPD conforme</span>
-              </div>
+            <div class="timeline-step">
+              <div class="timeline-badge">2</div>
+              <h4 class="timeline-step-title">Prototypage (la preuve par l'exemple)</h4>
+              <p class="timeline-step-description">On construit le cas d'usage en conditions réelles, sur vos vrais documents, vos vrais processus. On mesure, on ajuste, on itère jusqu'à ce que ça fonctionne vraiment.</p>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* === SECTION 2: FILTRES + CARTES === */}
-      <section class="section-cas-usage-v3">
-        <div class="container">
-          <div class="filter-section-v3">
-            <h2 class="filter-title-v3">Filtrer par fonction</h2>
-            <div class="filter-tabs-v3">
-              <div class="filter-tab-v3 active" data-filter="all">Tous</div>
-              <div class="filter-tab-v3" data-filter="dir">Direction</div>
-              <div class="filter-tab-v3" data-filter="data">Data / Finance</div>
-              <div class="filter-tab-v3" data-filter="soin">Soignant·e</div>
-              <div class="filter-tab-v3" data-filter="rh">RH</div>
-              <div class="filter-tab-v3" data-filter="educ">Éducateur·rice</div>
-              <div class="filter-tab-v3" data-filter="qualite">Qualité</div>
-              <div class="filter-tab-v3" data-filter="strat">Stratégie</div>
-            </div>
-          </div>
-
-          {/* === GRILLE DE CARTES (23 cartes importées) === */}
-          <div class="cards-grid" id="cards-container">
-        {/* Card 1 - Rapport d'activité (vitrine) */}
-        <div class="use-case-card" data-personas="dir">
-          <div class="card-header">
-            <div class="card-icon blue">📊</div>
-            <div class="card-title">Rapport d'activité en 2h</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">60-80%</div>
-            <div class="card-result-text">gains estimés sur<br />le temps de rédaction</div>
-          </div>
-          <div class="card-desc"><strong>Problème :</strong> 2 jours de compilation manuelle de données multi-services. <strong>Gain :</strong> L'IA agrège vos données et génère un rapport structuré conforme ARS. À mesurer ensemble sur votre contexte.</div>
-          <div class="card-tags">
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">ARS</span>
-            <span class="card-tag">CPOM</span>
-          </div>
-          <div class="card-cta">
-            Échangeons sur ce cas →
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 2 - EPRD/ERRD (vitrine) */}
-        <div class="use-case-card" data-personas="data dir">
-          <div class="card-header">
-            <div class="card-icon indigo">💰</div>
-            <div class="card-title">EPRD/ERRD simulé en 1 jour</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">70-80%</div>
-            <div class="card-result-text">gains estimés sur<br />la modélisation budgétaire</div>
-          </div>
-          <div class="card-desc"><strong>Problème :</strong> Création manuelle sous Excel, simulations longues. <strong>Gain :</strong> L'IA structure vos données comptables et génère un EPRD pré-rempli conforme ARS. À mesurer ensemble.</div>
-          <div class="card-tags">
-            <span class="card-tag data">Data & Finance</span>
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">EPRD</span>
-          </div>
-          <div class="card-cta">
-            Échangeons sur ce cas →
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-
-        {/* Card 3 - CA/CVS (vitrine) */}
-        <div class="use-case-card" data-personas="dir">
-          <div class="card-header">
-            <div class="card-icon blue">🏛️</div>
-            <div class="card-title">Préparation CA/CVS en 1h</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">80-85%</div>
-            <div class="card-result-text">gains estimés sur<br />la synthèse multi-services</div>
-          </div>
-          <div class="card-desc"><strong>Problème :</strong> 1 journée pour compiler les remontées de chaque service. <strong>Gain :</strong> L'IA synthétise automatiquement et crée un support de présentation. À mesurer ensemble.</div>
-          <div class="card-tags">
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">Gouvernance</span>
-          </div>
-          <div class="card-cta">
-            Échangeons sur ce cas →
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 4 - Benchmark territorial (vitrine) */}
-        <div class="use-case-card" data-personas="strat dir data">
-          <div class="card-header">
-            <div class="card-icon pink">🗺️</div>
-            <div class="card-title">Benchmark territorial SAE/ATIH</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">Open Data</div>
-            <div class="card-result-text">croisement automatique<br />bases publiques</div>
-          </div>
-          <div class="card-desc"><strong>Problème :</strong> Aucune visibilité territoriale sur votre positionnement. <strong>Gain :</strong> L'IA interroge SAE, ATIH, CNSA pour vous situer vs établissements comparables.</div>
-          <div class="card-tags">
-            <span class="card-tag strat">Stratégie</span>
-            <span class="card-tag data">Data</span>
-            <span class="card-tag">SAE</span>
-            <span class="card-tag">ATIH</span>
-          </div>
-          <div class="card-cta">
-            Échangeons sur ce cas →
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 5 - Protocoles HAS (vitrine) */}
-        <div class="use-case-card" data-personas="qualite">
-          <div class="card-header">
-            <div class="card-icon green">✅</div>
-            <div class="card-title">Protocoles HAS : veille + rédaction</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">50-60%</div>
-            <div class="card-result-text">gains estimés sur<br />la mise en conformité</div>
-          </div>
-          <div class="card-desc"><strong>Problème :</strong> Veille chronophage, rédaction manuelle des protocoles. <strong>Gain :</strong> L'IA synthétise les recommandations HAS et propose un brouillon conforme.</div>
-          <div class="card-tags">
-            <span class="card-tag qualite">Qualité</span>
-            <span class="card-tag">HAS</span>
-          </div>
-          <div class="card-cta">
-            Échangeons sur ce cas →
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Card 6 - Appels à projets (vitrine) */}
-        <div class="use-case-card" data-personas="dir">
-          <div class="card-header">
-            <div class="card-icon orange">📋</div>
-            <div class="card-title">Réponse aux appels à projets</div>
-          </div>
-          <div class="card-result">
-            <div class="card-result-metric">×3</div>
-            <div class="card-result-text">rapidité estimée sur<br />le montage dossier</div>
-          </div>
-          <div class="card-desc"><strong>Problème :</strong> Analyse longue du cahier des charges, rédaction complexe. <strong>Gain :</strong> L'IA structure votre réponse et génère un dossier prêt à finaliser.</div>
-          <div class="card-tags">
-            <span class="card-tag dir">Direction</span>
-            <span class="card-tag">AAP</span>
-          </div>
-          <div class="card-cta">
-            Échangeons sur ce cas →
-            <svg viewBox="0 0 20 20" fill="currentColor">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" />
-            </svg>
-          </div>
-        </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* === CTA PDF PREMIUM (machine à leads) === */}
-      <section class="cta-pdf-section">
-        <div class="container">
-          <div class="cta-pdf-content">
-            <h2 class="cta-pdf-title">Téléchargez nos 22 cas d'usage complets</h2>
-            <p class="cta-pdf-subtitle">
-              Rapport d'activité, CPOM, GPEC, formations, protocoles, transmissions... 
-              Découvrez tous nos prototypages IA adaptés à votre réalité terrain.
-            </p>
+            <div class="timeline-connector"></div>
             
-            <form class="lead-form" action="/api/leads" method="POST">
-              <div class="form-group">
-                <input type="text" name="name" placeholder="Nom *" required class="form-input" />
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" placeholder="Email professionnel *" required class="form-input" />
-              </div>
-              <div class="form-group">
-                <input type="text" name="etablissement" placeholder="Établissement *" required class="form-input" />
-              </div>
-              <button type="submit" class="btn-primary btn-large">
-                📥 Télécharger le PDF (22 cas complets)
-              </button>
-            </form>
+            <div class="timeline-step">
+              <div class="timeline-badge">3</div>
+              <h4 class="timeline-step-title">Déploiement & adoption (le vrai travail)</h4>
+              <p class="timeline-step-description">Former les équipes, intégrer dans les workflows existants, lever les résistances, poser les garde-fous éthiques.</p>
+            </div>
+            <div class="timeline-connector"></div>
             
-            <p class="trust-badge">
-              🔒 100% RGPD — Aucun spam, juste le PDF et nos actualités IA Santé
-            </p>
+            <div class="timeline-step">
+              <div class="timeline-badge">4</div>
+              <h4 class="timeline-step-title">Automatisation & scale (la valeur durable)</h4>
+              <p class="timeline-step-description">Le cas d'usage maîtrisé s'automatise et se réplique. Il tourne seul, se nourrit de données réelles, génère des gains structurels. C'est à ce stade que le ROI devient réel — et mesurable.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* === SECTION 3: IMPACT & MÉTHODE (fusion Avant/Après + Méthode) === */}
-      <section class="section-impact-v3">
+      {/* Typologie des cas d'usage */}
+      <section class="section-light">
         <div class="container">
-          <h2 class="impact-title-v3">Notre méthode : diagnostic, test, autonomie</h2>
-          <p class="impact-subtitle-v3">Un accompagnement ancré dans vos pratiques réelles</p>
-          
-          <div class="impact-grid-v3">
-            <div class="impact-step-v3">
-              <div class="step-icon-v3">🔬</div>
-              <h3>Diagnostic terrain</h3>
-              <p>On observe vos irritants et identifie les cas d'usage à fort impact</p>
-            </div>
-            <div class="impact-step-v3">
-              <div class="step-icon-v3">⚡</div>
-              <h3>Pilotes mesurés</h3>
-              <p>On teste 2-3 cas concrets avec vos équipes et on mesure les gains</p>
-            </div>
-            <div class="impact-step-v3">
-              <div class="step-icon-v3">🎯</div>
-              <h3>Autonomie</h3>
-              <p>Templates, prompts et process en place. Vous pilotez l'IA en interne</p>
+          <div class="section-header fade-in">
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Typologie des cas d'usage les plus fréquents</h2>
+            <p class="section-subtitle">Exemples concrets de cas d'usage IA déployés dans le secteur santé et médico-social</p>
+          </div>
+
+          {/* Direction & Stratégie */}
+          <div class="typologie-section fade-in">
+            <h3 class="typologie-category-title">Direction & Stratégie</h3>
+            <div class="typologie-grid">
+              <div class="typologie-card">
+                <h4 class="typologie-card-title">Rapport d'activité</h4>
+                <p class="typologie-card-description">L'IA agrège les données multi-services et génère un rapport structuré conforme aux exigences ARS/CPOM</p>
+              </div>
+              <div class="typologie-card">
+                <h4 class="typologie-card-title">Préparation CA/CVS</h4>
+                <p class="typologie-card-description">Synthèse automatique des remontées de chaque service et création d'un support de présentation</p>
+              </div>
+              <div class="typologie-card">
+                <h4 class="typologie-card-title">Benchmark territorial</h4>
+                <p class="typologie-card-description">Croisement automatique des bases publiques (SAE, ATIH, CNSA) pour situer votre établissement</p>
+              </div>
             </div>
           </div>
-          
-          <div class="impact-results-v3">
-            <div class="result-stat-v3">
-              <span class="result-number-v3">–70%</span>
-              <span class="result-label-v3">Temps de rédaction rapports</span>
+
+          {/* Administratif & Support */}
+          <div class="typologie-section fade-in">
+            <h3 class="typologie-category-title">Administratif & Support</h3>
+            <div class="typologie-grid">
+              <div class="typologie-card">
+                <h4 class="typologie-card-title">EPRD/ERRD</h4>
+                <p class="typologie-card-description">Structuration des données comptables et génération d'un document pré-rempli conforme ARS</p>
+              </div>
+              <div class="typologie-card">
+                <h4 class="typologie-card-title">Veille réglementaire</h4>
+                <p class="typologie-card-description">Suivi automatisé des évolutions HAS, ARS, DGCS avec synthèses personnalisées</p>
+              </div>
+              <div class="typologie-card">
+                <h4 class="typologie-card-title">Réponse aux appels d'offres</h4>
+                <p class="typologie-card-description">Analyse des cahiers des charges et génération de réponses structurées</p>
+              </div>
             </div>
-            <div class="result-stat-v3">
-              <span class="result-number-v3">×3</span>
-              <span class="result-label-v3">Vitesse montage projets</span>
+          </div>
+
+          {/* Cœur de métier */}
+          <div class="typologie-section fade-in">
+            <h3 class="typologie-category-title">Cœur de métier</h3>
+            <div class="typologie-grid">
+              <div class="typologie-card">
+                <h4 class="typologie-card-title">Transmissions ciblées</h4>
+                <p class="typologie-card-description">Synthèse automatique des transmissions pour faciliter la continuité des soins</p>
+              </div>
+              <div class="typologie-card">
+                <h4 class="typologie-card-title">Documents en FALC</h4>
+                <p class="typologie-card-description">Transformation automatique de documents en Facile à Lire et à Comprendre</p>
+              </div>
+              <div class="typologie-card">
+                <h4 class="typologie-card-title">Projets personnalisés</h4>
+                <p class="typologie-card-description">Aide à la rédaction de projets personnalisés de soins ou d'accompagnement</p>
+              </div>
             </div>
-            <div class="result-stat-v3">
-              <span class="result-number-v3">100%</span>
-              <span class="result-label-v3">Équipes autonomes après formation</span>
-            </div>
+          </div>
+
+          {/* CTA PDF */}
+          <div class="pdf-cta fade-in" style="margin-top: 5rem; text-align: center;">
+            <a href="/static/cas-usage-quube.pdf" class="btn btn-secondary btn-large" download>
+              <svg style="width: 24px; height: 24px; margin-right: 12px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Télécharger la typologie complète des cas d'usage IA en santé (PDF)
+            </a>
           </div>
         </div>
       </section>
 
-      {/* === SECTION 4: CTA FINAL === */}
+      {/* CTA Final */}
       <section class="section-cta-final">
         <div class="container">
           <div class="cta-content fade-in">
-            <h2 class="cta-title">Prêt à tester l'IA sur vos propres cas d'usage ?</h2>
-            <p class="cta-subtitle">Échangeons 30 min. On vous montre concrètement ce que l'IA peut changer dans votre quotidien.</p>
-            <a href="/contact" class="btn btn-primary btn-large">Réserver un créneau</a>
+            <h2 class="cta-title">Votre cas d'usage n'est pas listé ?</h2>
+            <p class="cta-subtitle">Échangeons sur vos besoins spécifiques. Nous identifierons ensemble les cas d'usage IA les plus pertinents pour votre organisation.</p>
+            <a href="/contact" class="btn btn-primary btn-large">Diagnostiquer mes cas d'usage</a>
           </div>
         </div>
       </section>
