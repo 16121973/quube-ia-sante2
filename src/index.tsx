@@ -155,14 +155,13 @@ app.get('/cas-usage', (c) => {
 
           {/* Bloc 1 : Ce qu'est vraiment un cas d'usage IA */}
           <div class="methodology-intro fade-in">
-            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">Un cas d'usage IA, c'est la rencontre entre un problème métier réel, une capacité IA démontrée, et une organisation prête à l'adopter.</p>
+            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">Un cas d'usage IA, c'est la rencontre entre <span>un problème métier réel, une capacité IA démontrée, et une organisation prête à l'adopter.</span></p>
             <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;"><strong>Sans les 3 éléments, ça ne fonctionne pas.</strong></p>
-            <p style="font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem;">Un cas d'usage qui n'est pas adopté par les équipes n'existe pas — il reste une démonstration. Identifier un cas d'usage, c'est 10% du travail. Le déployer, l'ancrer dans les pratiques, le scaler : c'est les 90% restants.</p>
           </div>
 
-          {/* Démarche en 4 temps */}
+          {/* Ce que nous faisons avec vous */}
           <div class="section-header fade-in" style="margin-top: 5rem; margin-bottom: 3rem;">
-            <h3 style="font-size: 2rem; font-weight: 800; color: var(--color-noir);">Notre démarche en 4 temps</h3>
+            <h3 style="font-size: 2rem; font-weight: 800; color: var(--color-noir);">Ce que nous faisons avec vous</h3>
           </div>
 
           <div class="demarche-timeline fade-in">
@@ -200,8 +199,7 @@ app.get('/cas-usage', (c) => {
       <section class="section-light">
         <div class="container">
           <div class="section-header fade-in">
-            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Typologie des cas d'usage les plus fréquents</h2>
-            <p class="section-subtitle">Exemples concrets de cas d'usage IA déployés dans le secteur santé et médico-social</p>
+            <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">quelques cas d'usages</h2>
           </div>
 
           {/* Direction & Stratégie */}
