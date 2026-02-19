@@ -844,58 +844,62 @@ app.get('/a-propos', (c) => {
         </div>
       </section>
 
-      {/* Terrains d'intervention - Version catégorisée */}
+      {/* Terrains d'intervention - Version moderne */}
       <section class="section-light">
         <div class="container">
           <div class="section-header fade-in">
             <h2 class="section-title" style="font-size: clamp(2.5rem, 8vw, 5.5rem) !important;">Nos terrains d'intervention</h2>
-            <p class="section-subtitle">14 secteurs accompagnés dans l'écosystème santé français</p>
+            <p class="section-subtitle">L'écosystème santé & médico-social français</p>
           </div>
           
-          <div class="sectors-categories fade-in">
-            {/* Catégorie 1 : Établissements de Santé */}
-            <div class="sector-category">
-              <div class="category-header">
-                <div class="category-icon">🏥</div>
-                <h3 class="category-title">Établissements de Santé</h3>
+          <div class="sectors-grid-modern fade-in">
+            {/* Card 1 : Établissements de Santé */}
+            <div class="sector-card-modern">
+              <div class="sector-card-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="32" height="32">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                </svg>
               </div>
-              <div class="category-list">
-                <div class="sector-item-v2">Hôpitaux publics & CHU</div>
-                <div class="sector-item-v2">Cliniques privées</div>
-                <div class="sector-item-v2">EHPAD</div>
-                <div class="sector-item-v2">Cabinets médicaux</div>
-                <div class="sector-item-v2">Cabinets dentaires</div>
-                <div class="sector-item-v2">Pharmacies</div>
-                <div class="sector-item-v2">Biologie médicale</div>
-              </div>
+              <h3 class="sector-card-title">Établissements de Santé</h3>
+              <ul class="sector-card-list">
+                <li>Hôpitaux & Cliniques</li>
+                <li>Cabinets médicaux & dentaires</li>
+                <li>Pharmacies</li>
+                <li>Biologie médicale</li>
+              </ul>
             </div>
 
-            {/* Catégorie 2 : Secteur Médico-Social */}
-            <div class="sector-category">
-              <div class="category-header">
-                <div class="category-icon">🤝</div>
-                <h3 class="category-title">Secteur Médico-Social</h3>
+            {/* Card 2 : Secteur Médico-Social */}
+            <div class="sector-card-modern">
+              <div class="sector-card-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="32" height="32">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
               </div>
-              <div class="category-list">
-                <div class="sector-item-v2">Handicap (ESSMS)</div>
-                <div class="sector-item-v2">Social & protection de l'enfance</div>
-                <div class="sector-item-v2">Services à domicile (SAAD, SSIAD)</div>
-              </div>
+              <h3 class="sector-card-title">Secteur Médico-Social</h3>
+              <ul class="sector-card-list">
+                <li>EHPAD</li>
+                <li>Handicap (ESSMS)</li>
+                <li>Social & protection de l'enfance</li>
+                <li>Services à domicile (SAAD, SSIAD)</li>
+              </ul>
             </div>
 
-            {/* Catégorie 3 : Écosystème Santé */}
-            <div class="sector-category">
-              <div class="category-header">
-                <div class="category-icon">🌐</div>
-                <h3 class="category-title">Écosystème Santé</h3>
+            {/* Card 3 : Écosystème Santé */}
+            <div class="sector-card-modern">
+              <div class="sector-card-icon">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="32" height="32">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                </svg>
               </div>
-              <div class="category-list">
-                <div class="sector-item-v2">Mutuelles & Institutions de Prévoyance</div>
-                <div class="sector-item-v2">Recherche médicale</div>
-                <div class="sector-item-v2">Associations & Fondations de santé</div>
-                <div class="sector-item-v2">Institutionnels (fédérations, syndicats, think tanks)</div>
-                <div class="sector-item-v2">Groupements hospitaliers de territoire (GHT)</div>
-              </div>
+              <h3 class="sector-card-title">Écosystème Santé</h3>
+              <ul class="sector-card-list">
+                <li>Mutuelles & Institutions de Prévoyance</li>
+                <li>Recherche médicale</li>
+                <li>Associations & Fondations</li>
+                <li>Institutionnels (fédérations, syndicats)</li>
+                <li>Groupements hospitaliers (GHT)</li>
+              </ul>
             </div>
           </div>
         </div>
